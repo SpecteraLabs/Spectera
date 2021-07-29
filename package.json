@@ -12,7 +12,6 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"alpha-sort": "^5.0.0",
 		"consola": "^2.15.3",
 		"discord.js": "^13.0.0-dev.30a58dc.1627430624",
 		"glob": "^7.1.7",
