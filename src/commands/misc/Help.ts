@@ -3,6 +3,7 @@ import { CallbackFunction, Command } from '../../interfaces/Command';
 import { EmbedFieldData, Message, MessageEmbed } from 'discord.js';
 import { guildPrefixes } from '../../events/MessageCreate';
 import configJSON from '../../../config.json';
+import { Anything } from '../../interfaces/Anything';
 const { prefix: globalPrefix } = configJSON;
 
 export const run: CallbackFunction = async (client, message: Message, args) => {
@@ -39,7 +40,7 @@ export const run: CallbackFunction = async (client, message: Message, args) => {
 						.filter((data) => typeof data[1] != 'function')
 						.map((data) =>
 							data[0] == 'usage'
-								? `**Usage**: ${prefix}${cmd.name} ${data[1]}`
+								? `**Usage**: ${prefix}${(cmd as Anything).name} ${data[1]}`
 								: `**${data[0][0].toUpperCase() + data[0].slice(1)}**: ${
 										data[1].map
 											? data[1].map((d: unknown) => `**${d}**`).join(', ')

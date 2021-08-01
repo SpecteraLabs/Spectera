@@ -20,6 +20,7 @@ export class Obligator extends Client {
 	public commands: Collection<string, Command> = new Collection();
 	public aliases: Collection<string, string> = new Collection();
 	public events: Collection<string, Event> = new Collection();
+	public cooldowns: Collection<string, number> = new Collection();
 	public config: Config;
 	public constructor() {
 		super({
@@ -61,6 +62,30 @@ export class Obligator extends Client {
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({
 			color: 'RANDOM',
+			...data,
+		});
+	}
+	public successEmbed(
+		data: MessageEmbedOptions,
+		message: Message
+	): MessageEmbed {
+		return new MessageEmbed({
+			color: '##8f82ff',
+			...data,
+		});
+	}
+	public errorEmbed(data: MessageEmbedOptions, message: Message): MessageEmbed {
+		return new MessageEmbed({
+			color: '#DD5E53',
+			...data,
+		});
+	}
+	public neutralEmbed(
+		data: MessageEmbedOptions,
+		message: Message
+	): MessageEmbed {
+		return new MessageEmbed({
+			color: '#FFFFFF',
 			...data,
 		});
 	}
