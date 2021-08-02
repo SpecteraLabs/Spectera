@@ -11,4 +11,4 @@ const AutoRoleSchema = new Schema({
 	},
 });
 
-export const Model = model('autorole-system', AutoRoleSchema);
+export const autoRoleSchema = model('autorole-system', AutoRoleSchema);

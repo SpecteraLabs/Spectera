@@ -59,12 +59,6 @@ export class Obligator extends Client {
 			this.on(file.name, file.run.bind(null, this));
 		});
 	}
-	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
-		return new MessageEmbed({
-			color: 'RANDOM',
-			...data,
-		});
-	}
 	public successEmbed(
 		data: MessageEmbedOptions,
 		message: Message

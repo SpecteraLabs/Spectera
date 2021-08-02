@@ -12,4 +12,4 @@ const PrefixSchema = new Schema({
 	},
 });
 
-export const Model = model('guild-prefixes', PrefixSchema);
+export const commandPrefixSchema = model('guild-prefixes', PrefixSchema);

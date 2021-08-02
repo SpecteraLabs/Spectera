@@ -7,7 +7,7 @@ import { Anything } from '../../interfaces/Anything';
 const { prefix: globalPrefix } = configJSON;
 
 export const run: CallbackFunction = async (client, message: Message, args) => {
-	const prefix = guildPrefixes[message.guild.id] || globalPrefix;
+	const prefix = guildPrefixes[message.guild.id];
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
 		(category: string) => {
 			return {
@@ -23,7 +23,7 @@ export const run: CallbackFunction = async (client, message: Message, args) => {
 			};
 		}
 	);
-	const commandEmbed: MessageEmbed = client.embed(
+	const commandEmbed: MessageEmbed = client.neutralEmbed(
 		{ fields, description: '**Help Command**' },
 		message
 	);
@@ -34,7 +34,7 @@ export const run: CallbackFunction = async (client, message: Message, args) => {
 	if (!cmd) return message.reply({ embeds: [commandEmbed] });
 	message.channel.send({
 		embeds: [
-			client.embed(
+			client.neutralEmbed(
 				{
 					description: Object.entries(cmd)
 						.filter((data) => typeof data[1] != 'function')

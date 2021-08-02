@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 
-const messageLogSchema = new Schema({
+const LoggingSchema = new Schema({
 	_id: {
 		type: String,
 		required: true,
@@ -12,4 +12,4 @@ const messageLogSchema = new Schema({
 	},
 });
 
-export const Model = model('message-log-channels', messageLogSchema);
+export const messageLogSchema = model('message-log-channels', LoggingSchema);
