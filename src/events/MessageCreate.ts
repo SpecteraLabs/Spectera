@@ -37,5 +37,5 @@ export const loadPrefixes = async (client: Obligator) => {
 			guildPrefixes[guildId] = result ? result.prefix : globalPrefix;
 			client.logger.info(result);
 		}
-	})
-}
+	});
+};
