@@ -10,7 +10,6 @@
 	},
 	"keywords": [],
 	"author": "",
-	"type": "module",
 	"license": "ISC",
 	"dependencies": {
 		"consola": "^2.15.3",

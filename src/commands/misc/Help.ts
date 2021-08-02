@@ -2,7 +2,7 @@ import ms from 'ms';
 import { CallbackFunction, Command } from '../../interfaces/Command';
 import { EmbedFieldData, Message, MessageEmbed } from 'discord.js';
 import { guildPrefixes } from '../../events/MessageCreate';
-import configJSON from '../../../config.json';
+import configJSON from '../../config.json';
 import { Anything } from '../../interfaces/Anything';
 const { prefix: globalPrefix } = configJSON;
 
