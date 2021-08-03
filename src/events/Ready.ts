@@ -1,5 +1,6 @@
+import { loadPrefixes } from '../LoadPrefixes';
 import { CallbackFunction } from '../interfaces/Event';
-import { loadPrefixes } from './MessageCreate';
+
 
 export const run: CallbackFunction = async (client) => {
 	loadPrefixes(client);

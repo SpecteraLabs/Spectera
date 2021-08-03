@@ -1,4 +1,4 @@
 dist/
 node_modules/
-src/config.json
+config.json
 src/database/mongo.ts

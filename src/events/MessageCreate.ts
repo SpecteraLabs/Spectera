@@ -1,15 +1,10 @@
 import { Message } from 'discord.js';
 import { CallbackFunction } from '../interfaces/Event';
-import ConfigJSON from '../config.json';
 import { Command } from '../interfaces/Command';
-import { Obligator } from '../client/Client';
-import { mongo } from '../database/mongo';
-import { commandPrefixSchema } from '../database/schemas/Prefix_schema';
-const { prefix: globalPrefix } = ConfigJSON;
-export const guildPrefixes = {};
+import { guildPrefixes } from '../LoadPrefixes';
 
 export const run: CallbackFunction = async (client, message: Message) => {
-	const prefix = guildPrefixes[message.guild.id] || globalPrefix;
+	const prefix = guildPrefixes[message.guild.id];
 
 	if (message.author.bot || !message.guild) return;
 	if (message.content.toLowerCase().startsWith(prefix)) {
@@ -28,14 +23,3 @@ export const run: CallbackFunction = async (client, message: Message) => {
 };
 
 export const name: string = 'messageCreate';
-export const loadPrefixes = async (client: Obligator) => {
-	await mongo().then(async () => {
-		for (const guild of client.guilds.cache) {
-			const guildId = guild[1].id;
-
-			const result = await commandPrefixSchema.findOne({ _id: guildId });
-			guildPrefixes[guildId] = result ? result.prefix : globalPrefix;
-			client.logger.info(result);
-		}
-	});
-};
