@@ -58,3 +58,4 @@ export const run: CallbackFunction = async (client, message, args) => {
 
 export const name: string = 'help';
 export const category: string = 'misc';
+export const usage: string = '<command>'

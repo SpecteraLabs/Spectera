@@ -10,4 +10,4 @@ export const name: string = 'ping';
 export const category: string = 'misc';
 export const aliases: string[] = ['latency', 'runtime'];
 export const description: string = "Shows bot's Latency in milliseconds";
-export const usage: string ='ping'
+export const usage: string =''
