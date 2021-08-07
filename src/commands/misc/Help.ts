@@ -4,7 +4,7 @@ import { EmbedFieldData, Message, MessageEmbed } from 'discord.js';
 import { Anything } from '../../interfaces/Anything';
 import { guildPrefixes } from '../../LoadPrefixes';
 
-export const run: CallbackFunction = async (client, message: Message, args) => {
+export const run: CallbackFunction = async (client, message, args) => {
 	const prefix = guildPrefixes[message.guild.id];
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
 		(category: string) => {
@@ -38,13 +38,13 @@ export const run: CallbackFunction = async (client, message: Message, args) => {
 						.filter((data) => typeof data[1] != 'function')
 						.map((data) =>
 							data[0] == 'usage'
-								? `**Usage**: ${prefix}${(cmd as Anything).name} ${data[1]}`
+								? `**Usage**: \`\`\`yaml\n${prefix}${(cmd as Anything).name} ${data[1]}\`\`\``
 								: `**${data[0][0].toUpperCase() + data[0].slice(1)}**: ${
 										data[1].map
-											? data[1].map((d: unknown) => `**${d}**`).join(', ')
+											? data[1].map((d: unknown) => `\`${d}\``).join(', ')
 											: typeof data[1] == 'number'
-											? `**${ms(data[1], { long: true })}**`
-											: `**${data[1]}**`
+											? `\`${ms(data[1], { long: true })}\``
+											: `\`${data[1]}\``
 								  }`
 						)
 						.join('\n'),

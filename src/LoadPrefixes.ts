@@ -1,7 +1,7 @@
 import { mongo } from "./database/mongo";
 import { commandPrefixSchema } from "./database/schemas/Prefix_schema";
 import { Obligator } from "./client/Client";
-import * as ConfigJSON from '../config.json';
+import ConfigJSON from '../config.json';
 const { prefix: globalPrefix } = ConfigJSON;
 export const guildPrefixes = {}
 
@@ -12,7 +12,7 @@ export const loadPrefixes = async (client: Obligator) => {
 
 			const result = await commandPrefixSchema.findOne({ _id: guildId });
 			guildPrefixes[guildId] = result ? result.prefix : globalPrefix;
-			client.logger.info(result);
+			client.logger.info(guildPrefixes);
 		}
 	});
 };
