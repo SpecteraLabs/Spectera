@@ -1,8 +1,8 @@
 import ms from 'ms';
 import { CallbackFunction, Command } from '../../interfaces/Command';
-import { EmbedFieldData, Message, MessageEmbed } from 'discord.js';
+import { EmbedFieldData, MessageEmbed } from 'discord.js';
 import { Anything } from '../../interfaces/Anything';
-import { guildPrefixes } from '../../LoadPrefixes';
+import { guildPrefixes } from '../../database/LoadPrefixes';
 
 export const run: CallbackFunction = async (client, message, args) => {
 	const prefix = guildPrefixes[message.guild.id];

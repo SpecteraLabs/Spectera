@@ -13,7 +13,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"consola": "^2.15.3",
-		"discord.js": "^13.0.0-dev.t1627949059.35fa3b3",
+		"discord.js": "^13.0.0",
 		"glob": "^7.1.7",
 		"mongoose": "^5.13.5",
 		"ms": "^2.1.3"

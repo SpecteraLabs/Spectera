@@ -1,4 +1,4 @@
-import { loadPrefixes } from '../LoadPrefixes';
+import { loadPrefixes } from '../database/LoadPrefixes';
 import { CallbackFunction } from '../interfaces/Event';
 
 
