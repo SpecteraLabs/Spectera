@@ -4,23 +4,28 @@ import {
 	Collection,
 	Message,
 	MessageEmbed,
-	MessageEmbedOptions,
-	Channel
+	MessageEmbedOptions
 } from 'discord.js';
 import glob from 'glob';
 import { promisify } from 'util';
 import { Anything } from '../interfaces/Anything';
+import { Colors } from '../interfaces/Colors';
 import { Command } from '../interfaces/Command';
 import { Config } from '../interfaces/Config';
+import { Emotes } from '../interfaces/Emotes';
 import { Event } from '../interfaces/Event';
+import * as BotColors from './config/Colors';
+import * as BotEmotes from './config/Emotes'
 
 const globPromise = promisify(glob);
 
 export class Obligator extends Client {
 	public logger: Consola = consola;
+	public colors: Colors = BotColors;
+	public emotes: Emotes = BotEmotes;
 	public categories: Set<string> = new Set();
 	public commands: Collection<string, Command> = new Collection();
-	public snipes: Collection<Channel, Anything> = new Collection();
+	public snipes: Collection<any, Anything> = new Collection();
 	public aliases: Collection<string, string> = new Collection();
 	public events: Collection<string, Event> = new Collection();
 	public cooldowns: Collection<string, number> = new Collection();

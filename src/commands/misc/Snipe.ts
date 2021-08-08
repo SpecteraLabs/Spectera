@@ -1,4 +1,4 @@
-import { Message, MessageEmbed } from "discord.js";
+import { MessageEmbed } from "discord.js";
 import { CallbackFunction } from "../../interfaces/Command";
 
 export const run: CallbackFunction = async (client, message, args) => {
@@ -13,3 +13,4 @@ export const run: CallbackFunction = async (client, message, args) => {
 		if(msg.image)embed.setImage(msg.image); 
 	message.channel.send({ embeds: [embed] });
 }
+export const name = 'snipe';
