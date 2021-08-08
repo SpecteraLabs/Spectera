@@ -5,9 +5,11 @@ import {
 	Message,
 	MessageEmbed,
 	MessageEmbedOptions,
+	Channel
 } from 'discord.js';
 import glob from 'glob';
 import { promisify } from 'util';
+import { Anything } from '../interfaces/Anything';
 import { Command } from '../interfaces/Command';
 import { Config } from '../interfaces/Config';
 import { Event } from '../interfaces/Event';
@@ -18,6 +20,7 @@ export class Obligator extends Client {
 	public logger: Consola = consola;
 	public categories: Set<string> = new Set();
 	public commands: Collection<string, Command> = new Collection();
+	public snipes: Collection<Channel, Anything> = new Collection();
 	public aliases: Collection<string, string> = new Collection();
 	public events: Collection<string, Event> = new Collection();
 	public cooldowns: Collection<string, number> = new Collection();

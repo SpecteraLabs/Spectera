@@ -1,4 +1,4 @@
-import { loadPrefixes } from '../database/LoadPrefixes';
+import { loadPrefixes } from '../mongodb/LoadPrefixes';
 import { CallbackFunction } from '../interfaces/Event';
 
 

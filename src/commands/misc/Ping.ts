@@ -6,8 +6,8 @@ export const run: CallbackFunction = async (client, message) => {
 	);
 };
 
-export const name: string = 'ping';
-export const category: string = 'misc';
-export const aliases: string[] = ['latency', 'runtime'];
-export const description: string = "Shows bot's Latency in milliseconds";
-export const usage: string =''
+export const name = 'ping';
+export const category = 'misc';
+export const aliases = ['latency', 'runtime'];
+export const description = "Shows bot's Latency in milliseconds";
+export const args = false

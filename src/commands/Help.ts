@@ -1,13 +1,13 @@
 import ms from 'ms';
-import { CallbackFunction, Command } from '../../interfaces/Command';
+import { CallbackFunction, Command } from '../interfaces/Command';
 import { EmbedFieldData, MessageEmbed } from 'discord.js';
-import { Anything } from '../../interfaces/Anything';
-import { guildPrefixes } from '../../database/LoadPrefixes';
+import { Anything } from '../interfaces/Anything';
+import { guildPrefixes } from '../mongodb/LoadPrefixes';
 
 export const run: CallbackFunction = async (client, message, args) => {
 	const prefix = guildPrefixes[message.guild.id];
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
-		(category: string) => {
+		(category) => {
 			return {
 				name: `${category[0].toUpperCase() + category.slice(1)} [${
 					client.commands.filter(
@@ -56,6 +56,7 @@ export const run: CallbackFunction = async (client, message, args) => {
 	});
 };
 
-export const name: string = 'help';
-export const category: string = 'misc';
-export const usage: string = '<command>'
+export const name = 'help';
+export const category = 'misc';
+export const usage = '<command>';
+export const args = true

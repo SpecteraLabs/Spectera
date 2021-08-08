@@ -10,4 +10,6 @@ export interface Command {
 	category: string;
 	aliases?: string[];
 	run: CallbackFunction;
+	args: boolean;
+	usage?: string;
 }
