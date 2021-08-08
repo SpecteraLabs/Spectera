@@ -4,7 +4,7 @@ import {
 	Collection,
 	Message,
 	MessageEmbed,
-	MessageEmbedOptions
+	MessageEmbedOptions,
 } from 'discord.js';
 import glob from 'glob';
 import { promisify } from 'util';
@@ -15,7 +15,7 @@ import { Config } from '../interfaces/Config';
 import { Emotes } from '../interfaces/Emotes';
 import { Event } from '../interfaces/Event';
 import * as BotColors from './config/Colors';
-import * as BotEmotes from './config/Emotes'
+import * as BotEmotes from './config/Emotes';
 
 const globPromise = promisify(glob);
 

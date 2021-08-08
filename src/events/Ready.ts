@@ -1,7 +1,6 @@
 import { loadPrefixes } from '../mongodb/LoadPrefixes';
 import { CallbackFunction } from '../interfaces/Event';
 
-
 export const run: CallbackFunction = async (client) => {
 	loadPrefixes(client);
 	const activities = [

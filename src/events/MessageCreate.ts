@@ -19,15 +19,15 @@ export const run: CallbackFunction = async (client, message: Message) => {
 		command
 			.run(client, message, args)
 			.catch((err: any) => client.logger.error(err));
-			if (command.args && !args.length) {
-				let reply = `You didn't provide any arguments, ${message.author}!`;
-			
-				if (command.usage) {
-					reply += `\nIncorrect syntax, Use \`${prefix}${command.name} ${command.usage}\``;
-				}
-			
-				return message.reply(reply);
+		if (command.args && !args.length) {
+			let reply = `You didn't provide any arguments, ${message.author}!`;
+
+			if (command.usage) {
+				reply += `\nIncorrect syntax, Use \`${prefix}${command.name} ${command.usage}\``;
 			}
+
+			return message.reply(reply);
+		}
 	}
 };
 

@@ -38,7 +38,9 @@ export const run: CallbackFunction = async (client, message, args) => {
 						.filter((data) => typeof data[1] != 'function')
 						.map((data) =>
 							data[0] == 'usage'
-								? `**Usage**: \`\`\`yaml\n${prefix}${(cmd as Anything).name} ${data[1]}\`\`\``
+								? `**Usage**: \`\`\`yaml\n${prefix}${(cmd as Anything).name} ${
+										data[1]
+								  }\`\`\``
 								: `**${data[0][0].toUpperCase() + data[0].slice(1)}**: ${
 										data[1].map
 											? data[1].map((d: unknown) => `\`${d}\``).join(', ')
@@ -59,4 +61,4 @@ export const run: CallbackFunction = async (client, message, args) => {
 export const name = 'help';
 export const category = 'misc';
 export const usage = '<command>';
-export const args = true
+export const args = true;

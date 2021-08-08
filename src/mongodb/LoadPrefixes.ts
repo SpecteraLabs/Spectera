@@ -1,9 +1,9 @@
-import { mongo } from "./mongo";
-import { commandPrefixSchema } from "./schemas/Prefix_schema";
-import { Obligator } from "../client/Client";
+import { mongo } from './mongo';
+import { commandPrefixSchema } from './schemas/Prefix_schema';
+import { Obligator } from '../client/Client';
 import ConfigJSON from '../../config.json';
 const { prefix: globalPrefix } = ConfigJSON;
-export const guildPrefixes = {}
+export const guildPrefixes = {};
 
 export const loadPrefixes = async (client: Obligator) => {
 	await mongo().then(async () => {
