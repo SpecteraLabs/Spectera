@@ -2,10 +2,9 @@ import ms from 'ms';
 import { CallbackFunction, Command } from '../interfaces/Command';
 import { EmbedFieldData, MessageEmbed } from 'discord.js';
 import { Anything } from '../interfaces/Anything';
-import { guildPrefixes } from '../mongodb/LoadPrefixes';
 
 export const run: CallbackFunction = async (client, message, args) => {
-	const prefix = guildPrefixes[message.guild.id];
+	const prefix = client.prefixes.get(message.guildId)
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
 		(category) => {
 			return {
@@ -61,4 +60,3 @@ export const run: CallbackFunction = async (client, message, args) => {
 export const name = 'help';
 export const category = 'misc';
 export const usage = '<command>';
-export const args = true;

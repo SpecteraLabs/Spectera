@@ -2,7 +2,7 @@ import { Collection, Message, MessageEmbed, Snowflake } from 'discord.js';
 import { CallbackFunction } from '../interfaces/Event';
 import { messageLogSchema } from '../mongodb/schemas/Logging_schema';
 
-export const run: CallbackFunction = async (client, messages) => {
+export const run: CallbackFunction = async (client, messages: Collection<Snowflake, Message>) => {
 	const ms = messages.first();
 	const guildId = ms.guild.id;
 	const result = await messageLogSchema.findOne({ _id: guildId });
@@ -13,13 +13,13 @@ export const run: CallbackFunction = async (client, messages) => {
 	for (const message of messages.values()) {
 		if (message.partial) await message.fetch();
 		if (message.channel.partial) await message.channel.fetch();
-		if (message.channel.type != 'GUILD_TEXT') return;
+		if (ms.channel.type != 'GUILD_TEXT' || message.channel.type != "GUILD_TEXT") return;
 		count++;
 		embed.setTitle(`${count} messages purged in #${ms.channel.name}`);
 		value += `[${message.author.tag}]: ${message.content}\n`;
 		embed.setDescription(`${value}`);
 	}
-	const channel = ms.guild.channels.cache.find(
+	const channel: any = ms.guild.channels.cache.find(
 		(ch) => ch.id === result.channelId
 	);
 	channel.send({ embeds: [embed] });

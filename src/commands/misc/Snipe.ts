@@ -14,3 +14,4 @@ export const run: CallbackFunction = async (client, message, args) => {
 	message.channel.send({ embeds: [embed] });
 };
 export const name = 'snipe';
+export const category = 'misc';

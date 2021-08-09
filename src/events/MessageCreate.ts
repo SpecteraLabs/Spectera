@@ -1,10 +1,9 @@
 import { Message } from 'discord.js';
 import { CallbackFunction } from '../interfaces/Event';
 import { Command } from '../interfaces/Command';
-import { guildPrefixes } from '../mongodb/LoadPrefixes';
 
 export const run: CallbackFunction = async (client, message: Message) => {
-	const prefix = guildPrefixes[message.guild.id];
+	const prefix = client.prefixes.get(message.guildId)
 
 	if (message.author.bot || !message.guild) return;
 	if (message.content.toLowerCase().startsWith(prefix)) {

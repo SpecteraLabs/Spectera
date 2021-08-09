@@ -5,6 +5,7 @@ import {
 	Message,
 	MessageEmbed,
 	MessageEmbedOptions,
+	Snowflake
 } from 'discord.js';
 import glob from 'glob';
 import { promisify } from 'util';
@@ -23,6 +24,7 @@ export class Obligator extends Client {
 	public logger: Consola = consola;
 	public colors: Colors = BotColors;
 	public emotes: Emotes = BotEmotes;
+	public prefixes: Collection<Snowflake, string> = new Collection();
 	public categories: Set<string> = new Set();
 	public commands: Collection<string, Command> = new Collection();
 	public snipes: Collection<any, Anything> = new Collection();
