@@ -14,7 +14,7 @@ export const run: CallbackFunction = async (client, message: Message) => {
 	});
 	const guildId = message.guild.id;const result = await messageLogSchema.findOne({ _id: guildId });
 	if (!result) return;
-	const ochannel: any = message.guild.channels.cache.find(
+	const ochannel = message.guild.channels.cache.find(
 		(ch: Channel) => ch.id === result.channelId
 		);
 		if (message.channel.type != "GUILD_TEXT") return;
@@ -26,7 +26,8 @@ export const run: CallbackFunction = async (client, message: Message) => {
 		.setColor(client.colors.error)
 		.setFooter(`ID: ${message.member.user.id}`)
 		.setTimestamp();
-		if (message.attachments.filter(a => typeof a.height == 'number' && typeof a.width == 'number')) embed.setImage(`${message.attachments}`);
+	if (message.attachments) embed.setImage(`${message.attachments.first()}`);
+	if (!ochannel.isText()) return;
 		ochannel.send({ embeds: [embed] });
 };
 export const name = 'messageDelete';

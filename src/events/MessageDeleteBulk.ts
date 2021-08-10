@@ -19,9 +19,10 @@ export const run: CallbackFunction = async (client, messages: Collection<Snowfla
 		value += `[${message.author.tag}]: ${message.content}\n`;
 		embed.setDescription(`${value}`);
 	}
-	const channel: any = ms.guild.channels.cache.find(
+	const channel = ms.guild.channels.cache.find(
 		(ch) => ch.id === result.channelId
 	);
+	if (!channel.isText()) return;
 	channel.send({ embeds: [embed] });
 };
 export const name = 'messageDeleteBulk';
