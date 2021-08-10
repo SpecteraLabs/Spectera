@@ -1,4 +1,4 @@
-import { model, Schema } from "mongoose";
+import { model, Schema } from 'mongoose';
 
 const MuteSchema = new Schema({
 	_id: {
@@ -10,6 +10,6 @@ const MuteSchema = new Schema({
 		type: String,
 		required: true,
 	},
-})
+});
 
-export const muteRoleSchema = model('mute-role-schema', MuteSchema)
+export const muteRoleSchema = model('mute-role-schema', MuteSchema);

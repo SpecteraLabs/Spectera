@@ -1,8 +1,12 @@
+import { Message } from 'discord.js';
 import { CallbackFunction } from '../../interfaces/Event';
 
-export const run: CallbackFunction = async (client, message) => {
-	message.reply(
-		`:ping_pong: Pong! Latency is **${Math.round(client.ws.ping)}**ms`
+export const run: CallbackFunction = async (client, message: Message) => {
+	const msg = await message.reply('Pinging....');
+	msg.edit(
+		`:ping_pong: Pong!\n**Latency**: ${Math.round(
+			client.ws.ping
+		)}ms\n**Api Latency**: ${msg.createdTimestamp - message.createdTimestamp}ms`
 	);
 };
 

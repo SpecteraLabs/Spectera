@@ -5,7 +5,7 @@ import {
 	Message,
 	MessageEmbed,
 	MessageEmbedOptions,
-	Snowflake
+	Snowflake,
 } from 'discord.js';
 import glob from 'glob';
 import { promisify } from 'util';
@@ -30,7 +30,8 @@ export class Obligator extends Client {
 	public snipes: Collection<any, Anything> = new Collection();
 	public aliases: Collection<string, string> = new Collection();
 	public events: Collection<string, Event> = new Collection();
-	public cooldowns: Collection<string, number> = new Collection();
+	public cooldowns: Collection<string, number | Collection<string, number>> =
+		new Collection();
 	public config: Config;
 	public constructor() {
 		super({

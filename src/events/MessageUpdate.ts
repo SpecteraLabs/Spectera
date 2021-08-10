@@ -2,7 +2,11 @@ import { Channel, Message, MessageEmbed } from 'discord.js';
 import { CallbackFunction } from '../interfaces/Event';
 import { messageLogSchema } from '../mongodb/schemas/Logging_schema';
 
-export const run: CallbackFunction = async (client, oldMessage: Message, newMessage: Message) => {
+export const run: CallbackFunction = async (
+	client,
+	oldMessage: Message,
+	newMessage: Message
+) => {
 	if (newMessage.partial || oldMessage.partial) return;
 	const wasMessage = oldMessage.content;
 	const isMessage = newMessage.content;

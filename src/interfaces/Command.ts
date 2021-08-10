@@ -9,6 +9,7 @@ export interface Command {
 	name: string;
 	category: string;
 	aliases?: string[];
+	cooldown?: number;
 	run: CallbackFunction;
 	args: boolean;
 	usage?: string;

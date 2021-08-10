@@ -4,7 +4,7 @@ import { EmbedFieldData, MessageEmbed } from 'discord.js';
 import { Anything } from '../interfaces/Anything';
 
 export const run: CallbackFunction = async (client, message, args) => {
-	const prefix = client.prefixes.get(message.guildId)
+	const prefix = client.prefixes.get(message.guildId);
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
 		(category) => {
 			return {
