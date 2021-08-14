@@ -10,16 +10,6 @@
     "@sapphire/framework": "^2.0.0-next.d4386ff5.0",
     "discord.js": "^13.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn dlx @yarnpkg/doctor && lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.ts": "prettier --write",
-    "*.js": "prettier --write"
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-angular"
@@ -52,7 +42,7 @@
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
     "lint": "prettier --write .",
-    "build": "tsc"
+    "build": "tsc --diagnostics"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
