@@ -4,6 +4,4 @@ dist/
 !.yarn/sdks
 !.yarn/versions
 node_modules/
-/.env
-/src/index.ts
-/config.json
+/src/config.json

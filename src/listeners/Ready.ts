@@ -7,7 +7,6 @@ export class Ready extends Listener {
 			once: true,
 		});
 	}
-
 	async run() {
 		this.container.logger.info(`${this.container.client.user.tag} is ready!`);
 	}
