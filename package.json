@@ -2,7 +2,7 @@
 	"name": "randomdir",
 	"version": "3.0.0",
 	"description": "",
-	"main": "dist/index.js",
+	"main": "dist/src/index.js",
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
@@ -42,7 +42,7 @@
 	},
 	"scripts": {
 		"ts-start": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
-    "start": "tsc && node .",
+    "start": "node .",
 		"lint": "prettier --write .",
 		"build": "tsc --diagnostics",
 		"build:js": "tsc"
