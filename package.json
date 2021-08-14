@@ -1,8 +1,8 @@
 {
 	"name": "randomdir",
-	"version": "1.0.0",
+	"version": "3.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
