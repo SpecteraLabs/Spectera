@@ -41,7 +41,8 @@
 		}
 	},
 	"scripts": {
-		"start": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+		"ts-start": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+    "start": "tsc && node .",
 		"lint": "prettier --write .",
 		"build": "tsc --diagnostics",
 		"build:js": "tsc"

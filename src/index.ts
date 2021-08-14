@@ -1,5 +1,6 @@
 import { SapphireClient } from '@sapphire/framework';
-import { token } from '../config.json';
+import ConfigJSON from '../config.json';
+const { token } = ConfigJSON;
 
 const client = new SapphireClient({
 	defaultPrefix: '+',
