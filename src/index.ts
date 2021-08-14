@@ -1,5 +1,5 @@
 import { SapphireClient } from '@sapphire/framework';
-import { token } from '../config.json'
+import { token } from '../config.json';
 
 const client = new SapphireClient({
 	defaultPrefix: '+',
@@ -7,4 +7,4 @@ const client = new SapphireClient({
 	partials: ['GUILD_MEMBER', 'CHANNEL', 'MESSAGE', 'USER', 'REACTION'],
 });
 
-client.login(token)
+client.login(token);
