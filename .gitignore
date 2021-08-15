@@ -5,3 +5,4 @@ dist/
 !.yarn/versions
 node_modules/
 /src/config.json
+/src/index.ts
