@@ -47,12 +47,16 @@
 		"start": "yarn lint && tsc && node .",
 		"lint": "prettier --write .",
 		"build": "tsc --diagnostics",
-		"build:js": "tsc"
+		"build:js": "tsc",
+		"check": "yarn prettier -c . && yarn eslint . --ext .ts"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^13.1.0",
 		"@commitlint/config-angular": "^13.1.0",
 		"@types/node": "^16.6.1",
+		"@typescript-eslint/eslint-plugin": "latest",
+		"@typescript-eslint/parser": "latest",
+		"eslint": "^7.32.0",
 		"husky": "^7.0.1",
 		"lint-staged": "^11.1.2",
 		"prettier": "^2.3.2",

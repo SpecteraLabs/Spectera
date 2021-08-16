@@ -1,8 +1,5 @@
 dist/
-!.yarn/cache
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
+.yarn/
 node_modules/
 /src/config.json
 /src/index.ts

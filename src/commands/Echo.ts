@@ -13,6 +13,6 @@ export class Echo extends Command {
 			.pick('guildTextChannel')
 			.catch(() => message.channel);
 		const msg = await args.rest('string');
-		destination.send({ content: msg });
+		return destination.send({ content: msg });
 	}
 }

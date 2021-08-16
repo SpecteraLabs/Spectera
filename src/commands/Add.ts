@@ -1,10 +1,5 @@
 import { ApplyOptions } from '@sapphire/decorators';
-import {
-	Args,
-	Command,
-	CommandOptions,
-	PieceContext,
-} from '@sapphire/framework';
+import { Args, Command, CommandOptions } from '@sapphire/framework';
 import { Message } from 'discord.js';
 
 @ApplyOptions<CommandOptions>({

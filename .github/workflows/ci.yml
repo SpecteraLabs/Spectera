@@ -13,4 +13,4 @@ jobs:
           node-version: 16
       - run: yarn --frozen-lockfile
       - run: yarn build
-      - run: yarn prettier -c .
+      - run: yarn check
