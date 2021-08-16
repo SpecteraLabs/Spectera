@@ -48,7 +48,7 @@
 		"lint": "prettier --write .",
 		"build": "tsc --diagnostics",
 		"build:js": "tsc",
-		"check": "yarn prettier -c . && yarn eslint . --ext .ts"
+		"check:lint": "yarn prettier -c . && yarn eslint . --ext .ts"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^13.1.0",
