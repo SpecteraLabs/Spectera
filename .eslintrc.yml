@@ -12,23 +12,28 @@ plugins:
   - '@typescript-eslint'
 rules:
   brace-style:
-    - error
+    - warn
     - stroustrup
     - allowSingleLine: true
-  comma-spacing: error
-  comma-style: error
+  comma-spacing: warn
+  comma-style: warn
   curly:
-    - error
+    - warn
     - multi-line
     - consistent
   dot-location:
-    - error
+    - warn
     - property
   indent:
-    - error
+    - warn
     - tab
   semi:
-    - error
+    - warn
     - always
-  no-var: error
+  no-console: off
+  no-empty-function: warn
+  no-lonely-if: warn
+  no-var: warn
+  no-trailing-spaces: error
+  prefer-const: warn
   '@typescript-eslint/explicit-module-boundary-types': off

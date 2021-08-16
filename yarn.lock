@@ -354,11 +354,11 @@ __metadata:
   linkType: hard
 
 "@sapphire/decorators@npm:^3.0.0-next.6e8314f3.0":
-  version: 3.0.0-next.6e8314f3.0
-  resolution: "@sapphire/decorators@npm:3.0.0-next.6e8314f3.0"
+  version: 3.0.0-pr-144.6f602eee.0
+  resolution: "@sapphire/decorators@npm:3.0.0-pr-144.6f602eee.0"
   dependencies:
     tslib: 2.x
-  checksum: 6bedba26e712ea3ee7351e675078277fea0bf37f35e77838046e2aa291678b7d5a1e2849d8773691482d8b0e3b28aab57a6a738284b29abbd03eb5c16983a60d
+  checksum: d594af93f4a8fdc0728c35a3e3425f0224539cbc919342c7cddf5711b001e045f0cae515836624b4cbdd4f0af58f555dcc2644174f7955f3d5d92c2895151e95
   languageName: node
   linkType: hard
 
@@ -403,8 +403,8 @@ __metadata:
   linkType: hard
 
 "@sapphire/framework@npm:^2.0.0-next.d4386ff5.0":
-  version: 2.0.0-next.d4386ff5.0
-  resolution: "@sapphire/framework@npm:2.0.0-next.d4386ff5.0"
+  version: 2.0.0-pr-244.fc651b10.0
+  resolution: "@sapphire/framework@npm:2.0.0-pr-244.fc651b10.0"
   dependencies:
     "@sapphire/discord-utilities": ^2.1.5
     "@sapphire/discord.js-utilities": next
@@ -413,7 +413,7 @@ __metadata:
     "@sapphire/utilities": ^2.0.1
     lexure: ^0.17.0
     tslib: ^2.3.0
-  checksum: d7be6667e3db6b4078d9bd063c000f770a272d8cf16be5859a8dcdaedc4be09d4d6c99fca2199d9fb30bd4f6be75c8a42e237688f66af28dbdf7f81ef4915d2f
+  checksum: ead8e82de914423ad38abcfd3ae462015f5d6b8275ca74eadd0765f86fbf613c95d3050e654adc49b52e4dd8941716325c7d4656fdbd2e7c8dcb3b6c8a7ad408
   languageName: node
   linkType: hard
 
