@@ -10,6 +10,7 @@
 		"@sapphire/decorators": "^3.0.0-next.6e8314f3.0",
 		"@sapphire/discord.js-utilities": "^2.0.2",
 		"@sapphire/framework": "^2.0.0-next.d4386ff5.0",
+		"@sapphire/plugin-subcommands": "next",
 		"@sapphire/snowflake": "^2.0.0",
 		"@sapphire/utilities": "^2.1.0-next.6e8314f3.0",
 		"discord.js": "^13.1.0",
@@ -55,14 +56,14 @@
 	"devDependencies": {
 		"@commitlint/cli": "^13.1.0",
 		"@commitlint/config-angular": "^13.1.0",
-		"@types/node": "^16.6.1",
-		"@typescript-eslint/eslint-plugin": "latest",
-		"@typescript-eslint/parser": "latest",
+		"@types/node": "^16.7.1",
+		"@typescript-eslint/eslint-plugin": "^4.29.2",
+		"@typescript-eslint/parser": "^4.29.2",
 		"eslint": "^7.32.0",
 		"husky": "^7.0.1",
 		"lint-staged": "^11.1.2",
 		"prettier": "^2.3.2",
-		"ts-node": "^10.2.0",
+		"ts-node": "^10.2.1",
 		"ts-node-dev": "^1.1.8",
 		"typescript": "^4.3.5"
 	}

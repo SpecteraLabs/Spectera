@@ -12,5 +12,9 @@ export class Ready extends Listener {
 		await mongo().then(() => {
 			this.container.logger.info('Connected to database');
 		});
+		const commands = this.container.stores.get('commands');
+		commands.forEach((command) => {
+			this.container.logger.info(command.name);
+		});
 	}
 }

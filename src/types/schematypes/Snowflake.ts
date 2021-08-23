@@ -3,7 +3,7 @@ import { Schema, SchemaType } from 'mongoose';
 
 export class Snowflake extends SchemaType {
 	constructor(key, options) {
-		super(key, options, 'flake');
+		super(key, options, 'Snowflake');
 	}
 
 	cast(val) {

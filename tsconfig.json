@@ -14,6 +14,6 @@
 		"skipDefaultLibCheck": true,
 		"resolveJsonModule": true
 	},
-	"include": ["src", "src/listeners"],
+	"include": ["src"],
 	"exclude": ["node_modules", "**/*.spec.ts"]
 }

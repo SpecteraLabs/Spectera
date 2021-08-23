@@ -3,7 +3,6 @@ import { Command, CommandOptions } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 @ApplyOptions<CommandOptions>({
-	name: 'ping',
 	description: 'Send back the latency of the bot',
 })
 export class Ping extends Command {

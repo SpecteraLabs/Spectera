@@ -1,13 +1,13 @@
 import { Args, Command, CommandOptions } from '@sapphire/framework';
-import { ApplyOptions } from '@sapphire/decorators';
+import { ApplyOptions, RequiresUserPermissions } from '@sapphire/decorators';
 import type { Message } from 'discord.js';
 
 @ApplyOptions<CommandOptions>({
-	name: 'echo',
 	aliases: ['speak', 'say', 'parrot'],
 	description: 'Replies with whatever you say',
 })
 export class Echo extends Command {
+	@RequiresUserPermissions('MANAGE_CHANNELS')
 	async run(message: Message, args: Args) {
 		const destination = await args
 			.pick('guildTextChannel')
