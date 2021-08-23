@@ -1,13 +1,16 @@
-import { Listener, PieceContext } from '@sapphire/framework';
+import { Listener, ListenerOptions } from '@sapphire/framework';
+import { ApplyOptions } from '@sapphire/decorators';
+import { mongo } from '../database/mongo';
 
+@ApplyOptions<ListenerOptions>({
+	event: 'ready',
+	once: true,
+})
 export class Ready extends Listener {
-	constructor(context: PieceContext) {
-		super(context, {
-			name: 'ready',
-			once: true,
-		});
-	}
 	async run() {
 		this.container.logger.info(`${this.container.client.user.tag} is ready!`);
+		await mongo().then(() => {
+			this.container.logger.info('Connected to database');
+		});
 	}
 }

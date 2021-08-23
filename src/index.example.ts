@@ -1,5 +1,5 @@
 import { SapphireClient } from '@sapphire/framework';
-import { token } from './config.example.json';
+import { token } from './config/config.example.json';
 
 const client = new SapphireClient({
 	defaultPrefix: '+',

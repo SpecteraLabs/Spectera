@@ -33,7 +33,6 @@ rules:
   no-console: off
   no-empty-function: warn
   no-lonely-if: warn
-  no-var: warn
   no-trailing-spaces: error
   prefer-const: warn
   '@typescript-eslint/explicit-module-boundary-types': off
