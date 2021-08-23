@@ -3,7 +3,7 @@ import { ApplyOptions } from '@sapphire/decorators';
 import { mongo } from '../database/mongo';
 
 @ApplyOptions<ListenerOptions>({
-	event: 'ready',
+	name: 'ready',
 	once: true,
 })
 export class Ready extends Listener {
@@ -11,10 +11,6 @@ export class Ready extends Listener {
 		this.container.logger.info(`${this.container.client.user.tag} is ready!`);
 		await mongo().then(() => {
 			this.container.logger.info('Connected to database');
-		});
-		const commands = this.container.stores.get('commands');
-		commands.forEach((command) => {
-			this.container.logger.info(command.name);
 		});
 	}
 }

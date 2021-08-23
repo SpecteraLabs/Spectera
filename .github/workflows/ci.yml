@@ -13,5 +13,4 @@ jobs:
           node-version: 16
       - run: yarn set version latest
       - run: yarn
-      - run: yarn build
       - run: yarn check:lint
