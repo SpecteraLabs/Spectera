@@ -11,6 +11,6 @@ export class Snowflake extends SchemaType {
 		return snowflake;
 	}
 }
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+
+// @ts-expect-error Code is valid but typescript doesn't know
 Schema.Types.Snowflake = Snowflake;

@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"@sapphire/decorators": "^3.0.0-next.6e8314f3.0",
-		"@sapphire/discord.js-utilities": "^2.0.2",
+		"@sapphire/discord.js-utilities": "^3.0.0-next.2c2df24f.0",
 		"@sapphire/framework": "^2.0.0-next.a48b0764.0",
 		"@sapphire/plugin-subcommands": "^2.0.0-next.7a9739f.0",
 		"@sapphire/snowflake": "^2.0.0",

@@ -9,7 +9,24 @@ import { commandPrefixSchema } from '../../database/schemas/PrefixSchema';
 })
 export class Prefix extends SubCommandPluginCommand {
 	public async set(message: Message, args: Args) {
-		/* empty for now */ console.log(message, args);
+		let prefix = await args.pick('string');
+		await message.guild.me.setNickname(`[${prefix}] Obligator`);
+		prefix = prefix.toLowerCase();
+		await commandPrefixSchema.findOneAndUpdate(
+			{
+				_id: message.guildId,
+			},
+			{
+				_id: message.guildId,
+				prefix,
+			},
+			{
+				upsert: true,
+			}
+		);
+		await message.reply({
+			content: `Successfully changed prefix of this guild`,
+		});
 	}
 	public async show(message: Message) {
 		const prefix =
