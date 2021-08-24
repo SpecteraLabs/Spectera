@@ -8,7 +8,7 @@ import { mongo } from '../database/mongo';
 })
 export class Ready extends Listener {
 	async run() {
-		this.container.logger.info(`${this.container.client.user.tag} is ready!`);
+		this.container.logger.info(`${this.container.client.user!.tag} is ready!`);
 		await mongo().then(() => {
 			this.container.logger.info('Connected to database');
 		});

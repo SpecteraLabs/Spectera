@@ -1,14 +1,14 @@
-import { Args, Command, CommandOptions } from '@sapphire/framework';
 import { ApplyOptions, RequiresUserPermissions } from '@sapphire/decorators';
 import type { Message } from 'discord.js';
+import { ObligatorCommand } from '../../lib/structures/ObligatorCommand';
 
-@ApplyOptions<CommandOptions>({
+@ApplyOptions<ObligatorCommand.Options>({
 	aliases: ['speak', 'say', 'parrot'],
 	description: 'Replies with whatever you say',
 })
-export class Echo extends Command {
+export class Echo extends ObligatorCommand {
 	@RequiresUserPermissions('MANAGE_CHANNELS')
-	async run(message: Message, args: Args) {
+	public async run(message: Message, args: ObligatorCommand.Args) {
 		const destination = await args
 			.pick('guildTextChannel')
 			.catch(() => message.channel);

@@ -2,7 +2,7 @@ import { Snowflake as SnowFlake } from '@sapphire/snowflake';
 import { Schema, SchemaType } from 'mongoose';
 
 export class Snowflake extends SchemaType {
-	constructor(key, options) {
+	constructor(key: string, options: unknown) {
 		super(key, options, 'Snowflake');
 	}
 

@@ -1,12 +1,12 @@
 import { ApplyOptions } from '@sapphire/decorators';
-import { Command, CommandOptions } from '@sapphire/framework';
 import type { Message } from 'discord.js';
+import { ObligatorCommand } from '../../lib/structures/ObligatorCommand';
 
-@ApplyOptions<CommandOptions>({
+@ApplyOptions<ObligatorCommand.Options>({
 	description: 'Send back the latency of the bot',
 })
-export class Ping extends Command {
-	async run(message: Message) {
+export class Ping extends ObligatorCommand {
+	public async run(message: Message) {
 		const msg = await message.channel.send('Ping?');
 		return msg.edit(
 			`Pong! Bot Latency ${Math.round(

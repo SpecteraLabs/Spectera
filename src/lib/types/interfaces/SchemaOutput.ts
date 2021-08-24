@@ -1,4 +1,4 @@
-import { Snowflake } from "@sapphire/snowflake";
+import type { Snowflake } from '@sapphire/snowflake';
 
 export interface SchemaOutput {
 	prefix: string;
