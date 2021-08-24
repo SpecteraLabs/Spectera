@@ -1,6 +1,6 @@
 import { ApplyOptions, RequiresUserPermissions } from '@sapphire/decorators';
 import type { Message } from 'discord.js';
-import { ObligatorCommand } from '../../lib/structures/ObligatorCommand';
+import { ObligatorCommand } from '#structures/ObligatorCommand';
 
 @ApplyOptions<ObligatorCommand.Options>({
 	aliases: ['speak', 'say', 'parrot'],

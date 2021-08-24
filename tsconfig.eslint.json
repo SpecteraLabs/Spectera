@@ -6,10 +6,6 @@
 	},
 	"include": [
 		"src",
-		"tests",
-		"scripts",
-		"ormconfig.js",
-		"babel.config.js",
-		"jest.config.ts"
+		"tests"
 	]
 }

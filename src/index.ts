@@ -1,6 +1,6 @@
 import { SapphireClient } from '@sapphire/framework';
-import { commandPrefixSchema } from './database/schemas/PrefixSchema';
-import { token } from './config/config.json';
+import { commandPrefixSchema } from '#schemas/PrefixSchema';
+import { token } from '#config/config';
 
 const client = new SapphireClient({
 	fetchPrefix: async (message) => {

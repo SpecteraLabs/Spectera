@@ -69,5 +69,14 @@
 		"ts-node": "^10.2.1",
 		"ts-node-dev": "^1.1.8",
 		"typescript": "^4.3.5"
+	},
+	"imports": {
+		"#config/*": "./dist/config/*.json",
+		"#structures/*": "./dist/lib/structures/*.js",
+		"#types/enums/*": "./dist/lib/types/enums/*.js",
+		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js",
+		"#schemas/*": "./dist/database/schemas/*.js",
+		"#database/*": "./dist/database/*.js",
+		"#Schema/*": "./dist/lib/types/SchemaTypes/*.js"
 	}
 }

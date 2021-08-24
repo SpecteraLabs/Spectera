@@ -2,8 +2,8 @@ import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
 import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import type { Message } from 'discord.js';
-import { commandPrefixSchema } from '../../database/schemas/PrefixSchema';
-import type { SchemaOutput } from '../../lib/types/interfaces/SchemaOutput';
+import { commandPrefixSchema } from '#schemas/PrefixSchema';
+import type { SchemaOutput } from '#types/interfaces/SchemaOutput';
 
 @ApplyOptions<SubCommandPluginCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],

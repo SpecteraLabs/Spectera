@@ -1,6 +1,6 @@
 import { Listener, ListenerOptions } from '@sapphire/framework';
 import { ApplyOptions } from '@sapphire/decorators';
-import { mongo } from '../database/mongo';
+import { mongo } from '#database/mongo';
 
 @ApplyOptions<ListenerOptions>({
 	name: 'ready',
