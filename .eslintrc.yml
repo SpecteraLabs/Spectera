@@ -36,3 +36,4 @@ rules:
   no-trailing-spaces: error
   prefer-const: warn
   '@typescript-eslint/explicit-module-boundary-types': off
+  '@typescript-eslint/no-namespace': off

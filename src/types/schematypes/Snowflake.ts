@@ -6,11 +6,22 @@ export class Snowflake extends SchemaType {
 		super(key, options, 'Snowflake');
 	}
 
-	cast(val) {
-		const snowflake = new SnowFlake(val);
+	cast(val: unknown) {
+		const value = Number(val);
+		if (isNaN(value)) {
+			throw new Error(`Snowflake: ${val} is not a number`);
+		}
+		const snowflake = new SnowFlake(value);
 		return snowflake;
 	}
 }
 
-// @ts-expect-error Code is valid but typescript doesn't know
 Schema.Types.Snowflake = Snowflake;
+
+declare module 'mongoose' {
+	namespace Schema {
+		namespace Types {
+			class Snowflake extends SchemaType {}
+		}
+	}
+}
