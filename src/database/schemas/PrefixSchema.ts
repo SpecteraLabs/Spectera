@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { Snowflake } from '../../types/SchemaTypes/Snowflake';
+import { Snowflake } from '../../lib/types/SchemaTypes/Snowflake';
 
 const PrefixSchema = new Schema({
 	_id: {

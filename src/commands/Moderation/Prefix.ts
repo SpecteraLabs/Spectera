@@ -3,7 +3,7 @@ import { Args } from '@sapphire/framework';
 import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import { Message } from 'discord.js';
 import { commandPrefixSchema } from '../../database/schemas/PrefixSchema';
-import { SchemaOutput } from '../../types/interfaces/SchemaOutput';
+import { SchemaOutput } from '../../lib/types/interfaces/SchemaOutput';
 
 @ApplyOptions<SubCommandPluginCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],
