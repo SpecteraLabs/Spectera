@@ -9,15 +9,13 @@
 	"dependencies": {
 		"@sapphire/decorators": "^3.0.0-next.6e8314f3.0",
 		"@sapphire/discord.js-utilities": "^3.0.0-next.2c2df24f.0",
-		"@sapphire/eslint-config": "^3.2.3",
-		"@sapphire/framework": "^2.0.0-next.a48b0764.0",
+		"@sapphire/framework": "next",
 		"@sapphire/plugin-subcommands": "^2.0.0-next.7a9739f.0",
 		"@sapphire/snowflake": "^2.0.0",
-		"@sapphire/ts-config": "^3.0.0",
 		"@sapphire/utilities": "^2.1.0-next.6e8314f3.0",
 		"discord.js": "^13.1.0",
 		"dotenv-cra": "^3.0.1",
-		"mongoose": "^5.13.7"
+		"mongoose": "^5.13.8"
 	},
 	"commitlint": {
 		"extends": [
@@ -59,9 +57,11 @@
 	"devDependencies": {
 		"@commitlint/cli": "^13.1.0",
 		"@commitlint/config-angular": "^13.1.0",
+		"@sapphire/eslint-config": "^3.2.3",
+		"@sapphire/ts-config": "^3.0.0",
 		"@types/node": "^16.7.1",
-		"@typescript-eslint/eslint-plugin": "^4.29.2",
-		"@typescript-eslint/parser": "^4.29.2",
+		"@typescript-eslint/eslint-plugin": "^4.29.3",
+		"@typescript-eslint/parser": "^4.29.3",
 		"eslint": "^7.32.0",
 		"husky": "^7.0.1",
 		"lint-staged": "^11.1.2",
@@ -77,6 +77,6 @@
 		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js",
 		"#schemas/*": "./dist/database/schemas/*.js",
 		"#database/*": "./dist/database/*.js",
-		"#Schema/*": "./dist/lib/types/SchemaTypes/*.js"
+		"#SchemaTypes/*": "./dist/lib/types/SchemaTypes/*.js"
 	}
 }

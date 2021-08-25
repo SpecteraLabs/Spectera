@@ -13,9 +13,9 @@
 			"#types/interfaces/*": ["lib/types/interfaces/*.js"],
 			"#schemas/*": ["database/schemas/*.js"],
 			"#database/*": ["database/*.js"],
-			"#SchemaTypes/*": ["lib/types/SchemaTypes/*.js"],
+			"#SchemaTypes/*": ["lib/types/SchemaTypes/*.js"]
 		}
 	},
 	"include": [".", "./**/*.json"],
-	"exclude": ["./tsconfig.json"],
+	"exclude": ["./tsconfig.json"]
 }

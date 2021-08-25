@@ -6,7 +6,7 @@ import {
 	Args as SapphireArgs,
 	CommandContext,
 	PreconditionEntryResolvable,
-	PermissionsPrecondition,
+	UserPermissionsPrecondition,
 } from '@sapphire/framework';
 import type { PermissionResolvable } from 'discord.js';
 import { PermissionLevels } from '../types/enums/PermissionLevels';
@@ -27,7 +27,7 @@ export abstract class ObligatorCommand extends Command {
 			[]) as PreconditionEntryResolvable[];
 
 		if (options.permissions) {
-			preconditions.push(new PermissionsPrecondition(options.permissions));
+			preconditions.push(new UserPermissionsPrecondition(options.permissions));
 		}
 
 		const runInPreCondition = this.resolveRunInPreCondition(
