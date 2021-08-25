@@ -7,12 +7,12 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
-		"@sapphire/decorators": "^3.0.0-next.6e8314f3.0",
-		"@sapphire/discord.js-utilities": "^3.0.0-next.2c2df24f.0",
+		"@sapphire/decorators": "next",
+		"@sapphire/discord.js-utilities": "next",
 		"@sapphire/framework": "next",
-		"@sapphire/plugin-subcommands": "^2.0.0-next.7a9739f.0",
+		"@sapphire/plugin-subcommands": "next",
 		"@sapphire/snowflake": "^2.0.0",
-		"@sapphire/utilities": "^2.1.0-next.6e8314f3.0",
+		"@sapphire/utilities": "next",
 		"discord.js": "^13.1.0",
 		"dotenv-cra": "^3.0.1",
 		"mongoose": "^5.13.8"
@@ -49,7 +49,7 @@
 	"scripts": {
 		"ts-start": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
 		"start": "yarn lint && tsc -b src && node .",
-		"lint": "prettier --write .",
+		"lint": "prettier --write . && yarn eslint . --ext .ts --fix",
 		"build": "tsc --diagnostics",
 		"build:js": "tsc",
 		"check:lint": "yarn prettier -c . && yarn eslint . --ext .ts"
