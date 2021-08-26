@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { Snowflake } from '#SchemaTypes/Snowflake';
+import type { SchemaResult } from '#types/interfaces/SchemaOutput';
 
 const PrefixSchema = new Schema({
 	_id: {
@@ -13,4 +14,7 @@ const PrefixSchema = new Schema({
 	},
 });
 
-export const commandPrefixSchema = model('guild-prefixes', PrefixSchema);
+export const commandPrefixSchema = model<SchemaResult>(
+	'guild-prefixes',
+	PrefixSchema
+);

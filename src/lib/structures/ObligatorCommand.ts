@@ -13,9 +13,13 @@ import { PermissionLevels } from '../types/enums/PermissionLevels';
 
 export abstract class ObligatorCommand extends Command {
 	public readonly permissionLevel: PermissionLevels;
+	public readonly guarded: boolean;
+	public readonly hidden: boolean;
 	public constructor(context: PieceContext, options: ObligatorCommand.Options) {
 		super(context, ObligatorCommand.resolvePreConditions(context, options));
 		this.permissionLevel = options.permissionLevel ?? PermissionLevels.Everyone;
+		this.guarded = options.guarded ?? false;
+		this.hidden = options.hidden ?? false;
 	}
 
 	protected static resolvePreConditions(
@@ -42,6 +46,12 @@ export abstract class ObligatorCommand extends Command {
 		);
 		if (permissionLevelPreCondition !== null) {
 			preconditions.push(permissionLevelPreCondition);
+		}
+		if (options.bucket && options.cooldown) {
+			preconditions.push({
+				name: 'Cooldown',
+				context: { limit: options.bucket, delay: options.cooldown },
+			});
 		}
 
 		return options;
@@ -95,6 +105,8 @@ export namespace ObligatorCommand {
 		runIn?: RunInOption[];
 		guarded?: boolean;
 		hidden?: boolean;
+		bucket?: number;
+		cooldown?: number;
 	};
 	export type Args = SapphireArgs;
 	export type Context = CommandContext;

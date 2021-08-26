@@ -1,8 +1,8 @@
 import { Snowflake as SnowFlake } from '@sapphire/snowflake';
-import { Schema, SchemaType } from 'mongoose';
+import { AnyObject, Schema, SchemaType } from 'mongoose';
 
 export class Snowflake extends SchemaType {
-	public constructor(key: string, options: unknown) {
+	public constructor(key: string, options: AnyObject) {
 		super(key, options, 'Snowflake');
 	}
 

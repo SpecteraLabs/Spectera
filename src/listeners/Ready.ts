@@ -14,14 +14,15 @@ import {
 const dev = process.env.NODE_ENV !== 'production';
 
 @ApplyOptions<ListenerOptions>({
-	event: 'ready',
 	once: true,
 })
 export class UserEvent extends Listener {
 	private readonly style = dev ? yellow : blue;
 
 	public async run() {
-		await mongo();
+		await mongo().then(() =>
+			this.container.logger.info('Connected to the database!')
+		);
 		this.printBanner();
 		this.printStoreDebugInformation();
 	}

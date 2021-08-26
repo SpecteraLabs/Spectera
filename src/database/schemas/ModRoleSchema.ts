@@ -1,4 +1,5 @@
 import { SnowflakeArray } from '#SchemaTypes/SnowflakeArray';
+import type { SchemaResult } from '#types/interfaces/SchemaOutput';
 import { model, Schema } from 'mongoose';
 
 const ModSchema = new Schema({
@@ -13,4 +14,4 @@ const ModSchema = new Schema({
 	},
 });
 
-export const modRoleSchema = model('mod-roles', ModSchema);
+export const modRoleSchema = model<SchemaResult>('mod-roles', ModSchema);

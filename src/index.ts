@@ -2,13 +2,15 @@ import { SapphireClient } from '@sapphire/framework';
 import { commandPrefixSchema } from '#schemas/PrefixSchema';
 import { token } from '#config/config';
 import './setup';
+import type { Message } from 'discord.js';
 
 const client = new SapphireClient({
-	fetchPrefix: async (message) => {
+	fetchPrefix: async (message: Message) => {
+		if (!message.guild) return;
 		const { guildId } = message;
 		const result = await commandPrefixSchema.findOne({
 			_id: guildId,
-		});
+		})!;
 		return result ? result.prefix : '+';
 	},
 	caseInsensitivePrefixes: true,

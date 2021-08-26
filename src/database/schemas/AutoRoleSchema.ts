@@ -1,4 +1,5 @@
 import { Snowflake } from '#SchemaTypes/Snowflake';
+import type { SchemaResult } from '#types/interfaces/SchemaOutput';
 import { Schema, model } from 'mongoose';
 const AutoRoleSchema = new Schema({
 	_id: {
@@ -12,4 +13,7 @@ const AutoRoleSchema = new Schema({
 	},
 });
 
-export const autoRoleSchema = model('autorole-system', AutoRoleSchema);
+export const autoRoleSchema = model<SchemaResult>(
+	'autorole-system',
+	AutoRoleSchema
+);

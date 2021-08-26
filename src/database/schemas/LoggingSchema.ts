@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { Snowflake } from '#SchemaTypes/Snowflake';
+import type { SchemaResult } from '#types/interfaces/SchemaOutput';
 
 const LoggingSchema = new Schema({
 	_id: {
@@ -13,4 +14,7 @@ const LoggingSchema = new Schema({
 	},
 });
 
-export const messageLogSchema = model('message-log-channels', LoggingSchema);
+export const messageLogSchema = model<SchemaResult>(
+	'message-log-channels',
+	LoggingSchema
+);
