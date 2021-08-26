@@ -17,7 +17,6 @@ export class Prefix extends SubCommandPluginCommand {
 		await message.reply({
 			content: `Prefix for this guild is ${result.prefix ?? '+'}`,
 		});
-		return;
 	}
 
 	public async set(message: Message, args: Args) {
@@ -39,7 +38,6 @@ export class Prefix extends SubCommandPluginCommand {
 		await message.reply({
 			content: `Successfully changed prefix of this guild`,
 		});
-		return;
 	}
 
 	public async remove(message: Message) {

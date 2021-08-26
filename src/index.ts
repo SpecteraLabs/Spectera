@@ -1,6 +1,7 @@
 import { SapphireClient } from '@sapphire/framework';
 import { commandPrefixSchema } from '#schemas/PrefixSchema';
 import { token } from '#config/config';
+import './setup';
 
 const client = new SapphireClient({
 	fetchPrefix: async (message) => {
@@ -16,4 +17,4 @@ const client = new SapphireClient({
 	partials: ['GUILD_MEMBER', 'CHANNEL', 'MESSAGE', 'USER', 'REACTION'],
 });
 
-client.login(token);
+void client.login(token);

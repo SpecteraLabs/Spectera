@@ -1,5 +1,4 @@
-import type { PreconditionResult } from '@sapphire/framework';
-import { Precondition } from '@sapphire/framework';
+import { PreconditionResult, Precondition } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 export class Moderator extends Precondition {

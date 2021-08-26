@@ -4,6 +4,7 @@ env:
 extends:
   - 'eslint:recommended'
   - 'plugin:@typescript-eslint/recommended'
+  - '@sapphire/eslint-config'
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaVersion: 12
@@ -11,30 +12,8 @@ parserOptions:
 plugins:
   - '@typescript-eslint'
 rules:
-  brace-style:
-    - warn
-    - stroustrup
-    - allowSingleLine: true
-  comma-spacing: warn
-  comma-style: warn
-  curly:
-    - warn
-    - multi-line
-    - consistent
-  dot-location:
-    - warn
-    - property
-  indent:
-    - warn
-    - tab
-  semi:
-    - warn
-    - always
   no-console: off
-  no-empty-function: warn
   no-lonely-if: warn
-  no-trailing-spaces: error
-  prefer-const: warn
   '@typescript-eslint/explicit-module-boundary-types': off
   '@typescript-eslint/no-namespace': off
   '@typescript-eslint/no-non-null-assertion': off

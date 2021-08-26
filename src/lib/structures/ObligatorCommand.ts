@@ -13,10 +13,11 @@ import { PermissionLevels } from '../types/enums/PermissionLevels';
 
 export abstract class ObligatorCommand extends Command {
 	public readonly permissionLevel: PermissionLevels;
-	constructor(context: PieceContext, options: ObligatorCommand.Options) {
+	public constructor(context: PieceContext, options: ObligatorCommand.Options) {
 		super(context, ObligatorCommand.resolvePreConditions(context, options));
 		this.permissionLevel = options.permissionLevel ?? PermissionLevels.Everyone;
 	}
+
 	protected static resolvePreConditions(
 		context: PieceContext,
 		options: ObligatorCommand.Options

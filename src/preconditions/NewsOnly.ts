@@ -1,5 +1,4 @@
-import type { PreconditionResult } from '@sapphire/framework';
-import { Precondition } from '@sapphire/framework';
+import { PreconditionResult, Precondition } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 export class NewsOnly extends Precondition {
@@ -8,8 +7,8 @@ export class NewsOnly extends Precondition {
 		return message.channel.type === 'news'
 			? this.ok()
 			: this.error({
-				message: 'This command can only be used in text channels.',
-			});
+					message: 'This command can only be used in text channels.',
+			  });
 	}
 }
 

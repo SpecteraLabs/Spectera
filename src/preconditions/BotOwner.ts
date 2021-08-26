@@ -1,5 +1,4 @@
-import type { PreconditionResult } from '@sapphire/framework';
-import { Precondition } from '@sapphire/framework';
+import { Precondition, PreconditionResult } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 export class BotOwner extends Precondition {
