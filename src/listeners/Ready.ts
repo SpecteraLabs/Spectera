@@ -1,4 +1,3 @@
-import { mongo } from '#database/mongo';
 import { ApplyOptions } from '@sapphire/decorators';
 import { ListenerOptions, Listener, Store } from '@sapphire/framework';
 import {
@@ -19,10 +18,7 @@ const dev = process.env.NODE_ENV !== 'production';
 export class UserEvent extends Listener {
 	private readonly style = dev ? yellow : blue;
 
-	public async run() {
-		await mongo().then(() =>
-			this.container.logger.info('Connected to the database!')
-		);
+	public run() {
 		this.printBanner();
 		this.printStoreDebugInformation();
 	}
