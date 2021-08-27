@@ -1,10 +1,9 @@
-import { SnowflakeArray } from '#SchemaTypes/SnowflakeArray';
-import type { SchemaResult } from '#types/interfaces/SchemaOutput';
+import type { RolesResult } from '#types/interfaces/RolesResult';
 import { model, Schema } from 'mongoose';
 
 const ModSchema = new Schema({
 	_id: {
-		type: SnowflakeArray,
+		type: String,
 		required: true,
 	},
 
@@ -14,4 +13,4 @@ const ModSchema = new Schema({
 	},
 });
 
-export const modRoleSchema = model<SchemaResult>('mod-roles', ModSchema);
+export const modRoleSchema = model<RolesResult>('mod-roles', ModSchema);

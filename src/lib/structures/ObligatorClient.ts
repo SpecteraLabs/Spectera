@@ -2,12 +2,19 @@ import { SapphireClient } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 import { commandPrefixSchema } from '#schemas/PrefixSchema';
 import { mongo } from '#database/mongo';
-import { token } from '#config/config';
 import { connection } from 'mongoose';
+import { token } from '#config/config';
+import { blue, bold } from 'colorette';
 
 export class ObligatorClient extends SapphireClient {
 	public constructor() {
 		super({
+			fetchPrefix: async (message: Message) => {
+				const result = await commandPrefixSchema.findOne({
+					_id: message.guildId,
+				});
+				return result ? result.prefix : '+';
+			},
 			caseInsensitivePrefixes: true,
 			caseInsensitiveCommands: true,
 			intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'],
@@ -15,14 +22,11 @@ export class ObligatorClient extends SapphireClient {
 		});
 	}
 
-	public fetchPrefix = async (message: Message) => {
-		const result = await commandPrefixSchema.findOne({ id: message.guildId });
-		return result ? result.prefix : '+';
-	};
-
 	public async start() {
 		const response = await super.login(token);
-		await mongo();
+		await mongo().then(() =>
+			console.log(bold(blue('Connected to the database!')))
+		);
 		return response;
 	}
 

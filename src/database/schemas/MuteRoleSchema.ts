@@ -1,20 +1,16 @@
-import { Snowflake } from '#SchemaTypes/Snowflake';
-import type { SchemaResult } from '#types/interfaces/SchemaOutput';
+import type { RoleResult } from '#types/interfaces/AnyRoleResult';
 import { model, Schema } from 'mongoose';
 
 const MuteSchema = new Schema({
 	_id: {
-		type: Snowflake,
+		type: String,
 		required: true,
 	},
 
 	roleId: {
-		type: Snowflake,
+		type: String,
 		required: true,
 	},
 });
 
-export const muteRoleSchema = model<SchemaResult>(
-	'mute-role-schema',
-	MuteSchema
-);
+export const muteRoleSchema = model<RoleResult>('mute-role-schema', MuteSchema);

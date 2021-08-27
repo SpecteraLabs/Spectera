@@ -3,7 +3,6 @@ import type { Args } from '@sapphire/framework';
 import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import type { Message } from 'discord.js';
 import { commandPrefixSchema } from '#schemas/PrefixSchema';
-import type { SchemaOutput } from '#types/interfaces/SchemaOutput';
 
 @ApplyOptions<SubCommandPluginCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],
@@ -11,11 +10,11 @@ import type { SchemaOutput } from '#types/interfaces/SchemaOutput';
 })
 export class Prefix extends SubCommandPluginCommand {
 	public async show(message: Message) {
-		const result: SchemaOutput = await commandPrefixSchema.findOne({
+		const result = await commandPrefixSchema.findOne({
 			_id: message.guildId,
 		});
 		await message.reply({
-			content: `Prefix for this guild is ${result.prefix ?? '+'}`,
+			content: `Prefix for this guild is ${result!.prefix ?? '+'}`,
 		});
 	}
 

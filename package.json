@@ -2,7 +2,7 @@
 	"name": "obligatorsapphire",
 	"version": "3.0.0",
 	"description": "",
-	"main": "dist/index.js",
+	"main": "dist/Obligator.js",
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
@@ -11,10 +11,9 @@
 		"@sapphire/discord.js-utilities": "next",
 		"@sapphire/framework": "next",
 		"@sapphire/plugin-subcommands": "next",
-		"@sapphire/snowflake": "^2.0.0",
 		"@sapphire/utilities": "next",
 		"discord.js": "^13.1.0",
-		"mongoose": "^6.0.1"
+		"mongoose": "^6.0.2"
 	},
 	"commitlint": {
 		"extends": [
@@ -46,7 +45,8 @@
 		}
 	},
 	"scripts": {
-		"ts-start": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+		"start-tsn": "yarn lint && yarn ts-start",
+		"ts-start": "ts-node-dev --respawn --transpile-only --poll ./src/Obligator.ts",
 		"start": "yarn lint && tsc -b src && node .",
 		"lint": "prettier --write . && yarn eslint . --ext .ts --fix",
 		"build": "tsc --diagnostics",
@@ -58,7 +58,7 @@
 		"@commitlint/config-angular": "^13.1.0",
 		"@sapphire/eslint-config": "^3.2.3",
 		"@sapphire/plugin-api": "next",
-		"@sapphire/plugin-editable-commands": "^0.1.0-next.9af3e85.0",
+		"@sapphire/plugin-editable-commands": "next",
 		"@sapphire/plugin-logger": "^1.0.13",
 		"@sapphire/ts-config": "^3.0.0",
 		"@types/node": "^16.7.2",
@@ -72,7 +72,7 @@
 		"reflect-metadata": "^0.1.13",
 		"ts-node": "^10.2.1",
 		"ts-node-dev": "^1.1.8",
-		"typescript": "^4.3.5"
+		"typescript": "^4.4.2"
 	},
 	"imports": {
 		"#config/*": "./dist/config/*.json",

@@ -1,20 +1,19 @@
 import { Schema, model } from 'mongoose';
-import { Snowflake } from '#SchemaTypes/Snowflake';
-import type { SchemaResult } from '#types/interfaces/SchemaOutput';
+import type { ChannelResult } from '#types/interfaces/AnyChannelResult';
 
 const LoggingSchema = new Schema({
 	_id: {
-		type: Snowflake,
+		type: String,
 		required: true,
 	},
 
 	channelId: {
-		type: Snowflake,
+		type: String,
 		required: true,
 	},
 });
 
-export const messageLogSchema = model<SchemaResult>(
+export const messageLogSchema = model<ChannelResult>(
 	'message-log-channels',
 	LoggingSchema
 );

@@ -1,19 +1,18 @@
-import { Snowflake } from '#SchemaTypes/Snowflake';
-import type { SchemaResult } from '#types/interfaces/SchemaOutput';
+import type { RoleResult } from '#types/interfaces/AnyRoleResult';
 import { Schema, model } from 'mongoose';
 const AutoRoleSchema = new Schema({
 	_id: {
-		type: Snowflake,
+		type: String,
 		required: true,
 	},
 
 	roleId: {
-		type: Snowflake,
+		type: String,
 		required: true,
 	},
 });
 
-export const autoRoleSchema = model<SchemaResult>(
+export const autoRoleSchema = model<RoleResult>(
 	'autorole-system',
 	AutoRoleSchema
 );
