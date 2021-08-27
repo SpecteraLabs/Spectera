@@ -2,7 +2,6 @@ import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
 import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import type { Message } from 'discord.js';
-import { commandPrefixSchema } from '#schemas/PrefixSchema';
 
 @ApplyOptions<SubCommandPluginCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],
@@ -10,7 +9,7 @@ import { commandPrefixSchema } from '#schemas/PrefixSchema';
 })
 export class Prefix extends SubCommandPluginCommand {
 	public async show(message: Message) {
-		const result = await commandPrefixSchema.findOne({
+		const result = await this.container.database.prefixes!.findOne({
 			_id: message.guildId,
 		});
 		await message.reply({
@@ -22,7 +21,7 @@ export class Prefix extends SubCommandPluginCommand {
 		let prefix = await args.pick('string');
 		await message.guild!.me!.setNickname(`[${prefix}] Obligator`);
 		prefix = prefix.toLowerCase();
-		await commandPrefixSchema.findOneAndUpdate(
+		await this.container.database.prefixes!.findOneAndUpdate(
 			{
 				_id: message.guildId,
 			},
@@ -40,8 +39,8 @@ export class Prefix extends SubCommandPluginCommand {
 	}
 
 	public async remove(message: Message) {
-		await commandPrefixSchema
-			.findOneAndRemove({ _id: message.guildId })
+		await this.container.database
+			.prefixes!.findOneAndRemove({ _id: message.guildId })
 			.then(async () => {
 				await message.reply({
 					content: 'Successfully removed prefix of this guild',
