@@ -1,10 +1,9 @@
 import { SapphireClient } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 import { commandPrefixSchema } from '#schemas/PrefixSchema';
-import { mongo } from '#database/mongo';
 import { connection } from 'mongoose';
 import { token } from '#config/config';
-import { blue, bold } from 'colorette';
+import { Database } from '#database/Database';
 
 export class ObligatorClient extends SapphireClient {
 	public constructor() {
@@ -24,9 +23,7 @@ export class ObligatorClient extends SapphireClient {
 
 	public async start() {
 		const response = await super.login(token);
-		await mongo().then(() =>
-			console.log(bold(blue('Connected to the database!')))
-		);
+		await Database.connect();
 		return response;
 	}
 

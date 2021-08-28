@@ -1,14 +1,16 @@
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
 import type { Message } from 'discord.js';
-import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
+import { ObligatorSubCommand } from '#structures/ObligatorSubCommand';
 
-@ApplyOptions<SubCommandPluginCommand.Options>({
+@ApplyOptions<ObligatorSubCommand.Options>({
+	cooldownLimit: 2,
+	cooldownDelay: 30000,
 	aliases: ['calc'],
 	subCommands: ['add', 'subtract', 'multiply', 'divide'],
 	description: 'Simple math operations',
 })
-export class Math extends SubCommandPluginCommand {
+export class Math extends ObligatorSubCommand {
 	public async add(message: Message, args: Args) {
 		const x = await args.pick('number');
 		const y = await args.pick('number');

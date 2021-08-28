@@ -2,6 +2,6 @@ dist/
 .yarn/
 node_modules/
 /src/config/config.json
-/src/database/mongo.ts
+/src/database/Database.ts
 src/.env.*
 src/.env

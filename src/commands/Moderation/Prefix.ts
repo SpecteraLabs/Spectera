@@ -1,13 +1,12 @@
+import { ObligatorSubCommand } from '#structures/ObligatorSubCommand';
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
-import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import type { Message } from 'discord.js';
 
-@ApplyOptions<SubCommandPluginCommand.Options>({
+@ApplyOptions<ObligatorSubCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],
-	runIn: 'GUILD_TEXT',
 })
-export class Prefix extends SubCommandPluginCommand {
+export class Prefix extends ObligatorSubCommand {
 	public async show(message: Message) {
 		const result = await this.container.database.prefixes!.findOne({
 			_id: message.guildId,
