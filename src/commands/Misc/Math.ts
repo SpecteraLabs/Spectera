@@ -4,8 +4,6 @@ import type { Message } from 'discord.js';
 import { ObligatorSubCommand } from '#structures/ObligatorSubCommand';
 
 @ApplyOptions<ObligatorSubCommand.Options>({
-	cooldownLimit: 2,
-	cooldownDelay: 30000,
 	aliases: ['calc'],
 	subCommands: ['add', 'subtract', 'multiply', 'divide'],
 	description: 'Simple math operations',
