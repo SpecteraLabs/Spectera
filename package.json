@@ -45,13 +45,13 @@
 		}
 	},
 	"scripts": {
-		"start-tsn": "yarn lint && yarn ts-start",
-		"ts-start": "ts-node-dev --respawn --transpile-only --poll ./src/Obligator.ts",
-		"start": "yarn lint && tsc -b src && node .",
-		"lint": "prettier --write . && yarn eslint . --ext .ts --fix",
-		"build": "tsc --diagnostics",
-		"build:js": "tsc -b src",
-		"check:lint": "yarn prettier -c . && yarn eslint . --ext .ts"
+		"build": "tsc",
+		"watch": "tsc -w",
+		"start": "node ./dist/Obligator.js",
+		"dev": "run-s build start",
+		"lint": "prettier --write \"src/**/*.ts\"",
+		"predocker:watch": "npm install",
+		"docker:watch": "tsc-watch --onSuccess \"node ./dist/index.js\""
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^13.1.0",

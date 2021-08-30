@@ -1,5 +1,5 @@
 dist/
-.yarn/
+.yarn/cache
 node_modules/
 /src/config/config.json
 /src/database/Database.ts
