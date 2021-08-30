@@ -1,4 +1,5 @@
-import { Events, Listener } from '@sapphire/framework';
+/* eslint-disable no-useless-return */
+import { Listener } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 export class MessageCreate extends Listener {
@@ -7,6 +8,5 @@ export class MessageCreate extends Listener {
 		if (message.system) return;
 		if (message.author.bot) return;
 		if (message.channel.type === 'DM') return;
-		this.container.client.emit(Events.MessageCreate, message);
 	}
 }
