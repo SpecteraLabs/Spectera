@@ -8,9 +8,3 @@ export class BotOwner extends Precondition {
 			: this.error({ message: 'This command can only be used by bot owner. ' });
 	}
 }
-
-declare module '@sapphire/framework' {
-	interface Preconditions {
-		BotOwner: never;
-	}
-}

@@ -13,9 +13,3 @@ export class Moderator extends Precondition {
 			: this.error({ message: 'This command can only run by Administrators' });
 	}
 }
-
-declare module '@sapphire/framework' {
-	interface Preconditions {
-		Moderator: never;
-	}
-}

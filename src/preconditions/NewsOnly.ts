@@ -11,9 +11,3 @@ export class NewsOnly extends Precondition {
 			  });
 	}
 }
-
-declare module '@sapphire/framework' {
-	interface Preconditions {
-		NewsOnly: never;
-	}
-}

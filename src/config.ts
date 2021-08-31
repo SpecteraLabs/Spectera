@@ -31,7 +31,6 @@ export const CLIENT_OPTIONS: ClientOptions = {
 				? LogLevel.Info
 				: LogLevel.Debug,
 	},
-	restTimeOffset: 0,
 	caseInsensitiveCommands: true,
 	caseInsensitivePrefixes: true,
 };

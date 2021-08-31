@@ -11,9 +11,3 @@ export class TextOnly extends Precondition {
 			  });
 	}
 }
-
-declare module '@sapphire/framework' {
-	interface Preconditions {
-		TextOnly: never;
-	}
-}
