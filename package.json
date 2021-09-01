@@ -46,9 +46,9 @@
 		}
 	},
 	"scripts": {
-		"build:babel": "npx babel --extensions \".ts\" src -d dist",
+		"build:babel": "babel --extensions \".ts\" src -d dist",
 		"build": "yarn build:babel && yarn checklint",
-		"watch": "npx babel --extensions \".ts\" src -d dist --watch",
+		"watch": "babel --extensions \".ts\" src -d dist --watch",
 		"start": "yarn lint && yarn build && node ./dist/Obligator.js",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
 		"typecheck": "tsc -p src --noEmit",
@@ -59,6 +59,7 @@
 		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.14.8",
 		"@babel/core": "^7.15.0",
 		"@babel/plugin-proposal-class-properties": "^7.14.5",
 		"@babel/plugin-proposal-decorators": "^7.14.5",
