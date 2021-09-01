@@ -22,3 +22,5 @@ jobs:
         run: yarn --immutable
       - name: Check Liniting
         run: yarn check:lint
+        run: yarn build
+        run: yarn typecheck
