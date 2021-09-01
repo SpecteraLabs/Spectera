@@ -796,15 +796,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/prettier-config@npm:^1.1.6":
-  version: 1.1.6
-  resolution: "@sapphire/prettier-config@npm:1.1.6"
-  dependencies:
-    prettier: 2.x
-  checksum: 2d0aed3482908eb00f6614cd2aa59819b304475a172538c81180259af9869b7b1e7d27c2fa9a90f1ae5bc9d3f6c1d390f30ab8006022542fbdf12d0de1e62f6e
-  languageName: node
-  linkType: hard
-
 "@sapphire/ratelimits@npm:^2.0.1":
   version: 2.0.1
   resolution: "@sapphire/ratelimits@npm:2.0.1"
@@ -3513,7 +3504,6 @@ fsevents@~2.3.2:
     "@sapphire/plugin-editable-commands": next
     "@sapphire/plugin-logger": ^1.0.13
     "@sapphire/plugin-subcommands": next
-    "@sapphire/prettier-config": ^1.1.6
     "@sapphire/ts-config": ^3.0.0
     "@sapphire/utilities": next
     "@types/node": ^16.7.6
@@ -3720,7 +3710,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.x, prettier@npm:^2.3.2":
+"prettier@npm:^2.3.2":
   version: 2.3.2
   resolution: "prettier@npm:2.3.2"
   bin:
