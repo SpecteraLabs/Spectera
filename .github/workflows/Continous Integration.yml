@@ -20,3 +20,5 @@ jobs:
       - name: Install Dependencies if Cache Miss
         if: ${{ !steps.cache-restore.outputs.cache-hit }}
         run: yarn --immutable
+      - name: Check Liniting
+        run: yarn check:lint
