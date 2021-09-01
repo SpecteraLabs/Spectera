@@ -50,6 +50,7 @@
 		"watch": "npx babel --extensions \".ts\" src -d dist --watch",
 		"start": "yarn lint && yarn build && node ./dist/Obligator.js",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
+		"typecheck": "tsc -p src --noEmit",
 		"dev": "run-s build start",
 		"lint": "prettier --write \"src/**/*.ts\"",
 		"predocker:watch": "npm install",
