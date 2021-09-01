@@ -1,4 +1,4 @@
-name: Continous Integration
+name: Continuous Integration
 on:
   push:
   pull_request:
@@ -23,4 +23,4 @@ jobs:
       - name: Check Liniting
         run: yarn check:lint
       - name: Build Files
-        run: yarn build
+        run: yarn build:babel
