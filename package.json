@@ -49,6 +49,7 @@
 		"build": "npx babel --extensions \".ts\" src -d dist",
 		"watch": "npx babel --extensions \".ts\" src -d dist --watch",
 		"start": "yarn lint && yarn build && node ./dist/Obligator.js",
+		"check:link": "prettier -c \"src/**/*.ts\"",
 		"dev": "run-s build start",
 		"lint": "prettier --write \"src/**/*.ts\"",
 		"predocker:watch": "npm install",
@@ -88,5 +89,6 @@
 		"#schemas/*": "./dist/database/schemas/*.js",
 		"#database/*": "./dist/database/*.js",
 		"#SchemaTypes/*": "./dist/lib/types/SchemaTypes/*.js"
-	}
+	},
+	"packageManager": "yarn@3.0.1"
 }
