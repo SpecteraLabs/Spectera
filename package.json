@@ -46,7 +46,8 @@
 		}
 	},
 	"scripts": {
-		"build": "npx babel --extensions \".ts\" src -d dist",
+		"build:babel": "npx babel --extensions \".ts\" src -d dist",
+		"build": "yarn build:babel && yarn checklint",
 		"watch": "npx babel --extensions \".ts\" src -d dist --watch",
 		"start": "yarn lint && yarn build && node ./dist/Obligator.js",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
