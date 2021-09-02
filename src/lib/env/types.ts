@@ -31,4 +31,5 @@ export interface ObligatorEnv {
 	WEBSOCKET_PORT: IntegerString;
 
 	DISCORD_TOKEN: string;
+	MONGO_URL: string;
 }

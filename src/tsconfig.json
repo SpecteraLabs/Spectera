@@ -7,7 +7,6 @@
 		"baseUrl": ".",
 		"composite": true,
 		"paths": {
-			"#config/*": ["config/*.json"],
 			"#structures/*": ["lib/structures/*.js"],
 			"#types/enums/*": ["lib/types/enums/*.js"],
 			"#types/interfaces/*": ["lib/types/interfaces/*.js"],

@@ -47,7 +47,7 @@
 	},
 	"scripts": {
 		"build:babel": "babel --extensions \".ts\" src -d dist",
-		"build": "yarn build:babel && yarn checklint",
+		"build": "yarn build:babel && yarn typecheck",
 		"watch": "babel --extensions \".ts\" src -d dist --watch",
 		"start": "yarn lint && yarn build && node ./dist/Obligator.js",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
@@ -86,7 +86,6 @@
 		"typescript": "^4.4.2"
 	},
 	"imports": {
-		"#config/*": "./dist/config/*.json",
 		"#structures/*": "./dist/lib/structures/*.js",
 		"#types/enums/*": "./dist/lib/types/enums/*.js",
 		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js",

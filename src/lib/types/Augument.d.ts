@@ -1,4 +1,4 @@
-import type { Database } from '#database/Database';
+import type { Database } from 'database/Database';
 
 declare module '@sapphire/pieces' {
 	interface Container {

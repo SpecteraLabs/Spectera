@@ -1,7 +1,5 @@
 dist/
 .yarn/cache
 node_modules/
-/src/config/config.json
-/src/database/Database.ts
 src/.env.*
 src/.env

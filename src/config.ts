@@ -15,6 +15,7 @@ config({
 });
 
 export const OWNERS = envParseString('CLIENT_OWNERS');
+export const MONGO_URL = envParseString('MONGO_URL');
 
 function parseRegExpPrefix(): RegExp | undefined {
 	const { CLIENT_REGEX_PREFIX } = process.env;
