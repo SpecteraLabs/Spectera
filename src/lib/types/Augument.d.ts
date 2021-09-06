@@ -1,8 +1,8 @@
-import type { Database } from 'database/Database';
+import { PrismaClient } from '@prisma/client';
 
 declare module '@sapphire/pieces' {
 	interface Container {
-		database: Database;
+		database: PrismaClient;
 	}
 }
 

@@ -1,5 +1,5 @@
-dist/
+node_modules
 .yarn/cache
-node_modules/
-src/.env.*
-src/.env
+dist
+.env
+.env.*

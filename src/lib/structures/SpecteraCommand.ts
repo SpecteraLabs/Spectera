@@ -10,12 +10,12 @@ import {
 import type { PermissionResolvable } from 'discord.js';
 import { PermissionLevels } from '../types/enums/PermissionLevels';
 
-export abstract class ObligatorCommand extends Command {
+export abstract class SpecteraCommand extends Command {
 	public readonly permissionLevel: PermissionLevels;
 	public readonly guarded: boolean;
 	public readonly hidden: boolean;
-	public constructor(context: PieceContext, options: ObligatorCommand.Options) {
-		super(context, ObligatorCommand.resolvePreConditions(context, options));
+	public constructor(context: PieceContext, options: SpecteraCommand.Options) {
+		super(context, SpecteraCommand.resolvePreConditions(context, options));
 		this.permissionLevel = options.permissionLevel ?? PermissionLevels.Everyone;
 		this.guarded = options.guarded ?? false;
 		this.hidden = options.hidden ?? false;
@@ -23,8 +23,8 @@ export abstract class ObligatorCommand extends Command {
 
 	protected static resolvePreConditions(
 		context: PieceContext,
-		options: ObligatorCommand.Options
-	): ObligatorCommand.Options {
+		options: SpecteraCommand.Options
+	): SpecteraCommand.Options {
 		options.generateDashLessAliases ??= true;
 
 		const preconditions = (options.preconditions ??=
@@ -72,14 +72,14 @@ export abstract class ObligatorCommand extends Command {
 
 	protected static resolveRunInPreCondition(
 		context: PieceContext,
-		runIn?: ObligatorCommand.RunInOption[]
+		runIn?: SpecteraCommand.RunInOption[]
 	): PreconditionEntryResolvable | null {
 		runIn = [...new Set(runIn ?? (['text', 'news', 'dm'] as const))];
 
 		if (runIn.length === 3) return null;
 		if (runIn.length === 0) {
 			throw new Error(
-				`ObligatorCommand[${context.name}]: "runIn" was specified as an empty array.`
+				`SpecteraCommand[${context.name}]: "runIn" was specified as an empty array.`
 			);
 		}
 
@@ -96,7 +96,7 @@ export abstract class ObligatorCommand extends Command {
 	}
 }
 
-export namespace ObligatorCommand {
+export namespace SpecteraCommand {
 	export type RunInOption = 'text' | 'news' | 'dm';
 	export type Options = CommandOptions & {
 		permissionLevel?: number;

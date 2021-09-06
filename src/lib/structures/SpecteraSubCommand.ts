@@ -9,15 +9,15 @@ import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import type { PermissionResolvable } from 'discord.js';
 import { PermissionLevels } from '../types/enums/PermissionLevels';
 
-export abstract class ObligatorSubCommand extends SubCommandPluginCommand {
+export abstract class SpecteraSubCommand extends SubCommandPluginCommand {
 	public readonly permissionLevel: PermissionLevels;
 	public readonly guarded: boolean;
 	public readonly hidden: boolean;
 	public constructor(
 		context: PieceContext,
-		options: ObligatorSubCommand.Options
+		options: SpecteraSubCommand.Options
 	) {
-		super(context, ObligatorSubCommand.resolvePreConditions(context, options));
+		super(context, SpecteraSubCommand.resolvePreConditions(context, options));
 		this.permissionLevel = options.permissionLevel ?? PermissionLevels.Everyone;
 		this.guarded = options.guarded ?? false;
 		this.hidden = options.hidden ?? false;
@@ -25,8 +25,8 @@ export abstract class ObligatorSubCommand extends SubCommandPluginCommand {
 
 	protected static resolvePreConditions(
 		context: PieceContext,
-		options: ObligatorSubCommand.Options
-	): ObligatorSubCommand.Options {
+		options: SpecteraSubCommand.Options
+	): SpecteraSubCommand.Options {
 		options.generateDashLessAliases ??= true;
 
 		const preconditions = (options.preconditions ??=
@@ -74,14 +74,14 @@ export abstract class ObligatorSubCommand extends SubCommandPluginCommand {
 
 	protected static resolveRunInPreCondition(
 		context: PieceContext,
-		runIn?: ObligatorSubCommand.RunInOption[]
+		runIn?: SpecteraSubCommand.RunInOption[]
 	): PreconditionEntryResolvable | null {
 		runIn = [...new Set(runIn ?? (['text', 'news', 'dm'] as const))];
 
 		if (runIn.length === 3) return null;
 		if (runIn.length === 0) {
 			throw new Error(
-				`ObligatorSubCommand[${context.name}]: "runIn" was specified as an empty array.`
+				`SpecteraSubCommand[${context.name}]: "runIn" was specified as an empty array.`
 			);
 		}
 
@@ -98,7 +98,7 @@ export abstract class ObligatorSubCommand extends SubCommandPluginCommand {
 	}
 }
 
-export namespace ObligatorSubCommand {
+export namespace SpecteraSubCommand {
 	export type RunInOption = 'text' | 'news' | 'dm';
 	export type Options = SubCommandPluginCommand.Options & {
 		permissionLevel?: number;

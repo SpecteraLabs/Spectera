@@ -1,25 +1,23 @@
-import { SapphireClient } from '@sapphire/framework';
+import { SapphireClient, container } from '@sapphire/framework';
 import type { Message } from 'discord.js';
-import { commandPrefixSchema } from '#schemas/PrefixSchema';
 import { connection } from 'mongoose';
-import { Database } from '#database/Database';
 import { CLIENT_OPTIONS } from '../../config';
 
-export class ObligatorClient extends SapphireClient {
+export class SpecteraClient extends SapphireClient {
 	public constructor() {
 		super(CLIENT_OPTIONS);
 	}
 
 	public fetchPrefix = async (message: Message) => {
-		const result = await commandPrefixSchema.findOne({
-			_id: message.guildId,
+		if (!message.guild) return 's!';
+		const result = await container.database.guildSettings.findUnique({
+			where: { id: message.guild.id },
 		});
-		return result ? result.prefix : '+';
+		return result ? result.prefix : 's!';
 	};
 
 	public async start() {
 		const response = await super.login();
-		await Database.connect();
 		return response;
 	}
 

@@ -1,11 +1,11 @@
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Message } from 'discord.js';
-import { ObligatorCommand } from '#structures/ObligatorCommand';
+import { SpecteraCommand } from '#structures/SpecteraCommand';
 
-@ApplyOptions<ObligatorCommand.Options>({
+@ApplyOptions<SpecteraCommand.Options>({
 	description: 'Send back the latency of the bot',
 })
-export class Ping extends ObligatorCommand {
+export class Ping extends SpecteraCommand {
 	public async run(message: Message) {
 		const msg = await message.channel.send('Ping?');
 		return msg.edit(

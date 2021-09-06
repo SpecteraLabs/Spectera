@@ -1,12 +1,13 @@
 {
-	"name": "obligatorsapphire",
+	"name": "spectera",
 	"version": "3.0.0",
 	"description": "",
-	"main": "dist/Obligator.js",
+	"main": "dist/Spectera.js",
 	"keywords": [],
 	"author": "UndiedGamer",
 	"license": "Apache-2.0",
 	"dependencies": {
+		"@prisma/client": "2.30.3",
 		"@sapphire/decorators": "next",
 		"@sapphire/discord.js-utilities": "next",
 		"@sapphire/framework": "next",
@@ -82,6 +83,7 @@
 		"eslint": "^7.32.0",
 		"lint-staged": "^11.1.2",
 		"prettier": "^2.3.2",
+		"prisma": "2.30.3",
 		"reflect-metadata": "^0.1.13",
 		"ts-node": "^10.2.1",
 		"ts-node-dev": "^1.1.8",
@@ -90,10 +92,7 @@
 	"imports": {
 		"#structures/*": "./dist/lib/structures/*.js",
 		"#types/enums/*": "./dist/lib/types/enums/*.js",
-		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js",
-		"#schemas/*": "./dist/database/schemas/*.js",
-		"#database/*": "./dist/database/*.js",
-		"#SchemaTypes/*": "./dist/lib/types/SchemaTypes/*.js"
+		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js"
 	},
 	"packageManager": "yarn@3.0.1"
 }

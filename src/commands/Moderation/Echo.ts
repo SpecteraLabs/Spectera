@@ -1,14 +1,14 @@
 import { ApplyOptions, RequiresUserPermissions } from '@sapphire/decorators';
 import type { Message } from 'discord.js';
-import { ObligatorCommand } from '#structures/ObligatorCommand';
+import { SpecteraCommand } from '#structures/SpecteraCommand';
 
-@ApplyOptions<ObligatorCommand.Options>({
+@ApplyOptions<SpecteraCommand.Options>({
 	aliases: ['speak', 'say', 'parrot'],
 	description: 'Replies with whatever you say',
 })
-export class Echo extends ObligatorCommand {
+export class Echo extends SpecteraCommand {
 	@RequiresUserPermissions('MANAGE_CHANNELS')
-	public async run(message: Message, args: ObligatorCommand.Args) {
+	public async run(message: Message, args: SpecteraCommand.Args) {
 		const destination = await args
 			.pick('guildTextChannel')
 			.catch(() => message.channel);
