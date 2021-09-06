@@ -29,18 +29,34 @@ export class UserEvent extends Listener {
 		const llc = dev ? magentaBright : white;
 		const blc = dev ? magenta : blue;
 
-		const line01 = llc('');
-		const line02 = llc('');
-		const line03 = llc('');
+		const line01 = llc(String.raw`		          /////         `);
+		const line02 = llc(String.raw`	           /////////      `);
+		const line03 = llc(String.raw`             ////////////         `);
+		const line04 = llc(String.raw`	  //////////              `);
+		const line05 = llc(String.raw`           //////    ///          `);
+		const line06 = llc(String.raw`          ///    //////           `);
+		const line07 = llc(String.raw`	    /////////             `);
+		const line08 = llc(String.raw`        ///////////               `);
+		const line09 = llc(String.raw`	//////////                  `);
+		const line10 = llc(String.raw`	 /////                      `);
+		const line11 = llc('');
 
 		// Offset Pad
 		const pad = ' '.repeat(7);
 
 		console.log(
 			String.raw`
-${line01} ${pad}${blc('1.0.0')}
-${line02} ${pad}[${success}] Gateway
-${line03}${
+${line01} 
+${line02}   ________  _______    _______   ______  ___________  _______   _______        __      
+${line03}  /"       )|   __ "\  /"     "| /" _  "\("     _   ")/"     "| /"      \      /""\     
+${line04} (:   \___/ (. |__) :)(: ______)(: ( \___))__/  \\__/(: ______)|:        |    /    \    
+${line05}  \___  \   |:  ____/  \/    |   \/ \        \\_ /    \/    |  |_____/   )   /' /\  \   
+${line06}   __/  \\  (|  /      // ___)_  //  \ _     |.  |    // ___)_  //      /   //  __'  \  
+${line07}  /" \   :)/|__/ \    (:      "|(:   _) \    \:  |   (:      "||:  __   \  /   /  \\  \ 
+${line08} (_______/(_______)    \_______) \_______)    \__|    \_______)|__|  \___)(___/    \___)																			 
+${line09}${pad}${blc('3.0.0 [Sapphire Edition]')}
+${line10} ${pad}[${success}] Gateway
+${line11} ${pad} ${pad} ${pad} ${pad}   ${
 				dev
 					? ` ${pad}${blc('<')}${llc('/')}${blc('>')} ${llc(
 							'DEVELOPMENT MODE'
