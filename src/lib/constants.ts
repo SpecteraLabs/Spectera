@@ -1,6 +1,6 @@
 import { join } from 'path';
 
-export const rootFolder = join(__dirname, '..');
+export const rootFolder = join(__dirname, '..', '..');
 export const srcFolder = join(rootFolder, 'src');
 
 export const enum Emojis {

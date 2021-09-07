@@ -1,7 +1,6 @@
 import { SapphireClient, container } from '@sapphire/framework';
 import type { Message } from 'discord.js';
-import { connection } from 'mongoose';
-import { CLIENT_OPTIONS } from '../../config';
+import { CLIENT_OPTIONS } from '#root/config';
 
 export class SpecteraClient extends SapphireClient {
 	public constructor() {
@@ -22,7 +21,7 @@ export class SpecteraClient extends SapphireClient {
 	}
 
 	public async destroy() {
-		await connection.close();
+		await container.database.$disconnect();
 		return super.destroy();
 	}
 }

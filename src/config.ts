@@ -1,7 +1,7 @@
 process.env.NODE_ENV ??= 'development';
 
-import { envParseBoolean, envParseString } from './lib/env';
-import { srcFolder } from './constants';
+import { envParseArray, envParseBoolean, envParseString } from './lib/env';
+import { srcFolder } from '#lib/constants';
 import { LogLevel } from '@sapphire/framework';
 import type { ClientOptions } from 'discord.js';
 import { config } from 'dotenv-cra';
@@ -14,8 +14,7 @@ config({
 	path: join(srcFolder, '.env'),
 });
 
-export const OWNERS = envParseString('CLIENT_OWNERS');
-export const MONGO_URL = envParseString('MONGO_URL');
+export const OWNERS = envParseArray('CLIENT_OWNERS');
 
 function parseRegExpPrefix(): RegExp | undefined {
 	const { CLIENT_REGEX_PREFIX } = process.env;

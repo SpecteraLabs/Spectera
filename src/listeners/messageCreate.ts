@@ -7,6 +7,5 @@ export class MessageCreate extends Listener {
 		if (message.webhookId !== null) return;
 		if (message.system) return;
 		if (message.author.bot) return;
-		if (message.channel.type === 'DM') return;
 	}
 }

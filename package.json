@@ -14,8 +14,7 @@
 		"@sapphire/plugin-subcommands": "next",
 		"@sapphire/utilities": "next",
 		"discord.js": "^13.1.0",
-		"dotenv-cra": "^3.0.1",
-		"mongoose": "^6.0.2"
+		"dotenv-cra": "^3.0.1"
 	},
 	"commitlint": {
 		"extends": [
@@ -48,10 +47,10 @@
 	},
 	"scripts": {
 		"build:esbuild": "node scripts/build.mjs",
-		"build": "yarn clean && yarn build:esbuild && yarn typecheck",
+		"build": "yarn clean && yarn build:esbuild",
 		"watch": "node scripts/watch.mjs",
 		"clean": "node scripts/clean.mjs",
-		"start": "yarn lint && yarn build:esbuild && node ./dist/Obligator.js",
+		"start": "yarn lint && yarn build && node .",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
 		"typecheck": "tsc -p src --noEmit",
 		"dev": "run-s build start",
@@ -92,7 +91,10 @@
 	"imports": {
 		"#structures/*": "./dist/lib/structures/*.js",
 		"#types/enums/*": "./dist/lib/types/enums/*.js",
-		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js"
+		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js",
+		"#lib/*": "./dist/lib/*.js",
+		"#root/*": "./dist/*.js",
+		"#env": "./dist/lib/env/index.js"
 	},
 	"packageManager": "yarn@3.0.1"
 }

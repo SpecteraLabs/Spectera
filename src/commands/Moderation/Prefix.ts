@@ -1,18 +1,18 @@
 import { SpecteraSubCommand } from '#structures/SpecteraSubCommand';
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
+import { reply } from '@sapphire/plugin-editable-commands';
 import type { Message } from 'discord.js';
 
 @ApplyOptions<SpecteraSubCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],
-	runIn: ['text'] as never,
 })
 export class Prefix extends SpecteraSubCommand {
 	public async show(message: Message) {
 		const result = await this.container.database.guildSettings.findUnique({
 			where: { id: message.guild!.id },
 		});
-		await message.reply({
+		await reply(message, {
 			content: `Prefix for this guild is ${result!.prefix ?? '+'}`,
 		});
 	}
@@ -25,7 +25,7 @@ export class Prefix extends SpecteraSubCommand {
 			update: { prefix },
 			create: { id: message.guild!.id, prefix },
 		});
-		await message.reply({
+		await reply(message, {
 			content: `Successfully changed prefix of this guild`,
 		});
 	}
@@ -34,7 +34,7 @@ export class Prefix extends SpecteraSubCommand {
 		await this.container.database.guildSettings.delete({
 			where: { id: message.guild!.id },
 		});
-		await message.reply({
+		await reply(message, {
 			content: 'Successfully removed prefix of this guild',
 		});
 	}

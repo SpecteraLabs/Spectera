@@ -1,14 +1,6 @@
 import { ApplyOptions } from '@sapphire/decorators';
 import { ListenerOptions, Listener, Store } from '@sapphire/framework';
-import {
-	blue,
-	gray,
-	green,
-	magenta,
-	magentaBright,
-	white,
-	yellow,
-} from 'colorette';
+import { blue, gray, green, magenta, yellow, yellowBright } from 'colorette';
 
 const dev = process.env.NODE_ENV !== 'production';
 
@@ -26,7 +18,7 @@ export class UserEvent extends Listener {
 	private printBanner() {
 		const success = green('+');
 
-		const llc = dev ? magentaBright : white;
+		const llc = yellowBright;
 		const blc = dev ? magenta : blue;
 
 		const line01 = llc(String.raw`		          /////         `);
@@ -58,7 +50,7 @@ ${line09}${pad}${blc('3.0.0 [Sapphire Edition]')}
 ${line10} ${pad}[${success}] Gateway
 ${line11} ${pad} ${pad} ${pad} ${pad}   ${
 				dev
-					? ` ${pad}${blc('<')}${llc('/')}${blc('>')} ${llc(
+					? ` ${pad}${blc('<')}${llc('/')}${blc('>')} ${blc(
 							'DEVELOPMENT MODE'
 					  )}`
 					: ''

@@ -9,7 +9,10 @@
 		"paths": {
 			"#structures/*": ["lib/structures/*.js"],
 			"#types/enums/*": ["lib/types/enums/*.js"],
-			"#types/interfaces/*": ["lib/types/interfaces/*.js"]
+			"#types/interfaces/*": ["lib/types/interfaces/*.js"],
+			"#lib/*": ["lib/*.js"],
+			"#root/*": ["*"],
+			"#env": ["lib/env"]
 		}
 	},
 	"include": [".", "./**/*.json"],
