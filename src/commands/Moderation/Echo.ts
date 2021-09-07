@@ -5,6 +5,9 @@ import { SpecteraCommand } from '#structures/SpecteraCommand';
 @ApplyOptions<SpecteraCommand.Options>({
 	aliases: ['speak', 'say', 'parrot'],
 	description: 'Replies with whatever you say',
+	bucket: 1,
+	cooldown: 10000,
+	runIn: ['GUILD_TEXT'],
 })
 export class Echo extends SpecteraCommand {
 	@RequiresUserPermissions('MANAGE_CHANNELS')

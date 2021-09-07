@@ -1,14 +1,16 @@
-import { PreconditionResult, Precondition } from '@sapphire/framework';
+import { Precondition, AsyncPreconditionResult } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 export class Moderator extends Precondition {
-	public run(message: Message): PreconditionResult {
+	public async run(message: Message): AsyncPreconditionResult {
 		if (!message.guild) {
 			return this.error({ message: 'This cannot be run in dms' });
 		}
-		return message.member!.permissions.has(
-			'KICK_MEMBERS' || 'BAN_MEMBERS' || 'MANAGE_GUILD' || 'MANAGE_CHANNELS'
-		)
+		const guild = await this.container.database.guildSettings.findUnique({
+			where: { id: message.guild!.id },
+		});
+		return message.member!.permissions.has('BAN_MEMBERS') ||
+			message.member!.roles.cache.some((r) => guild!.modRoles.includes(r.id))
 			? this.ok()
 			: this.error({ message: 'This command can only run by Administrators' });
 	}

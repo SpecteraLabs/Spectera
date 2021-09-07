@@ -13,4 +13,5 @@ model GuildSettings {
   autorole  String?
   loggingChannel  String?
   muterole  String?
+  modRoles  String[]
 }

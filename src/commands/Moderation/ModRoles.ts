@@ -6,10 +6,21 @@ import type { Message } from 'discord.js';
 
 @ApplyOptions<SubCommandPluginCommand.Options>({
 	subCommands: ['set', 'show'],
+	runIn: ['GUILD_ANY'],
 })
 export class ModRoles extends SubCommandPluginCommand {
 	public async set(message: Message, args: Args) {
-		const role = await args.pick('role');
-		await reply(message, role.id);
+		const roles = await args.repeat('role');
+		for (const role of roles) {
+			await this.container.database.guildSettings.update({
+				where: { id: message.guild!.id },
+				data: {
+					modRoles: {
+						push: role.id,
+					},
+				},
+			});
+		}
+		await reply(message, 'Successfully set modroles for this server');
 	}
 }

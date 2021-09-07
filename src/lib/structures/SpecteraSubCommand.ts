@@ -24,7 +24,7 @@ export abstract class SpecteraSubCommand extends SubCommandPluginCommand {
 	}
 
 	protected static resolvePreConditions(
-		context: PieceContext,
+		_context: PieceContext,
 		options: SpecteraSubCommand.Options
 	): SpecteraSubCommand.Options {
 		options.generateDashLessAliases ??= true;
@@ -35,12 +35,6 @@ export abstract class SpecteraSubCommand extends SubCommandPluginCommand {
 		if (options.permissions) {
 			preconditions.push(new UserPermissionsPrecondition(options.permissions));
 		}
-
-		const runInPreCondition = this.resolveRunInPreCondition(
-			context,
-			options.runIn
-		);
-		if (runInPreCondition !== null) preconditions.push(runInPreCondition);
 
 		const permissionLevelPreCondition = this.resolvePermissionLevelPreCondition(
 			options.permissionLevel
@@ -71,39 +65,12 @@ export abstract class SpecteraSubCommand extends SubCommandPluginCommand {
 		if (permissionLevel <= PermissionLevels.BotOwner) return 'BotOwner';
 		return null;
 	}
-
-	protected static resolveRunInPreCondition(
-		context: PieceContext,
-		runIn?: SpecteraSubCommand.RunInOption[]
-	): PreconditionEntryResolvable | null {
-		runIn = [...new Set(runIn ?? (['text', 'news', 'dm'] as const))];
-
-		if (runIn.length === 3) return null;
-		if (runIn.length === 0) {
-			throw new Error(
-				`SpecteraSubCommand[${context.name}]: "runIn" was specified as an empty array.`
-			);
-		}
-
-		const array: any[] = [];
-		if (runIn.includes('dm')) array.push('DMOnly');
-
-		const hasText = runIn.includes('text');
-		const hasNews = runIn.includes('news');
-		if (hasText && hasNews) array.push('GuildOnly');
-		else if (hasText) array.push('TextOnly');
-		else if (hasNews) array.push('NewsOnly');
-
-		return array;
-	}
 }
 
 export namespace SpecteraSubCommand {
-	export type RunInOption = 'text' | 'news' | 'dm';
 	export type Options = SubCommandPluginCommand.Options & {
 		permissionLevel?: number;
 		permissions?: PermissionResolvable;
-		runIn?: RunInOption[];
 		guarded?: boolean;
 		hidden?: boolean;
 		bucket?: number;

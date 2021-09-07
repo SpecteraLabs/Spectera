@@ -57,7 +57,7 @@
 		"lint": "prettier --write \"src/**/*.ts\"",
 		"predocker:watch": "npm install",
 		"docker:watch": "tsc-watch --onSuccess \"node ./dist/index.js\"",
-		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next"
+		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next @sapphire/plugin-editable-commands@next"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.14.8",

@@ -1,4 +1,5 @@
 import { SpecteraSubCommand } from '#structures/SpecteraSubCommand';
+import { PermissionLevels } from '#types/enums/PermissionLevels';
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
 import { reply } from '@sapphire/plugin-editable-commands';
@@ -6,6 +7,7 @@ import type { Message } from 'discord.js';
 
 @ApplyOptions<SpecteraSubCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],
+	permissionLevel: PermissionLevels.Moderator,
 })
 export class Prefix extends SpecteraSubCommand {
 	public async show(message: Message) {
