@@ -11,6 +11,6 @@ export class Moderator extends Precondition {
 		});
 		return message.member!.permissions.has('BAN_MEMBERS') || message.member!.roles.cache.some((r) => guild!.modRoles.includes(r.id))
 			? this.ok()
-			: this.error({ message: 'This command can only run by Administrators' });
+			: this.error({ message: 'This command can only run by Moderators' });
 	}
 }

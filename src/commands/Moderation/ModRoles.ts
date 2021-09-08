@@ -14,6 +14,8 @@ export class ModRoles extends SpecteraSubCommand {
 	public async set(message: Message, args: Args) {
 		const roles = await args.repeat('role');
 		for (const role of roles) {
+			const condition = await this.container.database.guildSettings.findUnique({ where: { id: message.guild!.id } });
+			if (condition!.modRoles.includes(role.id)) return;
 			await this.container.database.guildSettings.update({
 				where: { id: message.guild!.id },
 				data: {
