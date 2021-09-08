@@ -20,12 +20,11 @@ export class Prefix extends SpecteraSubCommand {
 	}
 
 	public async set(message: Message, args: Args) {
-		let prefix = await args.pick('string');
-		prefix = prefix.toLowerCase();
-		await this.container.database.guildSettings.upsert({
+		let prefix_ = await args.pick('string');
+		prefix_ = prefix_.toLowerCase();
+		await this.container.database.guildSettings.update({
 			where: { id: message.guild!.id },
-			update: { prefix },
-			create: { id: message.guild!.id, prefix }
+			data: { prefix: prefix_ }
 		});
 		await reply(message, {
 			content: `Successfully changed prefix of this guild`
