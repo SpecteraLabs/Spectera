@@ -4,5 +4,5 @@ export const enum CooldownTime {
 	UltraSlow = 20000,
 	UltraMegaSlow = 25000,
 	ExtraLarge = 30000,
-	Mammoth = 60000,
+	Mammoth = 60000
 }

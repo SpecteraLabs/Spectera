@@ -5,7 +5,7 @@ import { blue, gray, green, magenta, yellow, yellowBright } from 'colorette';
 const dev = process.env.NODE_ENV !== 'production';
 
 @ApplyOptions<ListenerOptions>({
-	once: true,
+	once: true
 })
 export class UserEvent extends Listener {
 	private readonly style = dev ? yellow : blue;
@@ -48,13 +48,7 @@ ${line07}  /" \   :)/|__/ \    (:      "|(:   _) \    \:  |   (:      "||:  __  
 ${line08} (_______/(_______)    \_______) \_______)    \__|    \_______)|__|  \___)(___/    \___)																			 
 ${line09}${pad}${blc('3.0.0 [Sapphire Edition]')}
 ${line10} ${pad}[${success}] Gateway
-${line11} ${pad} ${pad} ${pad} ${pad}   ${
-				dev
-					? ` ${pad}${blc('<')}${llc('/')}${blc('>')} ${blc(
-							'DEVELOPMENT MODE'
-					  )}`
-					: ''
-			}
+${line11} ${pad} ${pad} ${pad} ${pad}   ${dev ? ` ${pad}${blc('<')}${llc('/')}${blc('>')} ${blc('DEVELOPMENT MODE')}` : ''}
 		`.trim()
 		);
 	}
@@ -69,10 +63,6 @@ ${line11} ${pad} ${pad} ${pad} ${pad}   ${
 	}
 
 	private styleStore(store: Store<any>, last: boolean) {
-		return gray(
-			`${last ? '└─' : '├─'} Loaded ${this.style(
-				store.size.toString().padEnd(3, ' ')
-			)} ${store.name}.`
-		);
+		return gray(`${last ? '└─' : '├─'} Loaded ${this.style(store.size.toString().padEnd(3, ' '))} ${store.name}.`);
 	}
 }

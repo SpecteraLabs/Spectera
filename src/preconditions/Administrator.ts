@@ -6,8 +6,6 @@ export class Administrator extends Precondition {
 		if (!message.guild) {
 			return this.error({ message: 'This cannot be run in dms' });
 		}
-		return message.member!.permissions.has('ADMINISTRATOR')
-			? this.ok()
-			: this.error({ message: 'This command can only run by Administrators' });
+		return message.member!.permissions.has('ADMINISTRATOR') ? this.ok() : this.error({ message: 'This command can only run by Administrators' });
 	}
 }

@@ -12,6 +12,7 @@
 		"@sapphire/discord.js-utilities": "next",
 		"@sapphire/framework": "next",
 		"@sapphire/plugin-subcommands": "next",
+		"@sapphire/prettier-config": "^1.1.6",
 		"@sapphire/utilities": "next",
 		"discord.js": "^13.1.0",
 		"dotenv-cra": "^3.0.1"
@@ -72,7 +73,9 @@
 		"@sapphire/plugin-api": "next",
 		"@sapphire/plugin-editable-commands": "next",
 		"@sapphire/plugin-logger": "^1.0.13",
+		"@sapphire/stopwatch": "^1.1.4",
 		"@sapphire/ts-config": "^3.0.0",
+		"@sapphire/type": "^2.1.0",
 		"@types/node": "^16.7.6",
 		"@typescript-eslint/eslint-plugin": "^4.29.3",
 		"@typescript-eslint/parser": "^4.29.3",
@@ -93,8 +96,8 @@
 		"#types/enums/*": "./dist/lib/types/enums/*.js",
 		"#types/interfaces/*": "./dist/lib/types/interfaces/*.js",
 		"#lib/*": "./dist/lib/*.js",
-		"#root/*": "./dist/*.js",
-		"#env": "./dist/lib/env/index.js"
+		"#root/*": "./dist/*.js"
 	},
-	"packageManager": "yarn@3.0.1"
+	"packageManager": "yarn@3.0.1",
+	"prettier": "@sapphire/prettier-config"
 }

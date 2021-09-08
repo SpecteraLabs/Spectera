@@ -7,6 +7,7 @@ import type { Message } from 'discord.js';
 @ApplyOptions<SubCommandPluginCommand.Options>({
 	subCommands: ['set', 'show'],
 	runIn: ['GUILD_ANY'],
+	requiredUserPermissions: ['ADMINISTRATOR']
 })
 export class ModRoles extends SubCommandPluginCommand {
 	public async set(message: Message, args: Args) {
@@ -16,9 +17,9 @@ export class ModRoles extends SubCommandPluginCommand {
 				where: { id: message.guild!.id },
 				data: {
 					modRoles: {
-						push: role.id,
-					},
-				},
+						push: role.id
+					}
+				}
 			});
 		}
 		await reply(message, 'Successfully set modroles for this server');

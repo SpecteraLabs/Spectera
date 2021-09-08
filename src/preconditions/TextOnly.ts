@@ -7,7 +7,7 @@ export class TextOnly extends Precondition {
 		return message.channel.type === 'text'
 			? this.ok()
 			: this.error({
-					message: 'This command can only be used in text channels.',
+					message: 'This command can only be used in text channels.'
 			  });
 	}
 }

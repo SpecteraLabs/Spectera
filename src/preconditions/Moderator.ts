@@ -7,10 +7,9 @@ export class Moderator extends Precondition {
 			return this.error({ message: 'This cannot be run in dms' });
 		}
 		const guild = await this.container.database.guildSettings.findUnique({
-			where: { id: message.guild!.id },
+			where: { id: message.guild!.id }
 		});
-		return message.member!.permissions.has('BAN_MEMBERS') ||
-			message.member!.roles.cache.some((r) => guild!.modRoles.includes(r.id))
+		return message.member!.permissions.has('BAN_MEMBERS') || message.member!.roles.cache.some((r) => guild!.modRoles.includes(r.id))
 			? this.ok()
 			: this.error({ message: 'This command can only run by Administrators' });
 	}

@@ -1528,6 +1528,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@discordjs/node-pre-gyp@npm:^0.4.0":
+  version: 0.4.1
+  resolution: "@discordjs/node-pre-gyp@npm:0.4.1"
+  dependencies:
+    detect-libc: ^1.0.3
+    https-proxy-agent: ^5.0.0
+    make-dir: ^3.1.0
+    node-fetch: ^2.6.1
+    nopt: ^5.0.0
+    npmlog: ^5.0.0
+    rimraf: ^3.0.2
+    semver: ^7.3.5
+    tar: ^6.1.8
+  bin:
+    node-pre-gyp: bin/node-pre-gyp
+  checksum: ceef8161f570986610997a0e2d38e7ee009c8dfbbf30a17738e6aaf7774b480bf234cbc202c6917390d61bb3a2b0859905a5a0c52dd699a7eb26102bc2b9a6d6
+  languageName: node
+  linkType: hard
+
 "@eslint/eslintrc@npm:^0.4.3":
   version: 0.4.3
   resolution: "@eslint/eslintrc@npm:0.4.3"
@@ -1777,12 +1796,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/prettier-config@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "@sapphire/prettier-config@npm:1.1.6"
+  dependencies:
+    prettier: 2.x
+  checksum: 2d0aed3482908eb00f6614cd2aa59819b304475a172538c81180259af9869b7b1e7d27c2fa9a90f1ae5bc9d3f6c1d390f30ab8006022542fbdf12d0de1e62f6e
+  languageName: node
+  linkType: hard
+
 "@sapphire/ratelimits@npm:^2.0.1":
   version: 2.0.1
   resolution: "@sapphire/ratelimits@npm:2.0.1"
   dependencies:
     "@sapphire/time-utilities": ^1.3.8
   checksum: 9e6e8b06a32b5437f2c884612c162abd0993a843cb77449c640c14cdd61a8040ddd0c9218bb1171c493c757d6e06433d8738f6ce6f8b03d5a7ac0a31a80593a4
+  languageName: node
+  linkType: hard
+
+"@sapphire/stopwatch@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "@sapphire/stopwatch@npm:1.1.4"
+  dependencies:
+    tslib: 2.x
+  checksum: 13a87a4895c5649b101c0e8a0862113fd8d165b1937ab39b4ca483274a29889e1b127e03e30e6fc3b6d6659041e77486ed9dbbb53b51af4042370b42873f87c4
   languageName: node
   linkType: hard
 
@@ -1811,6 +1848,17 @@ __metadata:
     tslib: ^2.3.0
     typescript: ^4.3.5
   checksum: 7dcb377f9b8f151323c580ba4d693b07ec9862e6996b0facced9a76d2f45ca0249eba6f11fa40051172cf9e4415cefac484896ae793b4c13f1777734c81839df
+  languageName: node
+  linkType: hard
+
+"@sapphire/type@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@sapphire/type@npm:2.1.0"
+  dependencies:
+    "@discordjs/node-pre-gyp": ^0.4.0
+    nan: ^2.14.2
+    tslib: ^2.3.0
+  checksum: 3cc0cd702bad2002cdd8dd1ca18cbf34df27a0516f25566d6ffb7a18cb17da7e0969791a66d531395b576c29263600e0ab39c403a6e90fb69a7805b188915298
   languageName: node
   linkType: hard
 
@@ -2251,6 +2299,23 @@ __metadata:
   version: 1.2.0
   resolution: "aproba@npm:1.2.0"
   checksum: 0fca141966559d195072ed047658b6e6c4fe92428c385dd38e288eacfc55807e7b4989322f030faff32c0f46bb0bc10f1e0ac32ec22d25315a1e5bbc0ebb76dc
+  languageName: node
+  linkType: hard
+
+"aproba@npm:^1.0.3 || ^2.0.0":
+  version: 2.0.0
+  resolution: "aproba@npm:2.0.0"
+  checksum: 5615cadcfb45289eea63f8afd064ab656006361020e1735112e346593856f87435e02d8dcc7ff0d11928bc7d425f27bc7c2a84f6c0b35ab0ff659c814c138a24
+  languageName: node
+  linkType: hard
+
+"are-we-there-yet@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "are-we-there-yet@npm:2.0.0"
+  dependencies:
+    delegates: ^1.0.0
+    readable-stream: ^3.6.0
+  checksum: 6c80b4fd04ecee6ba6e737e0b72a4b41bdc64b7d279edfc998678567ff583c8df27e27523bc789f2c99be603ffa9eaa612803da1d886962d2086e7ff6fa90c7c
   languageName: node
   linkType: hard
 
@@ -2748,6 +2813,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"color-support@npm:^1.1.2":
+  version: 1.1.3
+  resolution: "color-support@npm:1.1.3"
+  bin:
+    color-support: bin.js
+  checksum: 9b7356817670b9a13a26ca5af1c21615463b500783b739b7634a0c2047c16cef4b2865d7576875c31c3cddf9dd621fa19285e628f20198b233a5cfdda6d0793b
+  languageName: node
+  linkType: hard
+
 "colorette@npm:^1.2.2, colorette@npm:^1.3.0":
   version: 1.3.0
   resolution: "colorette@npm:1.3.0"
@@ -2802,7 +2876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"console-control-strings@npm:^1.0.0, console-control-strings@npm:~1.1.0":
+"console-control-strings@npm:^1.0.0, console-control-strings@npm:^1.1.0, console-control-strings@npm:~1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
   checksum: 8755d76787f94e6cf79ce4666f0c5519906d7f5b02d4b884cf41e11dcd759ed69c57da0670afd9236d229a46e0f9cf519db0cd829c6dca820bb5a5c3def584ed
@@ -3014,6 +3088,15 @@ __metadata:
   version: 1.1.2
   resolution: "depd@npm:1.1.2"
   checksum: 6b406620d269619852885ce15965272b829df6f409724415e0002c8632ab6a8c0a08ec1f0bd2add05dc7bd7507606f7e2cc034fa24224ab829580040b835ecd9
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "detect-libc@npm:1.0.3"
+  bin:
+    detect-libc: ./bin/detect-libc.js
+  checksum: daaaed925ffa7889bd91d56e9624e6c8033911bb60f3a50a74a87500680652969dbaab9526d1e200a4c94acf80fc862a22131841145a0a8482d60a99c24f4a3e
   languageName: node
   linkType: hard
 
@@ -3658,6 +3741,23 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"gauge@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "gauge@npm:3.0.1"
+  dependencies:
+    aproba: ^1.0.3 || ^2.0.0
+    color-support: ^1.1.2
+    console-control-strings: ^1.0.0
+    has-unicode: ^2.0.1
+    object-assign: ^4.1.1
+    signal-exit: ^3.0.0
+    string-width: ^1.0.1 || ^2.0.0
+    strip-ansi: ^3.0.1 || ^4.0.0
+    wide-align: ^1.1.2
+  checksum: 3bc14bc5edb3289fb1ba6216f08acee2075e61b96f78dcb1f3b42979a354ccef1eade6b7252e04779efb9b7726905b182d8b455603558e710d24c7a0a317eaee
+  languageName: node
+  linkType: hard
+
 "gauge@npm:~2.7.3":
   version: 2.7.4
   resolution: "gauge@npm:2.7.4"
@@ -3832,7 +3932,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"has-unicode@npm:^2.0.0":
+"has-unicode@npm:^2.0.0, has-unicode@npm:^2.0.1":
   version: 2.0.1
   resolution: "has-unicode@npm:2.0.1"
   checksum: 1eab07a7436512db0be40a710b29b5dc21fa04880b7f63c9980b706683127e3c1b57cb80ea96d47991bdae2dfe479604f6a1ba410106ee1046a41d1bd0814400
@@ -4600,6 +4700,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"make-dir@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "make-dir@npm:3.1.0"
+  dependencies:
+    semver: ^6.0.0
+  checksum: 484200020ab5a1fdf12f393fe5f385fc8e4378824c940fba1729dcd198ae4ff24867bc7a5646331e50cead8abff5d9270c456314386e629acec6dff4b8016b78
+  languageName: node
+  linkType: hard
+
 "make-error@npm:^1.1.1":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
@@ -4891,6 +5000,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"nan@npm:^2.14.2":
+  version: 2.15.0
+  resolution: "nan@npm:2.15.0"
+  dependencies:
+    node-gyp: latest
+  checksum: 33e1bb4dfca447fe37d4bb5889be55de154828632c8d38646db67293a21afd61ed9909cdf1b886214a64707d935926c4e60e2b09de9edfc2ad58de31d6ce8f39
+  languageName: node
+  linkType: hard
+
 "nanomatch@npm:^1.2.9":
   version: 1.2.13
   resolution: "nanomatch@npm:1.2.13"
@@ -5023,6 +5141,18 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"npmlog@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "npmlog@npm:5.0.1"
+  dependencies:
+    are-we-there-yet: ^2.0.0
+    console-control-strings: ^1.1.0
+    gauge: ^3.0.0
+    set-blocking: ^2.0.0
+  checksum: 516b2663028761f062d13e8beb3f00069c5664925871a9b57989642ebe09f23ab02145bf3ab88da7866c4e112cafff72401f61a672c7c8a20edc585a7016ef5f
+  languageName: node
+  linkType: hard
+
 "number-is-nan@npm:^1.0.0":
   version: 1.0.1
   resolution: "number-is-nan@npm:1.0.1"
@@ -5030,7 +5160,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.1.0":
+"object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
@@ -5292,7 +5422,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.2":
+"prettier@npm:2.x, prettier@npm:^2.3.2":
   version: 2.3.2
   resolution: "prettier@npm:2.3.2"
   bin:
@@ -5402,7 +5532,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:3, readable-stream@npm:^3.0.0":
+"readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -5768,7 +5898,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"semver@npm:^6.1.1, semver@npm:^6.1.2, semver@npm:^6.3.0":
+"semver@npm:^6.0.0, semver@npm:^6.1.1, semver@npm:^6.1.2, semver@npm:^6.3.0":
   version: 6.3.0
   resolution: "semver@npm:6.3.0"
   bin:
@@ -5777,7 +5907,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"set-blocking@npm:~2.0.0":
+"set-blocking@npm:^2.0.0, set-blocking@npm:~2.0.0":
   version: 2.0.0
   resolution: "set-blocking@npm:2.0.0"
   checksum: 6e65a05f7cf7ebdf8b7c75b101e18c0b7e3dff4940d480efed8aad3a36a4005140b660fa1d804cb8bce911cac290441dc728084a30504d3516ac2ff7ad607b02
@@ -6018,7 +6148,10 @@ fsevents@~2.3.2:
     "@sapphire/plugin-editable-commands": next
     "@sapphire/plugin-logger": ^1.0.13
     "@sapphire/plugin-subcommands": next
+    "@sapphire/prettier-config": ^1.1.6
+    "@sapphire/stopwatch": ^1.1.4
     "@sapphire/ts-config": ^3.0.0
+    "@sapphire/type": ^2.1.0
     "@sapphire/utilities": next
     "@types/node": ^16.7.6
     "@typescript-eslint/eslint-plugin": ^4.29.3
@@ -6101,7 +6234,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"string-width@npm:^1.0.2 || 2":
+"string-width@npm:^1.0.1 || ^2.0.0, string-width@npm:^1.0.2 || 2":
   version: 2.1.1
   resolution: "string-width@npm:2.1.1"
   dependencies:
@@ -6160,7 +6293,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:^4.0.0":
+"strip-ansi@npm:^3.0.1 || ^4.0.0, strip-ansi@npm:^4.0.0":
   version: 4.0.0
   resolution: "strip-ansi@npm:4.0.0"
   dependencies:
@@ -6258,6 +6391,20 @@ fsevents@~2.3.2:
     mkdirp: ^1.0.3
     yallist: ^4.0.0
   checksum: f5aa41340d3415ef6f19ed0ee620db1f7cb9ea3f5ea7bfef5ea199bdb39e978d11f31d347231193e0d9262f81de3e358aa3dda6ed0c1909f22a8ce3e3a743dad
+  languageName: node
+  linkType: hard
+
+"tar@npm:^6.1.8":
+  version: 6.1.11
+  resolution: "tar@npm:6.1.11"
+  dependencies:
+    chownr: ^2.0.0
+    fs-minipass: ^2.0.0
+    minipass: ^3.0.0
+    minizlib: ^2.1.1
+    mkdirp: ^1.0.3
+    yallist: ^4.0.0
+  checksum: a04c07bb9e2d8f46776517d4618f2406fb977a74d914ad98b264fc3db0fe8224da5bec11e5f8902c5b9bcb8ace22d95fbe3c7b36b8593b7dfc8391a25898f32f
   languageName: node
   linkType: hard
 
@@ -6737,7 +6884,7 @@ typescript@^4.4.2:
   languageName: node
   linkType: hard
 
-"wide-align@npm:^1.1.0":
+"wide-align@npm:^1.1.0, wide-align@npm:^1.1.2":
   version: 1.1.3
   resolution: "wide-align@npm:1.1.3"
   dependencies:

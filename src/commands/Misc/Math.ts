@@ -7,7 +7,7 @@ import { reply } from '@sapphire/plugin-editable-commands';
 @ApplyOptions<SpecteraSubCommand.Options>({
 	aliases: ['calc'],
 	subCommands: ['add', 'subtract', 'multiply', 'divide'],
-	description: 'Simple math operations',
+	description: 'Simple math operations'
 })
 export class Math extends SpecteraSubCommand {
 	public async add(message: Message, args: Args) {
@@ -32,7 +32,7 @@ export class Math extends SpecteraSubCommand {
 		const x = await args.pick('number');
 		const y = await args.pick('number');
 		await reply(message, {
-			content: `The quotient is **${x / y}** and remainder is **${x % y}**`,
+			content: `The quotient is **${x / y}** and remainder is **${x % y}**`
 		});
 	}
 }

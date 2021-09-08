@@ -3,9 +3,7 @@ export type IntegerString = `${bigint}`;
 
 export type ObligatorEnvAny = keyof ObligatorEnv;
 export type ObligatorEnvString = {
-	[K in ObligatorEnvAny]: ObligatorEnv[K] extends BooleanString | IntegerString
-		? never
-		: K;
+	[K in ObligatorEnvAny]: ObligatorEnv[K] extends BooleanString | IntegerString ? never : K;
 }[ObligatorEnvAny];
 export type ObligatorEnvBoolean = {
 	[K in ObligatorEnvAny]: ObligatorEnv[K] extends BooleanString ? K : never;
