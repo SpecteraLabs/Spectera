@@ -51,7 +51,7 @@
 		"build": "yarn clean && yarn build:esbuild",
 		"watch": "node scripts/watch.mjs",
 		"clean": "node scripts/clean.mjs",
-		"start": "yarn lint && yarn build && node .",
+		"start": "yarn lint && yarn watch && node .",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
 		"typecheck": "tsc -p src --noEmit",
 		"dev": "run-s build start",

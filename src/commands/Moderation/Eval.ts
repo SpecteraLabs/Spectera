@@ -13,13 +13,13 @@ import { Stopwatch } from '@sapphire/stopwatch';
 	aliases: ['ev'],
 	description: 'Evals any JavaScript code',
 	flags: ['async', 'hidden', 'silent', 's', 'showHidden'],
-	quotes: [],
+	quotes: [['```js', '```']],
 	permissionLevel: PermissionLevels.BotOwner,
 	options: ['depth']
 })
 export class Eval extends SpecteraCommand {
 	public async run(message: Message, args: Args) {
-		const code = await args.rest('string');
+		const code = await args.pick('string');
 
 		const EvalEmbed = new MessageEmbed().setTitle('Output').setColor('WHITE');
 		const { result, success, type, timer } = await this.eval(message, code, {
