@@ -8,6 +8,7 @@ import type { Message } from 'discord.js';
 @ApplyOptions<SpecteraSubCommand.Options>({
 	subCommands: ['set', 'show'],
 	runIn: ['GUILD_ANY'],
+	description: "let's you set modroles for your server",
 	permissionLevel: PermissionLevels.Administrator
 })
 export class ModRoles extends SpecteraSubCommand {

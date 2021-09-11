@@ -4,7 +4,7 @@ export const rootFolder = join(__dirname, '..', '..');
 export const srcFolder = join(rootFolder, 'src');
 
 export const enum Emojis {
-	Loading = '<a:aaloading:730555789730775042>',
+	Loading = '<a:loading:730555789730775042>',
 	GreenTick = '<:greenTick:637706251253317669>',
 	RedCross = '<:redCross:637706251257511973>'
 }

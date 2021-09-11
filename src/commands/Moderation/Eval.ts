@@ -15,7 +15,8 @@ import { Stopwatch } from '@sapphire/stopwatch';
 	flags: ['async', 'hidden', 'silent', 's', 'showHidden'],
 	quotes: [['```js', '```']],
 	permissionLevel: PermissionLevels.BotOwner,
-	options: ['depth']
+	options: ['depth'],
+	hidden: true
 })
 export class Eval extends SpecteraCommand {
 	public async run(message: Message, args: Args) {

@@ -7,6 +7,7 @@ import type { Message } from 'discord.js';
 
 @ApplyOptions<SpecteraSubCommand.Options>({
 	subCommands: ['set', 'remove', 'show'],
+	description: 'prefix configuration for your server',
 	permissionLevel: PermissionLevels.Moderator
 })
 export class Prefix extends SpecteraSubCommand {
@@ -15,16 +16,16 @@ export class Prefix extends SpecteraSubCommand {
 			where: { id: message.guild!.id }
 		});
 		await reply(message, {
-			content: `Prefix for this guild is ${result!.prefix ?? '+'}`
+			content: `Prefix for this guild is ${result!.prefix}`
 		});
 	}
 
 	public async set(message: Message, args: Args) {
-		let prefix_ = await args.pick('string');
-		prefix_ = prefix_.toLowerCase();
+		let prefix = await args.pick('string');
+		prefix = prefix.toLowerCase();
 		await this.container.database.guildSettings.update({
 			where: { id: message.guild!.id },
-			data: { prefix: prefix_ }
+			data: { prefix }
 		});
 		await reply(message, {
 			content: `Successfully changed prefix of this guild`
