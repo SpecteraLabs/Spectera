@@ -12,7 +12,7 @@ export class SpecteraClient extends SapphireClient {
 		const result = await container.database.guildSettings.findUnique({
 			where: { id: message.guild.id }
 		});
-		return result ? result.prefix : 's!';
+		return result!.prefixes.length ? result!.prefixes : ['s!'];
 	};
 
 	public async start() {

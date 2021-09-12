@@ -6,7 +6,7 @@ import { PermissionLevels } from '#types/enums/PermissionLevels';
 import { codeBlock, isThenable } from '@sapphire/utilities';
 import { Type } from '@sapphire/type';
 import { inspect } from 'util';
-import { send } from '@skyra/editable-commands';
+import { send } from '@sapphire/plugin-editable-commands';
 import { Stopwatch } from '@sapphire/stopwatch';
 
 @ApplyOptions<SpecteraCommand.Options>({

@@ -9,7 +9,7 @@ generator client {
 
 model GuildSettings {
   id  String  @unique
-  prefix  String  @default("s!")
+  prefixes  String[]
   autorole  String?
   loggingChannel  String?
   muterole  String?

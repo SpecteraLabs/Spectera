@@ -21,6 +21,6 @@ export const LoadingMessages = [
 ];
 
 export const enum BrandingColors {
-	Primary = 0x5b75b3,
-	Secondary = 0xfffeff
+	Primary = 0x8f82ff,
+	Secondary = 0xdd5e53
 }

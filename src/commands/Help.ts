@@ -2,9 +2,9 @@ import { BrandingColors } from '#lib/constants';
 import { SpecteraCommand } from '#structures/SpecteraCommand';
 import { SpecteraPaginatedMessage } from '#structures/SpecteraPaginatedMessage';
 import { ApplyOptions } from '@sapphire/decorators';
-import { UserOrMemberMentionRegex } from '@sapphire/discord-utilities';
+import { UserOrMemberMentionRegex } from '@sapphire/discord.js-utilities';
 import { Args, container } from '@sapphire/framework';
-import { reply } from '@skyra/editable-commands';
+import { reply } from '@sapphire/plugin-editable-commands';
 import { Collection, Message, MessageEmbed } from 'discord.js';
 
 function sortCommandsAlphabetically(_: SpecteraCommand[], __: SpecteraCommand[], firstCategory: string, secondCategory: string): 1 | -1 | 0 {
@@ -26,7 +26,7 @@ export class Help extends SpecteraCommand {
 		}
 
 		const command = await args.pick('string');
-		if (container.stores.get('commands').findKey((cmd) => cmd.name === command)) return;
+		if (container.stores.get('commands').findKey((cmd: any) => cmd.name === command)) return;
 
 		const category = await args.pickResult(Help.categories);
 		if (category.success) return this.display(message, args, category.value - 1, context);
@@ -42,7 +42,7 @@ export class Help extends SpecteraCommand {
 		const commandCategories: string[] = [];
 		for (const [category, commands] of commandsByCategory) {
 			const line = String(++i).padStart(2, '0');
-			commandCategories.push(`\`${line}.\` **${category}** → ${commands.length} command`);
+			commandCategories.push(`\`${line}.\` **${category}**: ${commands.length} command`);
 		}
 
 		const content = commandCategories.join('\n');
@@ -96,7 +96,7 @@ export class Help extends SpecteraCommand {
 
 	private formatCommand(prefix: string, paginatedMessage: boolean, command: SpecteraCommand) {
 		const { description } = command;
-		return paginatedMessage ? `• ${prefix}${command.name} → ${description}` : `• **${prefix}${command.name}** → ${description}`;
+		return paginatedMessage ? `• ${prefix}${command.name}: ${description}` : `• **${prefix}${command.name}**: ${description}`;
 	}
 
 	private static async fetchCommands(message: Message) {
@@ -111,9 +111,9 @@ export class Help extends SpecteraCommand {
 				const result = await cmd.preconditions.run(message, command, { command: null! });
 				if (!result.success) return;
 
-				const category = filtered.get(command.fullCategory!.join(' → '));
+				const category = filtered.get(command.fullCategory!.join(': '));
 				if (category) category.push(command);
-				else filtered.set(command.fullCategory!.join(' → '), [command as SpecteraCommand]);
+				else filtered.set(command.fullCategory!.join(': '), [command as SpecteraCommand]);
 			})
 		);
 

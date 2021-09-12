@@ -1,5 +1,5 @@
 import { Listener } from '@sapphire/framework';
-import { reply } from '@skyra/editable-commands';
+import { reply } from '@sapphire/plugin-editable-commands';
 import type { Message } from 'discord.js';
 
 export class MentionPrefix extends Listener<'mentionPrefixOnly'> {
