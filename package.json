@@ -14,7 +14,6 @@
 		"@sapphire/plugin-subcommands": "next",
 		"@sapphire/prettier-config": "^1.1.6",
 		"@sapphire/utilities": "next",
-		"@yarnpkg/pnpify": "^3.0.1-rc.3",
 		"discord.js": "^13.1.0",
 		"dotenv-cra": "^3.0.2"
 	},
