@@ -20,7 +20,7 @@ import { Stopwatch } from '@sapphire/stopwatch';
 })
 export class Eval extends SpecteraCommand {
 	public async run(message: Message, args: Args) {
-		const code = await args.pick('string');
+		const code = await args.pick('string').catch(() => args.rest('string'));
 
 		const EvalEmbed = new MessageEmbed().setTitle('Output').setColor('WHITE');
 		const { result, success, type, timer } = await this.eval(message, code, {
