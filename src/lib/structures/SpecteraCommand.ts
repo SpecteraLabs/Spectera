@@ -47,7 +47,7 @@ export abstract class SpecteraCommand extends Command {
 	protected static resolvePermissionLevelPreCondition(permissionLevel = 0): PreconditionEntryResolvable | null {
 		if (permissionLevel === 0) return null;
 		if (permissionLevel <= PermissionLevels.Moderator) {
-			return ['BotOwner', 'Moderator'];
+			return ['BotOwner', 'Moderator', 'Administrator'];
 		}
 		if (permissionLevel <= PermissionLevels.Administrator) {
 			return ['BotOwner', 'Administrator'];
