@@ -6,14 +6,18 @@ import { reply } from '@sapphire/plugin-editable-commands';
 import { Message, MessageEmbed } from 'discord.js';
 
 @ApplyOptions<SpecteraSubCommand.Options>({
-	subCommands: ['add', 'remove', 'show'],
+	subCommands: ['add', 'remove', 'show', { input: 'view', output: 'show' }],
 	description: 'prefix configuration for your server',
 	runIn: ['GUILD_ANY']
 })
 export class Prefix extends SpecteraSubCommand {
 	@ModeratorOnly()
 	public async add(message: Message, args: Args) {
+		const result = await this.container.database.guildSettings.findUnique({
+			where: { id: message.guild!.id }
+		});
 		const prefix = await args.pick('string');
+		if (result!.modRoles.includes(prefix)) return reply(message, 'This prefix already exists!')
 		await this.container.database.guildSettings.update({
 			where: { id: message.guild!.id },
 			data: {
@@ -22,7 +26,7 @@ export class Prefix extends SpecteraSubCommand {
 				}
 			}
 		});
-		reply(message, `Added ${prefix} as a prefix for this server!`);
+		return reply(message, `Added ${prefix} as a prefix for this server!`);
 	}
 	@ModeratorOnly()
 	public async remove(message: Message, args: Args) {
