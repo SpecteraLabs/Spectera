@@ -1,18 +1,20 @@
 import { ApplyOptions } from '@sapphire/decorators';
 import { ListenerOptions, Listener, Store } from '@sapphire/framework';
 import { blue, gray, green, magenta, yellow, yellowBright } from 'colorette';
+import { Collection } from 'discord.js';
 
 const dev = process.env.NODE_ENV !== 'production';
 
 @ApplyOptions<ListenerOptions>({
 	once: true
 })
-export class UserEvent extends Listener {
+export class Ready extends Listener {
 	private readonly style = dev ? yellow : blue;
 
 	public run() {
 		this.printBanner();
 		this.printStoreDebugInformation();
+		this.container.client.snipes = new Collection();
 	}
 
 	private printBanner() {

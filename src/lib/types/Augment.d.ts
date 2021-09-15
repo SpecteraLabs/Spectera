@@ -1,4 +1,6 @@
 import type { PrismaClient } from '@prisma/client';
+import type { Collection } from 'discord.js';
+import type { SnipedMessageObject } from './interfaces/Snipe';
 
 declare module '@sapphire/pieces' {
 	interface Container {
@@ -16,5 +18,9 @@ declare module '@sapphire/framework' {
 	}
 	interface ArgType {
 		emoji: string;
+	}
+
+	interface SapphireClient {
+		snipes: Collection<string, SnipedMessageObject>
 	}
 }
