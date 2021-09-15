@@ -10,16 +10,16 @@ export class MessageDelete extends Listener {
 			content: message.content,
 			author: message.author.tag,
 			member: message.member!,
-			image: message.attachments.first() ? message.attachments.first()?.proxyURL : null,
+			image: message.attachments.first() ? message.attachments.first()?.proxyURL : null
 		});
 
 		const result = await this.container.database.guildSettings.findUnique({
 			where: { id: message.guild!.id }
 		});
-		const { loggingChannel } = result!
+		const { loggingChannel } = result!;
 		if (loggingChannel === null) return;
 
-		const channel = message.guild!.channels.cache.find(ch => ch.id === loggingChannel);
+		const channel = message.guild!.channels.cache.find((ch) => ch.id === loggingChannel);
 		if (!isGuildBasedChannel(channel) || !isGuildBasedChannel(message.channel)) return;
 		const embed = new MessageEmbed()
 			.setAuthor(message.author.tag, message.member!.user.displayAvatarURL())

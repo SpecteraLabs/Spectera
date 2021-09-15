@@ -21,6 +21,6 @@ declare module '@sapphire/framework' {
 	}
 
 	interface SapphireClient {
-		snipes: Collection<string, SnipedMessageObject>
+		snipes: Collection<string, SnipedMessageObject>;
 	}
 }
