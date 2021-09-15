@@ -1,4 +1,4 @@
-import { Moderator } from '#lib/decorators/index';
+import { ModeratorOnly } from '#lib/decorators/index';
 import { SpecteraSubCommand } from '#structures/SpecteraSubCommand';
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
@@ -11,7 +11,7 @@ import { Message, MessageEmbed } from 'discord.js';
 	runIn: ['GUILD_ANY']
 })
 export class Prefix extends SpecteraSubCommand {
-	@Moderator()
+	@ModeratorOnly()
 	public async add(message: Message, args: Args) {
 		const prefix = await args.pick('string');
 		await this.container.database.guildSettings.update({
@@ -24,7 +24,7 @@ export class Prefix extends SpecteraSubCommand {
 		});
 		reply(message, `Added ${prefix} as a prefix for this server!`);
 	}
-	@Moderator()
+	@ModeratorOnly()
 	public async remove(message: Message, args: Args) {
 		const prefix = await args.pick('string');
 		const guild = await this.container.database.guildSettings.findUnique({

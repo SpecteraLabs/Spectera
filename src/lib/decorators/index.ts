@@ -1,3 +1,3 @@
-export * from './OwnerOnly';
-export * from './Administrator';
-export * from './Moderator';
+export * from './BotOwnerOnly';
+export * from './AdministratorOnly';
+export * from './ModeratorOnly';
