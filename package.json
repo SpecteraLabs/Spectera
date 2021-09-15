@@ -48,6 +48,7 @@
 	},
 	"scripts": {
 		"build:esbuild": "node scripts/build.mjs",
+		"postinstall": "husky install .github/husky",
 		"build": "yarn clean && yarn build:esbuild",
 		"watch": "node scripts/watch.mjs",
 		"clean": "node scripts/clean.mjs",
