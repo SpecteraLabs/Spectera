@@ -61,6 +61,9 @@
 		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next @sapphire/plugin-editable-commands@next"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^13.1.0",
+		"@commitlint/config-angular": "^13.1.0",
+		"@commitlint/config-conventional": "^13.1.0",
 		"@sapphire/eslint-config": "^3.2.3",
 		"@sapphire/plugin-api": "next",
 		"@sapphire/plugin-editable-commands": "next",
@@ -74,6 +77,7 @@
 		"colorette": "^1.4.0",
 		"esbuild": "^0.12.28",
 		"eslint": "^7.32.0",
+		"husky": "^7.0.2",
 		"lint-staged": "^11.1.2",
 		"prettier": "^2.4.0",
 		"prisma": "3.0.2",
