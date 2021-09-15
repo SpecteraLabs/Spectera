@@ -17,7 +17,7 @@ export class Prefix extends SpecteraSubCommand {
 			where: { id: message.guild!.id }
 		});
 		const prefix = await args.pick('string');
-		if (result!.modRoles.includes(prefix)) return reply(message, 'This prefix already exists!')
+		if (result!.modRoles.includes(prefix)) return reply(message, 'This prefix already exists!');
 		await this.container.database.guildSettings.update({
 			where: { id: message.guild!.id },
 			data: {
