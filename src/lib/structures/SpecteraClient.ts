@@ -8,7 +8,7 @@ export class SpecteraClient extends SapphireClient {
 	}
 
 	public fetchPrefix = async (message: Message) => {
-		if (!message.guild) return 's!';
+		if (!message.guild) return ['s!'];
 		const result = await container.database.guildSettings.findUnique({
 			where: { id: message.guild.id }
 		});

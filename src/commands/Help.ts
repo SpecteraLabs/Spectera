@@ -23,6 +23,7 @@ export class Help extends SpecteraCommand {
 		if (args.finished) {
 			if (args.getFlags('cat', 'categories')) return this.helpCategories(message, args);
 			if (args.getFlags('all')) return this.all(message, context);
+			return this.display(message, args, null, context);
 		}
 
 		const command = await args.pick('string');

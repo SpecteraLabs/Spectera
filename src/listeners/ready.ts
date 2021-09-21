@@ -2,6 +2,8 @@ import { ApplyOptions } from '@sapphire/decorators';
 import { ListenerOptions, Listener, Store } from '@sapphire/framework';
 import { blue, gray, green, magenta, yellow, yellowBright } from 'colorette';
 import { Collection } from 'discord.js';
+// @ts-expect-error i need this
+import { version } from '../../package.json';
 
 const dev = process.env.NODE_ENV !== 'production';
 
@@ -48,7 +50,7 @@ ${line05}  \___  \   |:  ____/  \/    |   \/ \        \\_ /    \/    |  |_____/ 
 ${line06}   __/  \\  (|  /      // ___)_  //  \ _     |.  |    // ___)_  //      /   //  __'  \  
 ${line07}  /" \   :)/|__/ \    (:      "|(:   _) \    \:  |   (:      "||:  __   \  /   /  \\  \ 
 ${line08} (_______/(_______)    \_______) \_______)    \__|    \_______)|__|  \___)(___/    \___)																			 
-${line09}${pad}${blc('3.0.0 [Sapphire Edition]')}
+${line09}${pad}${blc(version)}
 ${line10} ${pad}[${success}] Gateway
 ${line11} ${pad} ${pad} ${pad} ${pad}   ${dev ? ` ${pad}${blc('<')}${llc('/')}${blc('>')} ${blc('DEVELOPMENT MODE')}` : ''}
 		`.trim()

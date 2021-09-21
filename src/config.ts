@@ -35,6 +35,21 @@ export const CLIENT_OPTIONS: ClientOptions = {
 	intents: ['GUILDS', 'GUILD_MESSAGES', 'DIRECT_MESSAGES', 'GUILD_MESSAGE_REACTIONS'],
 	defaultPrefix: envParseString('CLIENT_PREFIX'),
 	regexPrefix: parseRegExpPrefix(),
+	api: {
+		auth: {
+			id: envParseString('CLIENT_ID'),
+			secret: envParseString('OAUTH2_SECRET'),
+			cookie: envParseString('OAUTH2_COOKIE'),
+			scopes: envParseArray('OAUTH2_SCOPE'),
+			transformers: [],
+			domainOverwrite: envParseString('OAUTH2_DOMAIN_OVERWRITE')
+		},
+		prefix: '/api',
+		origin: 'https://localhost:3000',
+		listenOptions: {
+			port: 5000
+		}
+	},
 	logger: {
 		level: envParseString('NODE_ENV') === 'production' ? LogLevel.Info : LogLevel.Debug
 	},

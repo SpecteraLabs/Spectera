@@ -30,4 +30,9 @@ export interface ObligatorEnv {
 
 	DISCORD_TOKEN: string;
 	MONGO_URL: string;
+	OAUTH2_SECRET: string;
+	OAUTH2_COOKIE: string;
+	OAUTH2_REDIRECT: string;
+	OAUTH2_SCOPE: string;
+	OAUTH2_DOMAIN_OVERWRITE: string;
 }
