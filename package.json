@@ -65,6 +65,7 @@
 		"@commitlint/cli": "^13.1.0",
 		"@commitlint/config-angular": "^13.1.0",
 		"@commitlint/config-conventional": "^13.1.0",
+		"@sapphire/cli": "^0.0.1",
 		"@sapphire/eslint-config": "^3.2.3",
 		"@sapphire/plugin-api": "next",
 		"@sapphire/plugin-editable-commands": "next",

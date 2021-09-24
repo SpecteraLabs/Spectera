@@ -1,0 +1,17 @@
+{
+	"category": "commands"
+}
+---
+import { ApplyOptions } from '@sapphire/decorators';
+import { SpecteraCommand } from '#structures/SpecteraCommand';
+import type { Message } from 'discord.js';
+import type { Args } from '@sapphire/framework';
+
+@ApplyOptions<SpecteraCommand.Options>({
+	description: 'Your description here.',
+})
+export class {{name}} extends SpecteraCommand {
+	public async run(message: Message, args: Args) {
+		// ...
+	}
+}
