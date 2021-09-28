@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:13.1.0"],
             ["@commitlint/config-angular", "npm:13.1.0"],
             ["@commitlint/config-conventional", "npm:13.1.0"],
-            ["@prisma/client", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.0.2"],
+            ["@prisma/client", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.1.1"],
             ["@sapphire/decorators", "npm:3.0.0-next.18081fac.0"],
             ["@sapphire/discord.js-utilities", "npm:3.0.0-next.2c2df24f.0"],
             ["@sapphire/eslint-config", "npm:3.2.3"],
@@ -64,7 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:11.1.2"],
             ["prettier", "npm:2.4.1"],
             ["pretty-quick", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.1.1"],
-            ["prisma", "npm:3.0.2"],
+            ["prisma", "npm:3.1.1"],
             ["reflect-metadata", "npm:0.1.13"],
             ["typescript", "patch:typescript@npm%3A4.5.0-dev.20210912#~builtin<compat/typescript>::version=4.5.0-dev.20210912&hash=32657b"]
           ],
@@ -453,20 +453,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@prisma/client", [
-        ["npm:3.0.2", {
-          "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-82437efd96/node_modules/@prisma/client/",
+        ["npm:3.1.1", {
+          "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-e4f7e955ea/node_modules/@prisma/client/",
           "packageDependencies": [
-            ["@prisma/client", "npm:3.0.2"]
+            ["@prisma/client", "npm:3.1.1"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.0.2", {
-          "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-82437efd96/node_modules/@prisma/client/",
+        ["virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.1.1", {
+          "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-e4f7e955ea/node_modules/@prisma/client/",
           "packageDependencies": [
-            ["@prisma/client", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.0.2"],
-            ["@prisma/engines-version", "npm:2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db"],
+            ["@prisma/client", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.1.1"],
+            ["@prisma/engines-version", "npm:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f"],
             ["@types/prisma", null],
-            ["prisma", "npm:3.0.2"]
+            ["prisma", "npm:3.1.1"]
           ],
           "packagePeers": [
             "@types/prisma",
@@ -476,19 +476,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@prisma/engines", [
-        ["npm:2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db", {
-          "packageLocation": "./.yarn/unplugged/@prisma-engines-npm-2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db-3b9ec476f7/node_modules/@prisma/engines/",
+        ["npm:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f", {
+          "packageLocation": "./.yarn/unplugged/@prisma-engines-npm-3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f-4e2ba773cc/node_modules/@prisma/engines/",
           "packageDependencies": [
-            ["@prisma/engines", "npm:2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db"]
+            ["@prisma/engines", "npm:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@prisma/engines-version", [
-        ["npm:2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db", {
-          "packageLocation": "./.yarn/cache/@prisma-engines-version-npm-2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db-ab19f59140-62589b282f.zip/node_modules/@prisma/engines-version/",
+        ["npm:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f", {
+          "packageLocation": "./.yarn/cache/@prisma-engines-version-npm-3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f-5b148740cf-ec5a1a75bd.zip/node_modules/@prisma/engines-version/",
           "packageDependencies": [
-            ["@prisma/engines-version", "npm:2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db"]
+            ["@prisma/engines-version", "npm:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f"]
           ],
           "linkType": "HARD",
         }]
@@ -4020,11 +4020,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["prisma", [
-        ["npm:3.0.2", {
-          "packageLocation": "./.yarn/unplugged/prisma-npm-3.0.2-d3b443d1a5/node_modules/prisma/",
+        ["npm:3.1.1", {
+          "packageLocation": "./.yarn/unplugged/prisma-npm-3.1.1-42c2141fe4/node_modules/prisma/",
           "packageDependencies": [
-            ["prisma", "npm:3.0.2"],
-            ["@prisma/engines", "npm:2.31.0-32.2452cc6313d52b8b9a96999ac0e974d0aedf88db"]
+            ["prisma", "npm:3.1.1"],
+            ["@prisma/engines", "npm:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f"]
           ],
           "linkType": "HARD",
         }]
@@ -4534,7 +4534,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:13.1.0"],
             ["@commitlint/config-angular", "npm:13.1.0"],
             ["@commitlint/config-conventional", "npm:13.1.0"],
-            ["@prisma/client", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.0.2"],
+            ["@prisma/client", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.1.1"],
             ["@sapphire/decorators", "npm:3.0.0-next.18081fac.0"],
             ["@sapphire/discord.js-utilities", "npm:3.0.0-next.2c2df24f.0"],
             ["@sapphire/eslint-config", "npm:3.2.3"],
@@ -4560,7 +4560,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:11.1.2"],
             ["prettier", "npm:2.4.1"],
             ["pretty-quick", "virtual:d6314b02cadfb26f4730a3502e1479f9a76844f95fc80ab6ce969cb578189c0b97c1ca766c9693963858b4ec4ae528647ae5d2ace47815719507d721624abbbc#npm:3.1.1"],
-            ["prisma", "npm:3.0.2"],
+            ["prisma", "npm:3.1.1"],
             ["reflect-metadata", "npm:0.1.13"],
             ["typescript", "patch:typescript@npm%3A4.5.0-dev.20210912#~builtin<compat/typescript>::version=4.5.0-dev.20210912&hash=32657b"]
           ],

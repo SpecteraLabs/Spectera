@@ -7,7 +7,7 @@
 	"author": "UndiedGamer",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@prisma/client": "3.0.2",
+		"@prisma/client": "3.1.1",
 		"@sapphire/decorators": "next",
 		"@sapphire/discord.js-utilities": "next",
 		"@sapphire/framework": "next",
@@ -82,7 +82,7 @@
 		"lint-staged": "^11.1.2",
 		"prettier": "^2.4.1",
 		"pretty-quick": "^3.1.1",
-		"prisma": "3.0.2",
+		"prisma": "3.1.1",
 		"reflect-metadata": "^0.1.13",
 		"typescript": "next"
 	},
