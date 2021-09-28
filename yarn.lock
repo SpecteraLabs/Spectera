@@ -1327,17 +1327,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"colorette@npm:2.0.12":
+  version: 2.0.12
+  resolution: "colorette@npm:2.0.12"
+  checksum: 1df990c6749826694756ecd05a771fb70fd426cf2b264cf496fb93a621fb4554fabfa8adde0923421f3e38b7265d546f6a46caf833f2d7facf45a40042b510b3
+  languageName: node
+  linkType: hard
+
 "colorette@npm:^1.2.2":
   version: 1.3.0
   resolution: "colorette@npm:1.3.0"
   checksum: bda403dfba4d032bee4169f2a6436a83ae3da488a53bcb3be92dc44ace056518245cc614b12429d7529493d6b090a119b2523b0d55e8cd6b81ad939a3003c008
-  languageName: node
-  linkType: hard
-
-"colorette@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "colorette@npm:2.0.2"
-  checksum: f2ec4e0c4c612737bc852cf3376e5d4261f8b6acefc9a52974c97473eeac855f8751dfcbb3cf3490bc4b644477ed9688aa4cade96d09742d0eafc8ec36fdab2b
   languageName: node
   linkType: hard
 
@@ -3846,7 +3846,7 @@ resolve@^1.10.0:
     "@types/node": ^16.9.4
     "@typescript-eslint/eslint-plugin": ^4.31.2
     "@typescript-eslint/parser": ^4.31.2
-    colorette: ^2.0.2
+    colorette: 2.0.12
     discord.js: ^13.1.0
     dotenv-cra: ^3.0.2
     esbuild: ^0.12.28
