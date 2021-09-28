@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sapphire/framework", "npm:2.0.0-next.852ee878.0"],
             ["@sapphire/plugin-api", "npm:3.0.0-next.49bbf8e.0"],
             ["@sapphire/plugin-editable-commands", "npm:0.1.0-next.49bbf8e.0"],
-            ["@sapphire/plugin-logger", "npm:1.0.14-next.d810c56.0"],
+            ["@sapphire/plugin-logger", "npm:1.0.14-pr-97.11c4df4.0"],
             ["@sapphire/plugin-subcommands", "npm:2.0.0-next.49bbf8e.0"],
             ["@sapphire/prettier-config", "npm:1.1.6"],
             ["@sapphire/stopwatch", "npm:1.1.4"],
@@ -634,12 +634,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@sapphire/plugin-logger", [
-        ["npm:1.0.14-next.d810c56.0", {
-          "packageLocation": "./.yarn/cache/@sapphire-plugin-logger-npm-1.0.14-next.d810c56.0-f35a5d5618-cf4cbe2179.zip/node_modules/@sapphire/plugin-logger/",
+        ["npm:1.0.14-pr-97.11c4df4.0", {
+          "packageLocation": "./.yarn/cache/@sapphire-plugin-logger-npm-1.0.14-pr-97.11c4df4.0-2be781585c-28ff8094c6.zip/node_modules/@sapphire/plugin-logger/",
           "packageDependencies": [
-            ["@sapphire/plugin-logger", "npm:1.0.14-next.d810c56.0"],
+            ["@sapphire/plugin-logger", "npm:1.0.14-pr-97.11c4df4.0"],
             ["@sapphire/time-utilities", "npm:1.3.8"],
-            ["colorette", "npm:1.4.0"],
+            ["colorette", "npm:1.3.0"],
             ["tslib", "npm:2.3.1"]
           ],
           "linkType": "HARD",
@@ -1811,13 +1811,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/colorette-npm-1.3.0-850a0c65bc-bda403dfba.zip/node_modules/colorette/",
           "packageDependencies": [
             ["colorette", "npm:1.3.0"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:1.4.0", {
-          "packageLocation": "./.yarn/cache/colorette-npm-1.4.0-7e94b44dc3-01c3c16058.zip/node_modules/colorette/",
-          "packageDependencies": [
-            ["colorette", "npm:1.4.0"]
           ],
           "linkType": "HARD",
         }],
@@ -4791,7 +4784,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sapphire/framework", "npm:2.0.0-next.852ee878.0"],
             ["@sapphire/plugin-api", "npm:3.0.0-next.49bbf8e.0"],
             ["@sapphire/plugin-editable-commands", "npm:0.1.0-next.49bbf8e.0"],
-            ["@sapphire/plugin-logger", "npm:1.0.14-next.d810c56.0"],
+            ["@sapphire/plugin-logger", "npm:1.0.14-pr-97.11c4df4.0"],
             ["@sapphire/plugin-subcommands", "npm:2.0.0-next.49bbf8e.0"],
             ["@sapphire/prettier-config", "npm:1.1.6"],
             ["@sapphire/stopwatch", "npm:1.1.4"],
