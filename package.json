@@ -62,9 +62,9 @@
 		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next @sapphire/plugin-editable-commands@next"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^13.1.0",
-		"@commitlint/config-angular": "^13.1.0",
-		"@commitlint/config-conventional": "^13.1.0",
+		"@commitlint/cli": "13.2.0",
+		"@commitlint/config-angular": "13.2.0",
+		"@commitlint/config-conventional": "13.2.0",
 		"@sapphire/eslint-config": "^3.2.3",
 		"@sapphire/plugin-api": "next",
 		"@sapphire/plugin-editable-commands": "next",
