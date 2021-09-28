@@ -19,8 +19,10 @@ declare module '@sapphire/framework' {
 	interface ArgType {
 		emoji: string;
 	}
+}
 
-	interface SapphireClient {
-		snipes: Collection<string, SnipedMessageObject>;
-	}
+declare module 'discord.js' {
+	        interface Client {
+                snipes: Collection<string, SnipedMessageObject>;
+        }
 }
