@@ -10,7 +10,7 @@
 		"@prisma/client": "3.1.1",
 		"@sapphire/decorators": "next",
 		"@sapphire/discord.js-utilities": "next",
-		"@sapphire/framework": "next",
+		"@sapphire/framework": "^1.0.2",
 		"@sapphire/plugin-subcommands": "next",
 		"@sapphire/prettier-config": "^1.1.6",
 		"@sapphire/utilities": "next",
