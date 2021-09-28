@@ -22,7 +22,7 @@ declare module '@sapphire/framework' {
 }
 
 declare module 'discord.js' {
-	        interface Client {
-                snipes: Collection<string, SnipedMessageObject>;
-        }
+	interface Client {
+		snipes: Collection<string, SnipedMessageObject>;
+	}
 }
