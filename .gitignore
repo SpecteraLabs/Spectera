@@ -2,7 +2,8 @@ node_modules
 dist
 .env
 .env.*
-.yarn/*
+!.env.example
+.yarn/cache
 !.yarn/patches
 !.yarn/releases
 !.yarn/plugins
