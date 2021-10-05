@@ -601,13 +601,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/ts-config@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@sapphire/ts-config@npm:3.0.0"
+"@sapphire/ts-config@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@sapphire/ts-config@npm:3.1.0"
   dependencies:
-    tslib: ^2.3.0
-    typescript: ^4.3.5
-  checksum: 7dcb377f9b8f151323c580ba4d693b07ec9862e6996b0facced9a76d2f45ca0249eba6f11fa40051172cf9e4415cefac484896ae793b4c13f1777734c81839df
+    tslib: ^2.3.1
+    typescript: ^4.4.3
+  checksum: 50bc7c20ca9348f0a328f6b773b5ad7f79abafd4f69ceae37b82866ca0ebbd361bdc3aa333926b8ba18f369999b65ecff9211c0493d0721deeba80dd13ed22b5
   languageName: node
   linkType: hard
 
@@ -3987,7 +3987,7 @@ resolve@^1.10.0:
     "@sapphire/plugin-subcommands": next
     "@sapphire/prettier-config": ^1.1.6
     "@sapphire/stopwatch": 1.2.0
-    "@sapphire/ts-config": 3.0.0
+    "@sapphire/ts-config": 3.1.0
     "@sapphire/type": 2.1.0
     "@sapphire/utilities": next
     "@types/node": 16.9.4
@@ -4370,7 +4370,7 @@ resolve@^1.10.0:
   languageName: node
   linkType: hard
 
-"typescript@^4.3.5, typescript@^4.4.3":
+typescript@^4.4.3:
   version: 4.4.3
   resolution: "typescript@npm:4.4.3"
   bin:
@@ -4390,7 +4390,7 @@ typescript@next:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.4.3
   resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"
   bin:
