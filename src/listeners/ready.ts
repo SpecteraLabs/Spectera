@@ -2,7 +2,6 @@ import { ApplyOptions } from '@sapphire/decorators';
 import { ListenerOptions, Listener, Store } from '@sapphire/framework';
 import { blue, gray, green, magenta, yellow, yellowBright } from 'colorette';
 import { Collection } from 'discord.js';
-// @ts-expect-error i need this
 import { version } from '../../package.json';
 
 const dev = process.env.NODE_ENV !== 'production';

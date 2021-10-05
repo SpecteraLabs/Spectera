@@ -1,0 +1,19 @@
+{
+	"extends": "@sapphire/ts-config",
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "dist",
+		"tsBuildInfoFile": "dist/.tsbuildinfo",
+		"sourceMap": true,
+		"baseUrl": "src",
+		"paths": {
+			"#structures/*": ["lib/structures/*.js"],
+			"#types/enums/*": ["lib/types/enums/*.js"],
+			"#types/interfaces/*": ["lib/types/interfaces/*.js"],
+			"#lib/*": ["lib/*.js"],
+			"#root/*": ["*"]
+		},
+		"experimentalDecorators": true
+	},
+	"include": ["src"]
+}

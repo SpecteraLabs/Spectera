@@ -38,11 +38,11 @@ export async function build(watch = false) {
 		write: true,
 		outdir: fileURLToPath(distFolder),
 		platform: 'node',
-		tsconfig: join(fileURLToPath(srcFolder), 'tsconfig.json'),
+		tsconfig: join(fileURLToPath(rootFolder), 'tsconfig.json'),
 		watch,
 		incremental: watch,
 		sourcemap: true,
 		external: [],
-		minify: process.env.NODE_ENV === 'production',
+		minify: process.env.NODE_ENV === 'production'
 	});
 }

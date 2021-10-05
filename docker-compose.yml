@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  spectera-bot:
+    build:
+      context: .
+      target: development
+    env_file: .env
+    volumes: 
+      - ./:/opt/app
+  postgres:
+    container_name: postgres
+    image: 'specterabot/postgres'
+    ports: 
+      - "8000:5432"
+    networks:
+      - spectera
+networks:
+  spectera:

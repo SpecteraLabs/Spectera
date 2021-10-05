@@ -1,7 +1,7 @@
 process.env.NODE_ENV ??= 'development';
 
 import { envParseArray, envParseBoolean, envParseString } from './lib/env';
-import { srcFolder } from '#lib/constants';
+import { rootFolder } from '#lib/constants';
 import { LogLevel } from '@sapphire/framework';
 import type { ActivitiesOptions, ActivityType, ClientOptions } from 'discord.js';
 import { config } from 'dotenv-cra';
@@ -9,7 +9,7 @@ import { join } from 'path';
 
 config({
 	debug: process.env.DOTENV_DEBUG_ENABLED ? envParseBoolean('DOTENV_DEBUG_ENABLED') : undefined,
-	path: join(srcFolder, '.env')
+	path: join(rootFolder, '.env')
 });
 
 export const OWNERS = envParseArray('CLIENT_OWNERS');
