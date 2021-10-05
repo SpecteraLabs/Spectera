@@ -69,7 +69,7 @@
 		"@sapphire/plugin-api": "next",
 		"@sapphire/plugin-editable-commands": "next",
 		"@sapphire/plugin-logger": "1.0.14-pr-97.11c4df4.0",
-		"@sapphire/stopwatch": "1.1.4",
+		"@sapphire/stopwatch": "1.2.0",
 		"@sapphire/ts-config": "3.0.0",
 		"@sapphire/type": "2.1.0",
 		"@types/node": "16.9.4",
