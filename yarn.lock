@@ -574,12 +574,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/stopwatch@npm:1.1.4":
-  version: 1.1.4
-  resolution: "@sapphire/stopwatch@npm:1.1.4"
+"@sapphire/stopwatch@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@sapphire/stopwatch@npm:1.2.0"
   dependencies:
     tslib: 2.x
-  checksum: 13a87a4895c5649b101c0e8a0862113fd8d165b1937ab39b4ca483274a29889e1b127e03e30e6fc3b6d6659041e77486ed9dbbb53b51af4042370b42873f87c4
+  checksum: 1863ec590f8b2a5bd6ce63563729dfdad97434b8048731c3431bc7ea91bd708dfdba28e14883e63591d01bc9aa7a8a2ae48c30f0a03f0d3e4568481655bb0e28
   languageName: node
   linkType: hard
 
@@ -3986,7 +3986,7 @@ resolve@^1.10.0:
     "@sapphire/plugin-logger": 1.0.14-pr-97.11c4df4.0
     "@sapphire/plugin-subcommands": next
     "@sapphire/prettier-config": ^1.1.6
-    "@sapphire/stopwatch": 1.1.4
+    "@sapphire/stopwatch": 1.2.0
     "@sapphire/ts-config": 3.0.0
     "@sapphire/type": 2.1.0
     "@sapphire/utilities": next
