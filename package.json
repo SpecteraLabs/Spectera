@@ -95,9 +95,5 @@
 		"#root/*": "./dist/*.js"
 	},
 	"packageManager": "yarn@3.0.2",
-	"prettier": "@sapphire/prettier-config",
-	"volta": {
-		"node": "16.10.0",
-		"yarn": "2.4.3"
-	}
+	"prettier": "@sapphire/prettier-config"
 }
