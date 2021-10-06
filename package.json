@@ -65,12 +65,12 @@
 		"@commitlint/cli": "13.2.0",
 		"@commitlint/config-angular": "13.2.0",
 		"@commitlint/config-conventional": "13.2.0",
-		"@sapphire/eslint-config": "^3.3.0",
+		"@sapphire/eslint-config": "3.3.0",
 		"@sapphire/plugin-api": "next",
 		"@sapphire/plugin-editable-commands": "next",
 		"@sapphire/plugin-logger": "next",
 		"@sapphire/stopwatch": "1.2.0",
-		"@sapphire/ts-config": "^3.1.0",
+		"@sapphire/ts-config": "3.1.0",
 		"@sapphire/type": "next",
 		"@types/node": "16.10.2",
 		"@typescript-eslint/eslint-plugin": "4.33.0",
@@ -84,7 +84,7 @@
 		"pretty-quick": "3.1.1",
 		"prisma": "3.2.0",
 		"reflect-metadata": "0.1.13",
-		"tsc-watch": "^4.5.0",
+		"tsc-watch": "4.5.0",
 		"typescript": "next"
 	},
 	"imports": {
