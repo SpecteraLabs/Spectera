@@ -10,10 +10,6 @@ services:
       - ./:/opt/app
   postgres:
     container_name: postgres
-    image: 'specterabot/postgres'
-    ports: 
-      - "8000:5432"
-    networks:
-      - spectera
-networks:
-  spectera:
+    image: postgres:12-alpine
+    expose:
+      - "5432"

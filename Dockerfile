@@ -13,7 +13,7 @@ ENTRYPOINT ["dumb-init", "--"]
 # Development, used for development only (defaults to watch command)
 FROM base as development
 
-CMD [ "yarn", "run", "docker:watch" ]
+CMD [ "yarn", "run", "docker-watch" ]
 
 # Build stage for production
 FROM base as build
