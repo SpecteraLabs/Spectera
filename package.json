@@ -6,16 +6,20 @@
 	"keywords": [],
 	"author": "UndiedGamer",
 	"license": "Apache-2.0",
-	"dependencies": {
-		"@prisma/client": "3.2.0",
-		"@sapphire/decorators": "^3.0.0",
-		"@sapphire/discord.js-utilities": "^3.0.1",
-		"@sapphire/framework": "next",
-		"@sapphire/plugin-subcommands": "next",
-		"@sapphire/prettier-config": "^1.2.0",
-		"@sapphire/utilities": "^3.0.1",
-		"discord.js": "^13.2.0",
-		"dotenv-cra": "^3.0.2"
+	"scripts": {
+		"build:esbuild": "node scripts/build.mjs",
+		"postinstall": "husky install .github/husky",
+		"build": "yarn clean && yarn build:esbuild",
+		"watch": "node scripts/watch.mjs",
+		"clean": "node scripts/clean.mjs",
+		"start": "yarn lint && yarn build && node .",
+		"check:lint": "prettier -c \"src/**/*.ts\"",
+		"typecheck": "tsc -p src --noEmit",
+		"dev": "run-s build start",
+		"lint": "prettier --write \"src/**/*.ts\"",
+		"predocker:watch": "yarn",
+		"docker-watch": "tsc-watch --onFailure \"node . \"",
+		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next @sapphire/plugin-editable-commands@next"
 	},
 	"commitlint": {
 		"extends": [
@@ -46,20 +50,16 @@
 			]
 		}
 	},
-	"scripts": {
-		"build:esbuild": "node scripts/build.mjs",
-		"postinstall": "husky install .github/husky",
-		"build": "yarn clean && yarn build:esbuild",
-		"watch": "node scripts/watch.mjs",
-		"clean": "node scripts/clean.mjs",
-		"start": "yarn lint && yarn build && node .",
-		"check:lint": "prettier -c \"src/**/*.ts\"",
-		"typecheck": "tsc -p src --noEmit",
-		"dev": "run-s build start",
-		"lint": "prettier --write \"src/**/*.ts\"",
-		"predocker:watch": "npm install",
-		"docker:watch": "tsc-watch --onFailure \"node . \"",
-		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next @sapphire/plugin-editable-commands@next"
+	"dependencies": {
+		"@prisma/client": "3.2.0",
+		"@sapphire/decorators": "^3.0.0",
+		"@sapphire/discord.js-utilities": "^3.0.1",
+		"@sapphire/framework": "next",
+		"@sapphire/plugin-subcommands": "next",
+		"@sapphire/prettier-config": "^1.2.0",
+		"@sapphire/utilities": "^3.0.1",
+		"discord.js": "^13.2.0",
+		"dotenv-cra": "^3.0.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "13.2.0",
