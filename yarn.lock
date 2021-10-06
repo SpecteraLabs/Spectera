@@ -447,7 +447,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/eslint-config@npm:^3.3.0":
+"@sapphire/eslint-config@npm:3.3.0":
   version: 3.3.0
   resolution: "@sapphire/eslint-config@npm:3.3.0"
   dependencies:
@@ -568,7 +568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/ts-config@npm:^3.1.0":
+"@sapphire/ts-config@npm:3.1.0":
   version: 3.1.0
   resolution: "@sapphire/ts-config@npm:3.1.0"
   dependencies:
@@ -3931,7 +3931,7 @@ resolve@^1.10.0:
     "@prisma/client": 3.2.0
     "@sapphire/decorators": ^3.0.0
     "@sapphire/discord.js-utilities": ^3.0.1
-    "@sapphire/eslint-config": ^3.3.0
+    "@sapphire/eslint-config": 3.3.0
     "@sapphire/framework": next
     "@sapphire/plugin-api": next
     "@sapphire/plugin-editable-commands": next
@@ -3939,7 +3939,7 @@ resolve@^1.10.0:
     "@sapphire/plugin-subcommands": next
     "@sapphire/prettier-config": ^1.2.0
     "@sapphire/stopwatch": 1.2.0
-    "@sapphire/ts-config": ^3.1.0
+    "@sapphire/ts-config": 3.1.0
     "@sapphire/type": next
     "@sapphire/utilities": ^3.0.1
     "@types/node": 16.10.2
@@ -3956,7 +3956,7 @@ resolve@^1.10.0:
     pretty-quick: 3.1.1
     prisma: 3.2.0
     reflect-metadata: 0.1.13
-    tsc-watch: ^4.5.0
+    tsc-watch: 4.5.0
     typescript: next
   languageName: unknown
   linkType: soft
@@ -4265,7 +4265,7 @@ resolve@^1.10.0:
   languageName: node
   linkType: hard
 
-"tsc-watch@npm:^4.5.0":
+"tsc-watch@npm:4.5.0":
   version: 4.5.0
   resolution: "tsc-watch@npm:4.5.0"
   dependencies:
