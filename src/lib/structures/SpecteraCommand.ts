@@ -1,16 +1,9 @@
-import {
-	Command,
-	CommandOptions,
-	PieceContext,
-	Args as SapphireArgs,
-	CommandContext,
-	PreconditionEntryResolvable,
-	UserPermissionsPrecondition
-} from '@sapphire/framework';
+import { PieceContext, Args as SapphireArgs, CommandContext, PreconditionEntryResolvable, UserPermissionsPrecondition } from '@sapphire/framework';
+import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import type { PermissionResolvable } from 'discord.js';
 import { PermissionLevels } from '../types/enums/PermissionLevels';
 
-export abstract class SpecteraCommand extends Command {
+export abstract class SpecteraCommand extends SubCommandPluginCommand {
 	public readonly permissionLevel: PermissionLevels;
 	public readonly guarded: boolean;
 	public readonly hidden: boolean;
@@ -58,7 +51,7 @@ export abstract class SpecteraCommand extends Command {
 }
 
 export namespace SpecteraCommand {
-	export type Options = CommandOptions & {
+	export type Options = SubCommandPluginCommand.Options & {
 		permissionLevel?: number;
 		permissions?: PermissionResolvable;
 		guarded?: boolean;

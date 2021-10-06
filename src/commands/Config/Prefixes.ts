@@ -1,16 +1,16 @@
 import { ModeratorOnly } from '#lib/decorators/index';
-import { SpecteraSubCommand } from '#structures/SpecteraSubCommand';
+import { SpecteraCommand } from '#structures/SpecteraCommand';
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
 import { reply } from '@sapphire/plugin-editable-commands';
 import { Message, MessageEmbed } from 'discord.js';
 
-@ApplyOptions<SpecteraSubCommand.Options>({
+@ApplyOptions<SpecteraCommand.Options>({
 	subCommands: ['add', 'remove', 'show', { input: 'view', output: 'show' }],
 	description: 'prefix configuration for your server',
 	runIn: ['GUILD_ANY']
 })
-export class Prefix extends SpecteraSubCommand {
+export class Prefix extends SpecteraCommand {
 	@ModeratorOnly()
 	public async add(message: Message, args: Args) {
 		const result = await this.container.database.guildSettings.findUnique({
@@ -28,6 +28,7 @@ export class Prefix extends SpecteraSubCommand {
 		});
 		return reply(message, `Added ${prefix} as a prefix for this server!`);
 	}
+
 	@ModeratorOnly()
 	public async remove(message: Message, args: Args) {
 		const prefix = await args.pick('string');
@@ -45,6 +46,7 @@ export class Prefix extends SpecteraSubCommand {
 		await this.container.database.$executeRaw`UPDATE "GuildSettings" SET prefixes = ${guild.prefixes} WHERE id = ${message.guild!.id}`;
 		return reply(message, `Succefully removed that prefix!`);
 	}
+
 	public async show(message: Message) {
 		const result = await this.container.database.guildSettings.findUnique({ where: { id: message.guild!.id } });
 		const prefixes = result!.prefixes.toString();
@@ -54,6 +56,6 @@ export class Prefix extends SpecteraSubCommand {
 			.setColor('WHITE')
 			.setFooter(`Requested by ${message.member?.displayName}`, message.author.displayAvatarURL({ dynamic: true }))
 			.setTimestamp();
-		reply(message, { embeds: [embed] });
+		return reply(message, { embeds: [embed] });
 	}
 }

@@ -1,15 +1,15 @@
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
 import type { Message } from 'discord.js';
-import { SpecteraSubCommand } from '#structures/SpecteraSubCommand';
+import { SpecteraCommand } from '#structures/SpecteraCommand';
 import { reply } from '@sapphire/plugin-editable-commands';
 
-@ApplyOptions<SpecteraSubCommand.Options>({
+@ApplyOptions<SpecteraCommand.Options>({
 	aliases: ['calc'],
 	subCommands: ['add', 'subtract', 'multiply', 'divide'],
 	description: 'Simple math operations'
 })
-export class Math extends SpecteraSubCommand {
+export class Math extends SpecteraCommand {
 	public async add(message: Message, args: Args) {
 		const x = await args.pick('number');
 		const y = await args.pick('number');

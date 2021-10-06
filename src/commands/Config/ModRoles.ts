@@ -1,17 +1,17 @@
-import { SpecteraSubCommand } from '#structures/SpecteraSubCommand';
+import { SpecteraCommand } from '#structures/SpecteraCommand';
 import { PermissionLevels } from '#types/enums/PermissionLevels';
 import { ApplyOptions } from '@sapphire/decorators';
 import type { Args } from '@sapphire/framework';
 import { reply } from '@sapphire/plugin-editable-commands';
 import type { Message } from 'discord.js';
 
-@ApplyOptions<SpecteraSubCommand.Options>({
+@ApplyOptions<SpecteraCommand.Options>({
 	subCommands: ['set', 'show'],
 	runIn: ['GUILD_ANY'],
 	description: "let's you set modroles for your server",
 	permissionLevel: PermissionLevels.Administrator
 })
-export class ModRoles extends SpecteraSubCommand {
+export class ModRoles extends SpecteraCommand {
 	public async set(message: Message, args: Args) {
 		const roles = await args.repeat('role');
 		for (const role of roles) {
