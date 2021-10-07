@@ -75,7 +75,7 @@
 		"@types/node": "16.10.2",
 		"@typescript-eslint/eslint-plugin": "4.33.0",
 		"@typescript-eslint/parser": "4.33.0",
-		"colorette": "2.0.14",
+		"colorette": "2.0.15",
 		"esbuild": "0.13.4",
 		"eslint": "7.32.0",
 		"husky": "7.0.2",
