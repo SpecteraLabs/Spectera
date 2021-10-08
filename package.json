@@ -71,8 +71,8 @@
 		"@sapphire/plugin-logger": "next",
 		"@sapphire/stopwatch": "1.2.0",
 		"@sapphire/ts-config": "3.1.0",
-		"@sapphire/type": "next",
-		"@types/node": "16.10.2",
+		"@sapphire/type": "^2.1.0",
+		"@types/node": "16.10.3",
 		"@typescript-eslint/eslint-plugin": "4.33.0",
 		"@typescript-eslint/parser": "4.33.0",
 		"colorette": "2.0.15",
@@ -85,7 +85,7 @@
 		"prisma": "3.2.1",
 		"reflect-metadata": "0.1.13",
 		"tsc-watch": "4.5.0",
-		"typescript": "next"
+		"typescript": "^4.4.3"
 	},
 	"imports": {
 		"#structures/*": "./dist/lib/structures/*.js",
