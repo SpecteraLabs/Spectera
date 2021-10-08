@@ -3,7 +3,7 @@ process.env.NODE_ENV ??= 'development';
 import { envParseArray, envParseBoolean, envParseString } from './lib/env';
 import { rootFolder } from '#lib/constants';
 import { LogLevel } from '@sapphire/framework';
-import type { ActivitiesOptions, ActivityType, ClientOptions } from 'discord.js';
+import type { ActivitiesOptions, ClientOptions } from 'discord.js';
 import { config } from 'dotenv-cra';
 import { join } from 'path';
 
@@ -26,7 +26,7 @@ function parsePresenceActivity(): ActivitiesOptions[] {
 	return [
 		{
 			name: CLIENT_PRESENCE_NAME,
-			type: envParseString('CLIENT_PRESENCE_TYPE', 'LISTENING') as ActivityType
+			type: process.env.CLIENT_PRESENCE_TYPE as any
 		}
 	];
 }

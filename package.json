@@ -18,8 +18,7 @@
 		"dev": "run-s build start",
 		"lint": "prettier --write \"src/**/*.ts\"",
 		"predocker:watch": "yarn",
-		"docker-watch": "tsc-watch --onFailure \"node . \"",
-		"update": "yarn add @sapphire/framework@next @sapphire/utilities@next @sapphire/discord.js-utilities@next @sapphire/plugin-subcommands@next @sapphire/decorators@next @sapphire/plugin-editable-commands@next"
+		"docker:watch": "tsc-watch --onFailure \"node . \""
 	},
 	"commitlint": {
 		"extends": [

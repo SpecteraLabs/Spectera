@@ -13,7 +13,7 @@ ENTRYPOINT ["dumb-init", "--"]
 # Development, used for development only (defaults to watch command)
 FROM base as development
 
-CMD [ "yarn", "run", "docker-watch" ]
+CMD [ "yarn", "run", "docker:watch" ]
 
 # Build stage for production
 FROM base as build
@@ -26,7 +26,7 @@ COPY . /opt/app
 
 RUN yarn tsc
 
-# Production image used to  run the bot in production, only contains node_modules & dist contents.
+# Production image used to run the bot in production, only contains node_modules & dist contents.
 FROM base as production
 
 ENV NODE_ENV production
