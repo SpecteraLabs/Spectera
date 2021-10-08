@@ -1,6 +1,7 @@
 import { SapphireClient, container } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 import { CLIENT_OPTIONS } from '#root/config';
+import { isNullishOrEmpty } from '#root/../node_modules/@sapphire/utilities/dist';
 
 export class SpecteraClient extends SapphireClient {
 	public constructor() {
@@ -12,7 +13,7 @@ export class SpecteraClient extends SapphireClient {
 		const result = await container.database.guildSettings.findUnique({
 			where: { id: message.guild.id }
 		});
-		return result!.prefixes.length ? result!.prefixes : ['s!'];
+		return isNullishOrEmpty(result!.prefixes) ? result!.prefixes : ['s!'];
 	};
 
 	public async start() {
