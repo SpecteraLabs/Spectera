@@ -418,12 +418,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/decorators@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@sapphire/decorators@npm:3.0.0"
+"@sapphire/decorators@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@sapphire/decorators@npm:3.0.1"
   dependencies:
-    tslib: 2.x
-  checksum: 740596993b02b18f8413014525493f8e559640b90b605afa344543c44597ee8f74457fcdf8e6b56d39630b86750de0ae2331b723241c12701ea14404d9387367
+    tslib: ^2.3.1
+  checksum: bb7398f4e9ccb2577b0aef8925a1ac9ee37b5e9afb645491df198a0d462230ef916158aacd01b587e2328050f94175c7c0074c6d6a863e55caa8e4c365a344a2
   languageName: node
   linkType: hard
 
@@ -447,18 +447,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/eslint-config@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@sapphire/eslint-config@npm:3.3.0"
+"@sapphire/discord.js-utilities@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@sapphire/discord.js-utilities@npm:3.1.0"
   dependencies:
-    "@typescript-eslint/eslint-plugin": ^4.32.0
-    "@typescript-eslint/parser": ^4.32.0
+    "@sapphire/discord-utilities": ^2.2.0
+    "@sapphire/time-utilities": ^1.4.2
+    "@sapphire/utilities": ^3.0.2
+  checksum: b2f68d719d8963cc583dd1e403cdcc944fd97ddd9f5e869e51a307f831945cd7cbd3144857c95726a355760b484bb1bfd7f723b26acf02967964ab85ff1deb55
+  languageName: node
+  linkType: hard
+
+"@sapphire/eslint-config@npm:3.3.1":
+  version: 3.3.1
+  resolution: "@sapphire/eslint-config@npm:3.3.1"
+  dependencies:
+    "@typescript-eslint/eslint-plugin": ^4.33.0
+    "@typescript-eslint/parser": ^4.33.0
     eslint: ^7.32.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
     prettier: ^2.4.1
     typescript: ^4.4.3
-  checksum: 27d037af2dd77ff4c1024c296e89f392e2a270f506dd5f0b8d3fce63382feacd05c1d7d4b4555debaca713b2b2a5435ca4b991a0fb4f66a5447b9717e325bd1a
+  checksum: c4da7198f02d4998dda911d8ced555b7806ddc5fd5aa4cbba3fc0d2c837dafd05a51c98fd0237d4797d2178626e7f905845d9818ad4f2feb9fe5c434d69f80e7
   languageName: node
   linkType: hard
 
@@ -532,12 +543,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/prettier-config@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@sapphire/prettier-config@npm:1.2.0"
+"@sapphire/prettier-config@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@sapphire/prettier-config@npm:1.2.1"
   dependencies:
-    prettier: 2.4.1
-  checksum: 9aa2143e8d2195c2ec1872354a1968cef306a62bb928dc806e61720f355b432e330a544dd171bec365885e4eea6b259d39a7af35828e6feff0ce5e2d5b780d0a
+    prettier: ^2.4.1
+  checksum: d9ab840d57d263423fb197bad25830195d285bfcd28a1c8c431154f24676674cd61d40edcfa8eabdb6415b17cfdf1c40342e3397a8d20b79f814df7fc2bb46e6
   languageName: node
   linkType: hard
 
@@ -550,12 +561,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/stopwatch@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@sapphire/stopwatch@npm:1.2.0"
+"@sapphire/stopwatch@npm:1.2.1":
+  version: 1.2.1
+  resolution: "@sapphire/stopwatch@npm:1.2.1"
   dependencies:
-    tslib: 2.x
-  checksum: 1863ec590f8b2a5bd6ce63563729dfdad97434b8048731c3431bc7ea91bd708dfdba28e14883e63591d01bc9aa7a8a2ae48c30f0a03f0d3e4568481655bb0e28
+    tslib: ^2.3.1
+  checksum: 0268cb323696870d37f68b6b85105c4494f08073755a60efab8e6109f4e2e37738f97d196919902cec143d16559ee3987e7aba9294a9dd7391ae3da63b50826a
   languageName: node
   linkType: hard
 
@@ -565,6 +576,15 @@ __metadata:
   dependencies:
     "@sapphire/utilities": ^3.0.1
   checksum: bc456385ae9c3d9cb8b9c05e26153b11032f8d1a6c18a764e6d9e206ef6aff67fe5d95238edadc4eaf2c312567c3c99fe095e2375aa17f6cd5a15749e1b25c2f
+  languageName: node
+  linkType: hard
+
+"@sapphire/time-utilities@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "@sapphire/time-utilities@npm:1.4.2"
+  dependencies:
+    "@sapphire/utilities": ^3.0.2
+  checksum: 93424a945e68d92de13dc8ea5c08618fdf3f46ce47eb4a607187e6e8d57b64172c98331075d55e1854b302dc278567295864588cff5778bcbcc59581056af72d
   languageName: node
   linkType: hard
 
@@ -593,6 +613,13 @@ __metadata:
   version: 3.0.1
   resolution: "@sapphire/utilities@npm:3.0.1"
   checksum: cc62d199f21ec33f0d41e71bb222093e65c674cb0c4863b57acc81118483ce6f27b1ef253962473dcd34b69d6955c10ea26b1c3aa645ca3a23f0f160dd7a0bd6
+  languageName: node
+  linkType: hard
+
+"@sapphire/utilities@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@sapphire/utilities@npm:3.0.2"
+  checksum: 2891dffb45e191d1a6dba593e55d0cc04a749cb95310b97193423d9cefd18b715b76844b7bc50b22834968364f787f0c2dec21c629d8ac9b0f784936aff75d6b
   languageName: node
   linkType: hard
 
@@ -692,7 +719,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:4.33.0, @typescript-eslint/eslint-plugin@npm:^4.32.0":
+"@typescript-eslint/eslint-plugin@npm:4.33.0, @typescript-eslint/eslint-plugin@npm:^4.33.0":
   version: 4.33.0
   resolution: "@typescript-eslint/eslint-plugin@npm:4.33.0"
   dependencies:
@@ -730,7 +757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:4.33.0, @typescript-eslint/parser@npm:^4.32.0":
+"@typescript-eslint/parser@npm:4.33.0, @typescript-eslint/parser@npm:^4.33.0":
   version: 4.33.0
   resolution: "@typescript-eslint/parser@npm:4.33.0"
   dependencies:
@@ -3998,19 +4025,19 @@ resolve@^1.10.0:
     "@commitlint/config-angular": 13.2.0
     "@commitlint/config-conventional": 13.2.0
     "@prisma/client": 3.2.1
-    "@sapphire/decorators": ^3.0.0
-    "@sapphire/discord.js-utilities": ^3.0.1
-    "@sapphire/eslint-config": 3.3.0
+    "@sapphire/decorators": ^3.0.1
+    "@sapphire/discord.js-utilities": ^3.1.0
+    "@sapphire/eslint-config": 3.3.1
     "@sapphire/framework": pr-293
     "@sapphire/plugin-api": next
     "@sapphire/plugin-editable-commands": next
     "@sapphire/plugin-logger": next
     "@sapphire/plugin-subcommands": next
-    "@sapphire/prettier-config": ^1.2.0
-    "@sapphire/stopwatch": 1.2.0
+    "@sapphire/prettier-config": ^1.2.1
+    "@sapphire/stopwatch": 1.2.1
     "@sapphire/ts-config": 3.1.0
     "@sapphire/type": ^2.1.0
-    "@sapphire/utilities": ^3.0.1
+    "@sapphire/utilities": ^3.0.2
     "@types/node": 16.10.3
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
@@ -4351,17 +4378,17 @@ resolve@^1.10.0:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.x, tslib@npm:^2, tslib@npm:^2.3.0, tslib@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
-  languageName: node
-  linkType: hard
-
 "tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2, tslib@npm:^2.3.0, tslib@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 
