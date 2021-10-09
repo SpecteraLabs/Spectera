@@ -10,6 +10,6 @@ services:
       - ./:/opt/app
   postgres:
     container_name: postgres
-    image: postgres:12-alpine
+    image: postgres:14-alpine
     expose:
       - "5432"
