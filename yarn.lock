@@ -3649,7 +3649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-quick@npm:3.1.1":
+"pretty-quick@npm:^3.1.1":
   version: 3.1.1
   resolution: "pretty-quick@npm:3.1.1"
   dependencies:
@@ -4176,7 +4176,7 @@ resolve@^1.10.0:
     husky: 7.0.2
     lint-staged: 11.2.2
     prettier: 2.4.1
-    pretty-quick: 3.1.1
+    pretty-quick: ^3.1.1
     prisma: 3.2.1
     reflect-metadata: 0.1.13
     tsc-watch: 4.5.0
