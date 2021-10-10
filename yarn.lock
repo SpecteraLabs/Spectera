@@ -15,11 +15,11 @@ __metadata:
   linkType: hard
 
 "@babel/code-frame@npm:^7.0.0":
-  version: 7.14.5
-  resolution: "@babel/code-frame@npm:7.14.5"
+  version: 7.15.8
+  resolution: "@babel/code-frame@npm:7.15.8"
   dependencies:
     "@babel/highlight": ^7.14.5
-  checksum: 0adbe4f8d91586f764f524e57631f582ab988b2ef504391a5d89db29bfaaf7c67c237798ed4a249b6a2d7135852cf94d3d07ce6b9739dd1df1f271d5ed069565
+  checksum: d75950f0e0925b33ab5e870079134509c13bcdbf96c8bf4d0dea91606775bc044258c762104ab20882fda3b07cbff24176ed77dfb57af5a901bde33ddfe690bb
   languageName: node
   linkType: hard
 
@@ -704,14 +704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 16.10.2
-  resolution: "@types/node@npm:16.10.2"
-  checksum: 83c1c3c68e7500103908c3f16094e458879c840a719c15b6ea577f81fe1f24a1b3473bb6c8e8091fe79a82543ca7639c6b1088fcf80292ec091d1d1c9504a87e
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:16.10.3":
+"@types/node@npm:*, @types/node@npm:16.10.3":
   version: 16.10.3
   resolution: "@types/node@npm:16.10.3"
   checksum: 3fd429bce8a4acb497dcc62b536782a5e87ccf7cd91d64a78b263ae5d66cb72bf84be9eeeff6f84ae0567b065a40b267caa66d311f9e094990a5847bbd168a29
@@ -1316,7 +1309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorette@npm:2.0.16":
+"colorette@npm:2.0.16, colorette@npm:^2.0.13":
   version: 2.0.16
   resolution: "colorette@npm:2.0.16"
   checksum: cd55596a3a2d1071c1a28eee7fd8a5387593ff1bd10a3e8d0a6221499311fe34a9f2b9272d77c391e0e003dcdc8934fb2f8d106e7ef1f7516f8060c901d41a27
@@ -1327,13 +1320,6 @@ __metadata:
   version: 1.4.0
   resolution: "colorette@npm:1.4.0"
   checksum: 01c3c16058b182a4ab4c126a65a75faa4d38a20fa7c845090b25453acec6c371bb2c5dceb0a2338511f17902b9d1a9af0cadd8509c9403894b79311032c256c3
-  languageName: node
-  linkType: hard
-
-"colorette@npm:^2.0.13":
-  version: 2.0.14
-  resolution: "colorette@npm:2.0.14"
-  checksum: a156f2a6b85f504bd2dec04591e64fe42751f459ccd828f3eb5c15ed6afdff7f0547f206a4147414520a976ce0130ac8c363093b3eb1924dd13b7014f67665d5
   languageName: node
   linkType: hard
 
