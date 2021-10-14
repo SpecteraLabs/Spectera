@@ -1,3 +1,4 @@
+import { ArgType, UserError } from '@sapphire/framework';
 import { join } from 'path';
 
 export const rootFolder = join(__dirname, '..', '..');
@@ -24,3 +25,11 @@ export const enum BrandingColors {
 	Primary = 0x8f82ff,
 	Secondary = 0xdd5e53
 }
+
+export const codeBlockRegExp = /\n*```(?:(\S+)\n)?\s*([^]+?)\s*```/i;
+
+export const handleArgs = <T extends ArgType[keyof ArgType]>(getArg: Promise<T>, message: string) => {
+	return getArg.catch(() => {
+		throw new UserError({ identifier: 'argsMissing', message });
+	});
+};

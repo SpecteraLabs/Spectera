@@ -4,34 +4,38 @@ import { Message, MessageEmbed } from 'discord.js';
 import type { Args } from '@sapphire/framework';
 import { PermissionLevels } from '#types/enums/PermissionLevels';
 import { codeBlock, isThenable } from '@sapphire/utilities';
-// import { Type } from '@sapphire/type';
+import { Type } from '@sapphire/type';
 import { inspect } from 'util';
 import { send } from '@sapphire/plugin-editable-commands';
 import { Stopwatch } from '@sapphire/stopwatch';
+import { codeBlockRegExp } from '#lib/constants';
 
 @ApplyOptions<SpecteraCommand.Options>({
 	aliases: ['ev'],
 	description: 'Evals any JavaScript code',
 	flags: ['async', 'hidden', 'silent', 's', 'showHidden'],
-	quotes: [['```js', '```']],
 	permissionLevel: PermissionLevels.BotOwner,
 	options: ['depth'],
 	hidden: true
 })
 export class Eval extends SpecteraCommand {
 	public async run(message: Message, args: Args) {
-		const code = await args.pick('string');
+		let code = await args.rest('string');
+		if (codeBlockRegExp.test(code)) {
+			const output = codeBlockRegExp.exec(code)!;
+			code = output[2];
+		}
 
 		const EvalEmbed = new MessageEmbed().setTitle('Output').setColor('WHITE');
-		const { result, success, timer } = await this.eval(message, code, {
+		const { result, success, timer, type } = await this.eval(message, code, {
 			async: args.getFlags('async'),
 			depth: Number(args.getOption('depth')) ?? 0,
 			showHidden: args.getFlags('hidden', 'showHidden')
 		});
 
-		// const Type = codeBlock('ts', type);
+		const Type = codeBlock('ts', type);
 		const output = success ? codeBlock('js', result) : `**ERROR**: ${codeBlock('bash', result)}`;
-		EvalEmbed.setDescription(output).setFooter(`⏱️ Time Taken: ${timer}`); // .addField('Type:', `${Type}`);
+		EvalEmbed.setDescription(output).setFooter(`⏱️ Time Taken: ${timer}`).addField('Type:', `${Type}`);
 		if (args.getFlags('silent', 's')) return null;
 
 		if (output.length > 2000) {
@@ -66,7 +70,7 @@ export class Eval extends SpecteraCommand {
 			success = false;
 		}
 
-		// const type = new Type(result).toString();
+		const type = new Type(result).toString();
 		if (isThenable(result)) result = await result;
 
 		if (typeof result !== 'string') {
@@ -76,6 +80,6 @@ export class Eval extends SpecteraCommand {
 			});
 		}
 
-		return { result, success, timer };
+		return { result, success, timer, type };
 	}
 }
