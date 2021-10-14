@@ -15,6 +15,7 @@ import { codeBlockRegExp } from '#lib/constants';
 	description: 'Evals any JavaScript code',
 	flags: ['async', 'hidden', 'silent', 's', 'showHidden'],
 	permissionLevel: PermissionLevels.BotOwner,
+	quotes: [],
 	options: ['depth'],
 	hidden: true
 })
