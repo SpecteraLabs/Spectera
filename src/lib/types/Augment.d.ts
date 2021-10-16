@@ -18,6 +18,7 @@ declare module '@sapphire/framework' {
 	}
 	interface ArgType {
 		emoji: string;
+		duration: string;
 	}
 }
 

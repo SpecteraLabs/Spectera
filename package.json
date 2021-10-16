@@ -57,6 +57,7 @@
 		"@sapphire/framework": "next",
 		"@sapphire/plugin-subcommands": "next",
 		"@sapphire/prettier-config": "^1.2.1",
+		"@sapphire/time-utilities": "^1.4.3",
 		"@sapphire/utilities": "^3.0.2",
 		"discord.js": "^13.2.0",
 		"dotenv-cra": "^3.0.2"
