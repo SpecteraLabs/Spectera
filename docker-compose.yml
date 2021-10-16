@@ -1,15 +1,15 @@
-version: "3.9"
+version: '3.9'
 
 services:
   spectera-bot:
     build:
       context: .
       target: development
-    env_file: .env
-    volumes: 
+    env_file: .env.production
+    volumes:
       - ./:/opt/app
   postgres:
     container_name: postgres
     image: postgres:12-alpine
     expose:
-      - "5432"
+      - '5432'
