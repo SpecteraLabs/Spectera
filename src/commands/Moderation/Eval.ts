@@ -20,7 +20,7 @@ import { codeBlockRegExp } from '#lib/constants';
 	hidden: true
 })
 export class Eval extends SpecteraCommand {
-	public async run(message: Message, args: Args) {
+	public async messageRun(message: Message, args: Args) {
 		let code = await args.rest('string');
 		if (codeBlockRegExp.test(code)) {
 			const output = codeBlockRegExp.exec(code)!;

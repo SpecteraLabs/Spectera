@@ -9,7 +9,7 @@ import { version, dependencies } from '../../../package.json';
 	description: 'Stats of Obligator'
 })
 export class Stats extends SpecteraCommand {
-	public async run(message: Message) {
+	public async messageRun(message: Message) {
 		const statsEmbed = new MessageEmbed().setColor('WHITE').setDescription(
 			`**Servers**: ${this.container.client.guilds.cache.size}
 				**Channels**: ${this.container.client.channels.cache.size}

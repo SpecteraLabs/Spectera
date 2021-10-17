@@ -11,7 +11,7 @@ import { SpecteraCommand } from '#structures/SpecteraCommand';
 })
 export class Echo extends SpecteraCommand {
 	@RequiresUserPermissions('MANAGE_CHANNELS')
-	public async run(message: Message, args: SpecteraCommand.Args) {
+	public async messageRun(message: Message, args: SpecteraCommand.Args) {
 		const destination = await args.pick('guildTextChannel').catch(() => message.channel);
 		const msg = await args.rest('string');
 		return destination.send({ content: msg });

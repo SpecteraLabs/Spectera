@@ -7,7 +7,7 @@ import { send } from '@sapphire/plugin-editable-commands';
 	description: 'Send back the latency of the bot'
 })
 export class Ping extends SpecteraCommand {
-	public async run(message: Message) {
+	public async messageRun(message: Message) {
 		const msg = await send(message, 'Ping?');
 		return msg.edit(
 			`Pong! Bot Latency ${Math.round(this.container.client.ws.ping)}ms. API Latency ${msg.createdTimestamp - message.createdTimestamp}ms.`
