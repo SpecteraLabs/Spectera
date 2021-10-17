@@ -447,7 +447,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/decorators@npm:^3.0.1":
+"@sapphire/decorators@npm:^3.1.1":
   version: 3.1.1
   resolution: "@sapphire/decorators@npm:3.1.1"
   dependencies:
@@ -465,7 +465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/discord.js-utilities@npm:^3.1.0, @sapphire/discord.js-utilities@npm:^3.2.1":
+"@sapphire/discord.js-utilities@npm:^3.2.1":
   version: 3.2.1
   resolution: "@sapphire/discord.js-utilities@npm:3.2.1"
   dependencies:
@@ -531,13 +531,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/plugin-editable-commands@npm:^0.1.0-next.23809.0":
-  version: 0.1.0-next.23809.0
-  resolution: "@sapphire/plugin-editable-commands@npm:0.1.0-next.23809.0"
+"@sapphire/plugin-editable-commands@npm:^0.1.0-next.ed5ae33.0":
+  version: 0.1.0-next.ed5ae33.0
+  resolution: "@sapphire/plugin-editable-commands@npm:0.1.0-next.ed5ae33.0"
   dependencies:
     "@skyra/editable-commands": ^2.1.0
     tslib: ^2.3.1
-  checksum: 8e7597bd2552685ed224dae336a347813b00c080e6fd63f3163c2a3127569cbb6167230572807b33d31c7e0d4c812d965c98590369be1225751a373ef2b61034
+  checksum: 48a157c26a38d2bdfefc8808085c918d3cf7c5e1085c955faa074b398d60c95268e94299a3f1fba8854704d4adb9f05123100e60362f2e1c91052056615b353d
   languageName: node
   linkType: hard
 
@@ -561,7 +561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/prettier-config@npm:^1.2.1":
+"@sapphire/prettier-config@npm:^1.2.2":
   version: 1.2.2
   resolution: "@sapphire/prettier-config@npm:1.2.2"
   dependencies:
@@ -579,12 +579,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/stopwatch@npm:1.2.1":
-  version: 1.2.1
-  resolution: "@sapphire/stopwatch@npm:1.2.1"
+"@sapphire/stopwatch@npm:1.2.2":
+  version: 1.2.2
+  resolution: "@sapphire/stopwatch@npm:1.2.2"
   dependencies:
     tslib: ^2.3.1
-  checksum: 0268cb323696870d37f68b6b85105c4494f08073755a60efab8e6109f4e2e37738f97d196919902cec143d16559ee3987e7aba9294a9dd7391ae3da63b50826a
+  checksum: a337381c7b431711468d659986dadd97c42988ed6f3532af225a0044f317af6c9ce55c3954f3cc30d2758e1bf0ce84a10fe5cd46b3b90b72cab16c93a8797c4d
   languageName: node
   linkType: hard
 
@@ -597,13 +597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/ts-config@npm:3.1.0":
-  version: 3.1.0
-  resolution: "@sapphire/ts-config@npm:3.1.0"
+"@sapphire/ts-config@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@sapphire/ts-config@npm:3.1.1"
   dependencies:
     tslib: ^2.3.1
     typescript: ^4.4.3
-  checksum: 50bc7c20ca9348f0a328f6b773b5ad7f79abafd4f69ceae37b82866ca0ebbd361bdc3aa333926b8ba18f369999b65ecff9211c0493d0721deeba80dd13ed22b5
+  checksum: c7debadf916d7a1a5de4f6c48f4b03d3d353784c047f5073c4faeab228c29c6981aa53c55934e15ce02015a73ff0af5fcfd0bc1e25404ed2937c060df0e66438
   languageName: node
   linkType: hard
 
@@ -618,7 +618,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/utilities@npm:^3.0.1, @sapphire/utilities@npm:^3.0.2, @sapphire/utilities@npm:^3.0.3":
+"@sapphire/utilities@npm:^3.0.1, @sapphire/utilities@npm:^3.0.3":
   version: 3.0.3
   resolution: "@sapphire/utilities@npm:3.0.3"
   checksum: 21fca640a8e0de16f00b0d1f057683aed9e8a03e56320295d410aa5bcf74a9f873c45622bfcdda42092975b858565709c52eac93a0298b14d109d77a84d96736
@@ -4142,20 +4142,20 @@ resolve@^1.10.0:
     "@commitlint/config-angular": 13.2.0
     "@commitlint/config-conventional": 13.2.0
     "@prisma/client": 3.2.1
-    "@sapphire/decorators": ^3.0.1
-    "@sapphire/discord.js-utilities": ^3.1.0
+    "@sapphire/decorators": ^3.1.1
+    "@sapphire/discord.js-utilities": ^3.2.1
     "@sapphire/eslint-config": 3.3.1
     "@sapphire/framework": next
     "@sapphire/plugin-api": next
-    "@sapphire/plugin-editable-commands": ^0.1.0-next.23809.0
+    "@sapphire/plugin-editable-commands": ^0.1.0-next.ed5ae33.0
     "@sapphire/plugin-logger": ^1.0.13
     "@sapphire/plugin-subcommands": next
-    "@sapphire/prettier-config": ^1.2.1
-    "@sapphire/stopwatch": 1.2.1
+    "@sapphire/prettier-config": ^1.2.2
+    "@sapphire/stopwatch": 1.2.2
     "@sapphire/time-utilities": ^1.4.3
-    "@sapphire/ts-config": 3.1.0
+    "@sapphire/ts-config": 3.1.1
     "@sapphire/type": ^2.1.0
-    "@sapphire/utilities": ^3.0.2
+    "@sapphire/utilities": ^3.0.3
     "@types/node": 16.10.3
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
