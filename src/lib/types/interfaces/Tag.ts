@@ -1,5 +1,5 @@
 export interface Tag {
 	name: string;
 	description?: string;
-	run(): void;
+	run: string;
 }

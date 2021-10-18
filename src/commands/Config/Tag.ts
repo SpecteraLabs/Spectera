@@ -27,12 +27,8 @@ export class TagCommand extends SpecteraCommand {
 			name,
 			description,
 			// eslint-disable-next-line @typescript-eslint/require-await
-			async run() {
-				runFunction;
-			}
+			run: `(async () => {\n${runFunction}\n})();`
 		};
-		// @ts-expect-error pls fuk off
-		tag.run = tag.run.toString();
 		tag = JSON.stringify(tag);
 		await this.container.database.guildSettings.update({
 			where: { id: message.guild!.id },

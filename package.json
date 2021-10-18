@@ -12,7 +12,7 @@
 		"build": "yarn clean && yarn build:esbuild",
 		"watch": "node scripts/watch.mjs",
 		"clean": "node scripts/clean.mjs",
-		"start": "yarn lint && yarn build && node .",
+		"start": "yarn lint && yarn build && node --enable-source-maps .",
 		"docker:start": "node --enable-source-maps .",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
 		"typecheck": "tsc --noEmit",

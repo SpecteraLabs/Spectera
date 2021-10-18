@@ -30,6 +30,8 @@ export class TagHandler extends Listener {
 		) {
 			const name = message.content.split(matchedTag!.name);
 			if (!prefixes.includes(name[0])) return;
+			const args = message.content.trim().slice(name[0].length).split(' ');
+			const uselessthing = args.shift()!.toLowerCase();
 			// @ts-expect-error it is initialized
 			// eslint-disable-next-line no-eval
 			eval(matchedTag.run);

@@ -56,7 +56,6 @@ export class Eval extends SpecteraCommand {
 		let success = true;
 		let result = null;
 		let timer;
-		// @ts-expect-error Code is correct
 		const msg = message;
 
 		try {
