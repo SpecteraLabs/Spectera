@@ -23,12 +23,13 @@ export class TagCommand extends SpecteraCommand {
 		if (runFunction.includes('process')) return reply(message, 'You cannot use process in tags!');
 		if (runFunction.includes('import ') || runFunction.includes('require(') || runFunction.includes('export ') || runFunction.includes('exports'))
 			return reply(message, 'You cannot use imports/exports in tags!');
+		if (runFunction.includes('eval') || runFunction.includes('Function')) return reply(message, 'You cannot use eval in tags!');
 		let tag: Tag | string = {
 			name,
 			description,
-			// eslint-disable-next-line @typescript-eslint/require-await
-			run: `(async () => {\n${runFunction}\n})();`
+			run: `(async () => {\n${runFunction}\n})()`
 		};
+		// eslint-disable-next-line func-names
 		tag = JSON.stringify(tag);
 		await this.container.database.guildSettings.update({
 			where: { id: message.guild!.id },

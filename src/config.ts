@@ -47,7 +47,7 @@ export const CLIENT_OPTIONS: ClientOptions = {
 		prefix: '/api',
 		origin: 'https://localhost:3000',
 		listenOptions: {
-			port: 5000
+			port: 5009
 		}
 	},
 	logger: {
