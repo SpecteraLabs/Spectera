@@ -38,7 +38,7 @@ export async function build(watch = false) {
 		write: true,
 		outdir: fileURLToPath(distFolder),
 		platform: 'node',
-		tsconfig: join(fileURLToPath(rootFolder), 'tsconfig.json'),
+		tsconfig: join(fileURLToPath(srcFolder), 'tsconfig.json'),
 		watch,
 		incremental: watch,
 		sourcemap: true,
