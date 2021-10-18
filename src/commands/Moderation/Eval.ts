@@ -24,6 +24,7 @@ export class Eval extends SpecteraCommand {
 		let code = await args.rest('string');
 		if (codeBlockRegExp.test(code)) {
 			const output = codeBlockRegExp.exec(code)!;
+			// eslint-disable-next-line prefer-destructuring
 			code = output[2];
 		}
 
