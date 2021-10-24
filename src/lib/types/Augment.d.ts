@@ -27,3 +27,5 @@ declare module 'discord.js' {
 		snipes: Collection<string, SnipedMessageObject>;
 	}
 }
+
+export type Snowflake = `${bigint}` & { __BRAND__: 'Snowflake' };

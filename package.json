@@ -19,7 +19,7 @@
 		"dev": "run-s build start",
 		"lint": "prettier --write \"src/**/*.ts\"",
 		"predocker:watch": "yarn",
-		"docker:watch": "tsc-watch --onSuccess \"node . --enable-source-maps\""
+		"docker:watch": "tsc-watch -b src --onSuccess \"node . --enable-source-maps\""
 	},
 	"commitlint": {
 		"extends": [

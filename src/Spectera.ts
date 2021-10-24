@@ -16,10 +16,10 @@
 
 import '#lib/setup';
 import { SpecteraClient } from '#structures/SpecteraClient';
-import Prisma from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 import { container } from '@sapphire/framework';
 
 const client = new SpecteraClient();
-container.database = new Prisma.PrismaClient();
+container.database = new PrismaClient();
 
 client.start();
