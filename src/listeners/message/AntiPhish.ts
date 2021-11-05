@@ -1,7 +1,7 @@
 import { uriRegex } from '#lib/constants';
 import { PHISHERMAN_KEY } from '#root/config';
 import { ApplyOptions } from '@sapphire/decorators';
-import { fetch, FetchMethods } from '@sapphire/fetch';
+import { fetch, FetchMethods, FetchResultTypes } from '@sapphire/fetch';
 import { Listener, ListenerOptions } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
@@ -20,16 +20,20 @@ export class AntiPhishEvent extends Listener {
 			const check = await fetch(`https://api.phisherman.gg/v1/domains/${uri}`);
 			if (check) {
 				await message.delete();
-				await fetch(`https://api.phisherman.gg/v1/domains/${uri}`, {
-					method: FetchMethods.Put,
-					headers: {
-						'Content-Type': 'application/json',
-						Authorization: `Bearer ${PHISHERMAN_KEY}`
+				await fetch(
+					`https://api.phisherman.gg/v1/domains/${uri}`,
+					{
+						method: FetchMethods.Put,
+						headers: {
+							'Content-Type': 'application/json',
+							Authorization: `Bearer ${PHISHERMAN_KEY}`
+						},
+						body: JSON.stringify({
+							guild: message.guild.id
+						})
 					},
-					body: JSON.stringify({
-						guild: message.guild.id
-					})
-				});
+					FetchResultTypes.Result
+				);
 				// TODO: Add logging for this
 			}
 		} catch (error) {
