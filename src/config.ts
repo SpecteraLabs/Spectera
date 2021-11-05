@@ -13,6 +13,7 @@ config({
 });
 
 export const OWNERS = envParseArray('CLIENT_OWNERS');
+export const PHISHERMAN_KEY = envParseString('PHISHERMAN_KEY');
 
 function parseRegExpPrefix(): RegExp | undefined {
 	const { CLIENT_REGEX_PREFIX } = process.env;

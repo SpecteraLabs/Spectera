@@ -1,6 +1,7 @@
 import { uriRegex } from '#lib/constants';
+import { PHISHERMAN_KEY } from '#root/config';
 import { ApplyOptions } from '@sapphire/decorators';
-import { fetch } from '@sapphire/fetch';
+import { fetch, FetchMethods } from '@sapphire/fetch';
 import { Listener, ListenerOptions } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
@@ -8,15 +9,31 @@ import type { Message } from 'discord.js';
 	event: 'messageCreate',
 	name: 'anti-phish'
 })
-export class UserEvent extends Listener {
+export class AntiPhishEvent extends Listener {
 	public async run(message: Message) {
 		if (message.author.bot) return;
+		if (!message.guild) return;
 		if (!message.content.match(uriRegex)) return;
-		const uri: string | RegExpExecArray = uriRegex.exec(message.content)!;
-		const check = await fetch(`https://api.phisherman.gg/v1/domains/${uri[0].replace('www.', '')}`);
-		if (check) {
-			await message.delete();
-			// TODO: Add logging for this
+		try {
+			const execedUri: string | RegExpExecArray = uriRegex.exec(message.content)!;
+			const uri = execedUri[0].replace('www.', '');
+			const check = await fetch(`https://api.phisherman.gg/v1/domains/${uri}`);
+			if (check) {
+				await message.delete();
+				await fetch(`https://api.phisherman.gg/v1/domains/${uri}`, {
+					method: FetchMethods.Put,
+					headers: {
+						'Content-Type': 'application/json',
+						Authorization: `Bearer ${PHISHERMAN_KEY}`
+					},
+					body: JSON.stringify({
+						guild: message.guild.id
+					})
+				});
+				// TODO: Add logging for this
+			}
+		} catch (error) {
+			this.container.logger.error(error);
 		}
 	}
 }

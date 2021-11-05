@@ -25,6 +25,7 @@ export interface ObligatorEnv {
 
 	CLIENT_PRESENCE_NAME: string;
 	CLIENT_PRESENCE_TYPE: string;
+	PHISHERMAN_KEY: string;
 
 	WEBSOCKET_PORT: IntegerString;
 
