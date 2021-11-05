@@ -27,9 +27,12 @@ export const enum BrandingColors {
 }
 
 export const codeBlockRegExp = /\n*```(?:(\S+)\n)?\s*([^]+?)\s*```/i;
+export const uriRegex = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 
-export const handleArgs = <T extends ArgType[keyof ArgType]>(getArg: Promise<T>, message: string) => {
-	return getArg.catch(() => {
+export const handleArgs = async <T extends ArgType[keyof ArgType]>(getArg: Promise<T>, message: string) => {
+	try {
+		return await getArg;
+	} catch {
 		throw new UserError({ identifier: 'argsMissing', message });
-	});
+	}
 };

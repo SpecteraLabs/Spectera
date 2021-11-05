@@ -18,9 +18,9 @@ CMD [ "yarn", "run", "docker:watch" ]
 # Build stage for production
 FROM base as build
 
-COPY ./package.json package-lock.json /opt/app/
+COPY ./package.json yarn.json /opt/app/
 
-RUN npm install
+RUN yarn
 
 COPY . /opt/app
 
