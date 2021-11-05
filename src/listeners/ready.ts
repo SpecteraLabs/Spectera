@@ -15,7 +15,6 @@ export class Ready extends Listener {
 	public run() {
 		this.printBanner();
 		this.printStoreDebugInformation();
-		this.container.client.snipes = new Collection();
 	}
 
 	private printBanner() {

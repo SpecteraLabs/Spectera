@@ -29,6 +29,6 @@ export class MessageDelete extends Listener {
 			.setFooter(`ID: ${message.member!.user.id}`)
 			.setTimestamp();
 		if (message.attachments.first()) embed.setImage(message.attachments.first()!.proxyURL);
-		channel!.send({ embeds: [embed] });
+		await channel!.send({ embeds: [embed] });
 	}
 }
