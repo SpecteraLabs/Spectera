@@ -473,6 +473,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/fetch@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@sapphire/fetch@npm:2.0.2"
+  dependencies:
+    cross-fetch: ^3.1.4
+  checksum: 3c75e42efa6cbd6ffad64a4df254994f07ce7ba38ac044c9a13fd2dea0d1a6d2173df94e9bc4b1d8165de0bb1071d5d65c1095b78938460d93a9a1f2e6026c3b
+  languageName: node
+  linkType: hard
+
 "@sapphire/framework@npm:^2.1.3":
   version: 2.1.3
   resolution: "@sapphire/framework@npm:2.1.3"
@@ -1381,6 +1390,15 @@ __metadata:
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
   checksum: a9a1503d4390d8b59ad86f4607de7870b39cad43d929813599a23714831e81c520bddf61bcdd1f8e30f05fd3a2b71ae8538e946eb2786dc65c2bbc520f692eff
+  languageName: node
+  linkType: hard
+
+"cross-fetch@npm:^3.1.4":
+  version: 3.1.4
+  resolution: "cross-fetch@npm:3.1.4"
+  dependencies:
+    node-fetch: 2.6.1
+  checksum: 2107e5e633aa327bdacab036b1907c7ddd28651ede0c1d4fd14db04510944d56849a8255e2f5b8f9a1da0e061b6cee943f6819fe29ed9a130195e7fadd82a4ff
   languageName: node
   linkType: hard
 
@@ -3190,6 +3208,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:2.6.1":
+  version: 2.6.1
+  resolution: "node-fetch@npm:2.6.1"
+  checksum: 91075bedd57879117e310fbcc36983ad5d699e522edb1ebcdc4ee5294c982843982652925c3532729fdc86b2d64a8a827797a745f332040d91823c8752ee4d7c
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.5":
   version: 2.6.5
   resolution: "node-fetch@npm:2.6.5"
@@ -4011,6 +4036,7 @@ resolve@^1.10.0:
     "@sapphire/decorators": ^3.1.3
     "@sapphire/discord.js-utilities": ^4.0.2
     "@sapphire/eslint-config": 4.0.2
+    "@sapphire/fetch": ^2.0.2
     "@sapphire/framework": ^2.1.3
     "@sapphire/plugin-api": ^3.0.1
     "@sapphire/plugin-editable-commands": ^1.0.1
