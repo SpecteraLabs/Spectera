@@ -11,8 +11,15 @@ model GuildSettings {
   id  String  @unique
   prefixes  String[]
   autorole  String?
-  loggingChannel  String?
   muterole  String?
   modRoles  String[]
   tags  String[]
+}
+
+model GuildLogs {
+  id String @unique
+  messageLogChannel String
+  modLogChannel String
+  memberLogChannel String
+  phishLogChannel String
 }
