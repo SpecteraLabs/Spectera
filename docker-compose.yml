@@ -8,11 +8,13 @@ services:
     env_file: .env.production
     volumes:
       - ./:/opt/app
+    networks:
+      - spectera
   postgres:
     container_name: postgres
-    image: undiedgamer/postgres:0.5.0
+    image: undiedgamer/postgres:latest
     ports:
-      - '6969:5432'
+      - '5433:5432'
     networks:
       - spectera
 networks:
