@@ -13,13 +13,13 @@ export class MessageDelete extends Listener {
 			image: message.attachments.first() ? message.attachments.first()?.proxyURL : null
 		});
 
-		const result = await this.container.database.guildSettings.findUnique({
+		const result = await this.container.database.guildLogs.findUnique({
 			where: { id: message.guild!.id }
 		});
-		const { loggingChannel } = result!;
-		if (loggingChannel === null) return;
+		const { messageLogChannel } = result!;
+		if (!messageLogChannel) return;
 
-		const channel = message.guild!.channels.cache.find((ch) => ch.id === loggingChannel);
+		const channel = message.guild!.channels.cache.find((ch) => ch.id === messageLogChannel);
 		if (!isGuildBasedChannel(channel) || !isGuildBasedChannel(message.channel)) return;
 		const embed = new MessageEmbed()
 			.setAuthor(message.author.tag, message.member!.user.displayAvatarURL())
