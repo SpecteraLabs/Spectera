@@ -1,6 +1,6 @@
 import { OWNERS } from '#root/config';
 import { createFunctionPrecondition } from '@sapphire/decorators';
-import { container } from '@sapphire/framework';
+import { container, UserError } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 export function ModeratorOnly(): MethodDecorator {
@@ -13,12 +13,8 @@ export function ModeratorOnly(): MethodDecorator {
 			!OWNERS.includes(message.author.id) ||
 			!message.member!.permissions.has('ADMINISTRATOR')
 		) {
-			message.reply('This command can only run by Moderators!');
+			throw new UserError({ message: 'This command can only run by Moderators!', identifier: 'permissionsMissing' });
 		}
-		return (
-			message.member!.roles.cache.some((role) => result!.modRoles.includes(role.id)) ||
-			OWNERS.includes(message.author.id) ||
-			message.member!.permissions.has('ADMINISTRATOR')
-		);
+		return true;
 	});
 }

@@ -1,6 +1,7 @@
 import esbuild from 'esbuild';
 import { opendir } from 'fs/promises';
 import { join } from 'path';
+import nodemon from 'nodemon';
 import { URL, fileURLToPath } from 'url';
 
 async function* scan(path, cb) {
@@ -16,7 +17,7 @@ async function* scan(path, cb) {
 	}
 }
 
-export async function build(watch = false) {
+export async function build() {
 	const rootFolder = new URL('../', import.meta.url);
 	const distFolder = new URL('dist/', rootFolder);
 	const srcFolder = new URL('src/', rootFolder);
@@ -30,19 +31,30 @@ export async function build(watch = false) {
 		}
 	}
 
-	await esbuild.build({
-		logLevel: 'info',
-		entryPoints: tsFiles,
-		format: 'cjs',
-		resolveExtensions: ['.ts', '.js'],
-		write: true,
-		outdir: fileURLToPath(distFolder),
-		platform: 'node',
-		tsconfig: join(fileURLToPath(srcFolder), 'tsconfig.json'),
-		watch,
-		incremental: watch,
-		sourcemap: true,
-		external: [],
-		minify: process.env.NODE_ENV === 'production'
-	});
+	await Promise.all([
+		esbuild.build({
+			logLevel: 'info',
+			entryPoints: tsFiles,
+			format: 'cjs',
+			resolveExtensions: ['.ts', '.js'],
+			write: true,
+			outdir: fileURLToPath(distFolder),
+			platform: 'node',
+			tsconfig: join(fileURLToPath(srcFolder), 'tsconfig.json'),
+			watch: {
+				onRebuild(err, _result) {
+					if (err) {
+						console.error(err);
+						process.exit(1);
+					}
+					nodemon.restart();
+				}
+			},
+			incremental: true,
+			sourcemap: true,
+			external: [],
+			minify: process.env.NODE_ENV === 'production'
+		}),
+		nodemon('yarn pre')
+	]);
 }
