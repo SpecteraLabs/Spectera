@@ -22,5 +22,3 @@ jobs:
         run: yarn --immutable
       - name: Check Liniting
         run: yarn check:lint
-      - name: Build Files
-        run: yarn build
