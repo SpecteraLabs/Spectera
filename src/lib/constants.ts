@@ -36,3 +36,8 @@ export const handleArgs = async <T extends ArgType[keyof ArgType]>(getArg: Promi
 		throw new UserError({ identifier: 'argsMissing', message });
 	}
 };
+
+export interface phisherFetch {
+	verifiedPhish: boolean;
+	classification: string;
+}

@@ -1,4 +1,4 @@
-import { uriRegex } from '#lib/constants';
+import { phisherFetch, uriRegex } from '#lib/constants';
 import { PHISHERMAN_KEY } from '#root/config';
 import { ApplyOptions } from '@sapphire/decorators';
 import { fetch, FetchMethods, FetchResultTypes } from '@sapphire/fetch';
@@ -17,8 +17,13 @@ export class AntiPhishEvent extends Listener {
 		try {
 			const execedUri: string | RegExpExecArray = uriRegex.exec(message.content)!;
 			const uri = execedUri[0].replace('www.', '');
-			const check = await fetch(`https://api.phisherman.gg/v1/domains/${uri}`);
-			if (check) {
+			const check = await fetch<phisherFetch>(`https://api.phisherman.gg/v2/domains/check/${uri}`, {
+				headers: {
+					'Content-Type': 'application/json',
+					Authorization: `Bearer ${PHISHERMAN_KEY}`
+				}
+			});
+			if (check.verifiedPhish) {
 				await message.delete();
 				await fetch(
 					`https://api.phisherman.gg/v1/domains/${uri}`,

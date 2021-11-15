@@ -1,8 +1,10 @@
 import { SapphireClient, container } from '@sapphire/framework';
-import type { Message } from 'discord.js';
+import { Collection, Message } from 'discord.js';
 import { CLIENT_OPTIONS } from '#root/config';
+import type { SnipedMessageObject } from '#types/interfaces/Snipe';
 
 export class SpecteraClient extends SapphireClient {
+	public snipes: Collection<string, SnipedMessageObject> = new Collection();
 	public constructor() {
 		super(CLIENT_OPTIONS);
 	}
