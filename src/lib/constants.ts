@@ -1,4 +1,5 @@
 import { ArgType, UserError } from '@sapphire/framework';
+import { Message, MessageEmbed, TextChannel, TextChannelResolvable } from 'discord.js';
 import { join } from 'path';
 
 export const rootFolder = join(__dirname, '..', '..');
@@ -40,4 +41,17 @@ export const handleArgs = async <T extends ArgType[keyof ArgType]>(getArg: Promi
 export interface phisherFetch {
 	verifiedPhish: boolean;
 	classification: string;
+}
+
+export function buildPhishLog(message: Message, url: string, classification: phisherFetch['classification']) {
+	return new MessageEmbed()
+		.setTitle('Phish Caught')
+		.setColor(BrandingColors.Primary)
+		.setTimestamp()
+		.setFooter(`id: ${message.author.id}`)
+		.setDescription(
+			`${url} has been caught by phisherman! in ${(message.channel as TextChannel).name}\nLink sent by ${
+				message.author.username
+			}\nLink is ${classification}`
+		);
 }
