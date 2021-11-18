@@ -1,7 +1,8 @@
 import { buildPhishLog, phisherFetch, uriRegex } from '#lib/constants';
+import { isScam } from '#lib/utils/util';
 import { PHISHERMAN_KEY } from '#root/config';
 import { ApplyOptions } from '@sapphire/decorators';
-import { fetch, FetchMethods, FetchResultTypes } from '@sapphire/fetch';
+import { fetch } from '@sapphire/fetch';
 import { Listener, ListenerOptions } from '@sapphire/framework';
 import type { Message, TextChannel } from 'discord.js';
 
@@ -23,8 +24,7 @@ export class AntiPhishEvent extends Listener {
 					Authorization: `Bearer ${PHISHERMAN_KEY}`
 				}
 			});
-			console.log(check, uri);
-			if (check.verifiedPhish) {
+			if (isScam(check.classification)) {
 				await message.delete();
 				// await fetch(
 				// 	`https://api.phisherman.gg/v1/domains/${uri}`,

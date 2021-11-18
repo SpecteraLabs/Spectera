@@ -1,9 +1,9 @@
 {
-	"extends": "@sapphire/ts-config",
+	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
 		"lib": ["ESNext", "DOM"],
 		"target": "ESNext",
 		"module": "ESNext"
 	},
-	"include": ["src", "scripts"]
+	"include": ["src", "scripts", "tests", "babel.config.js", "jest.config.ts"]
 }

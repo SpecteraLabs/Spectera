@@ -1,4 +1,7 @@
+import type { phisherFetch } from '#lib/constants';
+import { PHISHERMAN_KEY } from '#root/config';
 import { TwemojiRegex } from '@sapphire/discord-utilities';
+import { fetch } from '@sapphire/fetch';
 
 export const kRegExpUnicodeBoxNumber = /^\d\u20E3$/;
 export const kRegExpFormattedCustomEmoji = /<a?:\w{2,32}:\d{17,18}>/;
@@ -30,4 +33,8 @@ export function resolveEmoji(emoji: string | EmojiObject): string | null {
 			? `${emoji.animated ? 'a' : ''}:${emoji.name.replace(/~\d+/, '')}:${emoji.id}`
 			: encodeURIComponent(emoji.name)
 		: emoji.id;
+}
+
+export function isScam(classification: string) {
+	return classification === 'suspicious' || classification === 'malicious';
 }

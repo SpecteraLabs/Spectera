@@ -1,0 +1,18 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"noEmit": true,
+		"incremental": false,
+		"baseUrl": ".",
+		"paths": {
+			"#structures/*": ["../src/lib/structures/*.js"],
+			"#types/enums/*": ["../src/lib/types/enums/*.js"],
+			"#types/interfaces/*": ["../src/lib/types/interfaces/*.js"],
+			"#lib/*": ["../src/lib/*.js"],
+			"#root/*": ["../src/*"]
+		}
+	},
+	"include": [".", "../src/**/*"],
+	"exclude": ["../dist/**/*"],
+	"references": [{ "path": "../src" }]
+}

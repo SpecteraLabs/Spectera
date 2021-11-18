@@ -1,6 +1,9 @@
 import { ArgType, UserError } from '@sapphire/framework';
-import { Message, MessageEmbed, TextChannel, TextChannelResolvable } from 'discord.js';
+import { Message, MessageEmbed, TextChannel } from 'discord.js';
 import { join } from 'path';
+import { fetch } from '@sapphire/fetch';
+import { PHISHERMAN_KEY } from '#root/config';
+import { isScam } from './utils/util';
 
 export const rootFolder = join(__dirname, '..', '..');
 export const srcFolder = join(rootFolder, 'src');
@@ -40,7 +43,7 @@ export const handleArgs = async <T extends ArgType[keyof ArgType]>(getArg: Promi
 
 export interface phisherFetch {
 	verifiedPhish: boolean;
-	classification: string;
+	classification: 'safe' | 'unknown' | 'suspicious' | 'malicious';
 }
 
 export function buildPhishLog(message: Message, url: string, classification: phisherFetch['classification']) {
@@ -50,8 +53,23 @@ export function buildPhishLog(message: Message, url: string, classification: phi
 		.setTimestamp()
 		.setFooter(`id: ${message.author.id}`)
 		.setDescription(
-			`${url} has been caught by phisherman! in ${(message.channel as TextChannel).name}\nLink sent by ${
-				message.author.username
-			}\nLink is ${classification}`
+			`${url} has been caught by phisherman! in #${(message.channel as TextChannel).name}\nLink sent by **${
+				message.author.tag
+			}\n**Link is ${classification}`
 		);
 }
+
+export const checkv2Scam = async (domain: string) => {
+	const result = await fetch<phisherFetch>(`https://api.phisherman.gg/v2/domains/check/${domain}`, {
+		headers: {
+			'Content-Type': 'application/json',
+			Authorization: `Bearer ${PHISHERMAN_KEY}`
+		}
+	});
+	return isScam(result.classification);
+};
+
+export const checkv1Scam = async (domain: string) => {
+	const result = await fetch(`https://api.phisherman.gg/v1/domains/${domain}`);
+	return result;
+};
