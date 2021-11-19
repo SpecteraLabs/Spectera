@@ -58,7 +58,7 @@
 		"@sapphire/discord.js-utilities": "^4.1.2",
 		"@sapphire/eslint-config": "4.0.5",
 		"@sapphire/fetch": "^2.0.3",
-		"@sapphire/framework": "^2.1.4",
+		"@sapphire/framework": "pr-293",
 		"@sapphire/plugin-api": "^3.0.2",
 		"@sapphire/plugin-editable-commands": "^1.0.2",
 		"@sapphire/plugin-logger": "^2.0.2",
