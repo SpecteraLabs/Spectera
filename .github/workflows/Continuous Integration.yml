@@ -5,6 +5,8 @@ on:
 jobs:
   Continuous-integration:
     runs-on: ubuntu-latest
+    env:
+      PHISHERMAN_KEY: ${{ secrets.PHISHERMAN_KEY }}
     steps:
       - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
       - name: Use Node.js
