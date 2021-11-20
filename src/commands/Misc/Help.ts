@@ -78,7 +78,7 @@ export class HelpCommand extends SpecteraCommand {
 				const command = cmd as SpecteraCommand;
 				if (command.hidden) return;
 
-				const result = await cmd.preconditions.run(message, command, { command: null! });
+				const result = await cmd.preconditions.messageRun(message, command, { command: null! });
 				if (!result.success) return;
 
 				const category = filtered.get(command.fullCategory!.join(' → '));
