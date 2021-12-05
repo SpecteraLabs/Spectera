@@ -44,6 +44,6 @@ export function Snowflakeify(input: bigint): Snowflake {
 	return `${input}`;
 }
 
-export function UnSnowflakify(input: string): bigint {
+export function UnSnowflakify(input: Snowflake): bigint {
 	return BigInt(input);
 }
