@@ -28,4 +28,4 @@ declare module 'discord.js' {
 	}
 }
 
-export type Snowflake = `${bigint}` & { __BRAND__: 'Snowflake' };
+export type Snowflake = `${bigint}`;

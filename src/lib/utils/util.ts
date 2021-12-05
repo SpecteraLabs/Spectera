@@ -1,4 +1,5 @@
 import type { phisherFetch } from '#lib/constants';
+import type { Snowflake } from '#lib/types/Augment';
 import { PHISHERMAN_KEY } from '#root/config';
 import { TwemojiRegex } from '@sapphire/discord-utilities';
 import { fetch } from '@sapphire/fetch';
@@ -37,4 +38,12 @@ export function resolveEmoji(emoji: string | EmojiObject): string | null {
 
 export function isScam(classification: string) {
 	return classification === 'suspicious' || classification === 'malicious';
+}
+
+export function Snowflakeify(input: bigint): Snowflake {
+	return `${input}`;
+}
+
+export function UnSnowflakify(input: string): bigint {
+	return BigInt(input);
 }
