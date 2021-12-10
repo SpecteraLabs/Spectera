@@ -1,6 +1,6 @@
 import esbuild from 'esbuild';
 import { opendir } from 'fs/promises';
-import { join } from 'path';
+import { join, resolve } from 'path';
 import nodemon from 'nodemon';
 import { URL, fileURLToPath } from 'url';
 
@@ -17,7 +17,7 @@ async function* scan(path, cb) {
 	}
 }
 
-export async function build() {
+export async function build(watch = false) {
 	const rootFolder = new URL('../', import.meta.url);
 	const distFolder = new URL('dist/', rootFolder);
 	const srcFolder = new URL('src/', rootFolder);
@@ -41,15 +41,17 @@ export async function build() {
 			outdir: fileURLToPath(distFolder),
 			platform: 'node',
 			tsconfig: join(fileURLToPath(srcFolder), 'tsconfig.json'),
-			watch: {
-				onRebuild(err, _result) {
-					if (err) {
-						console.error(err);
-						process.exit(1);
-					}
-					nodemon.restart();
-				}
-			},
+			watch: watch
+				? {
+						onRebuild(err, _result) {
+							if (err) {
+								console.error(err);
+								process.exit(1);
+							}
+							nodemon.restart();
+						}
+				  }
+				: false,
 			incremental: true,
 			sourcemap: true,
 			external: [],

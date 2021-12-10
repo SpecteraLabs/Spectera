@@ -11,7 +11,7 @@ import { BrandingColors } from '#lib/constants';
 	description: 'Your description here.'
 })
 export class HelpCommand extends SpecteraCommand {
-	public async messageRun(message: Message, _args: Args, context: SpecteraCommand.Context) {
+	public override async messageRun(message: Message, _args: Args, context: SpecteraCommand.Context) {
 		return this.display(message, null, context);
 	}
 
@@ -75,10 +75,10 @@ export class HelpCommand extends SpecteraCommand {
 		const filtered = new Collection<string, SpecteraCommand[]>();
 		await Promise.all(
 			commands.map(async (cmd) => {
-				const command = cmd as SpecteraCommand;
+				const command = cmd as unknown as SpecteraCommand;
 				if (command.hidden) return;
 
-				const result = await cmd.preconditions.messageRun(message, command, { command: null! });
+				const result = await cmd.preconditions.messageRun(message, command as any, { command: null! });
 				if (!result.success) return;
 
 				const category = filtered.get(command.fullCategory!.join(' → '));

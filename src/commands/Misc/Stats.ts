@@ -26,10 +26,10 @@ export class StatsCommand extends SpecteraCommand {
 	public async messageRun(message: Message) {
 		const statsEmbed = new MessageEmbed().setColor('WHITE').setDescription(
 			`**Servers**: ${this.container.client.guilds.cache.size}
-				**Channels**: ${this.container.client.channels.cache.size}
-				**Members**: ${this.container.client.users.cache.size}
-				**Bot Version**: ${version}
-				**DiscordJS Version**: ${dependencies['discord.js'].replaceAll('^', '')}`
+			**Channels**: ${this.container.client.channels.cache.size}
+			**Members**: ${this.container.client.users.cache.size}
+			**Bot Version**: ${version}
+			**DiscordJS Version**: ${dependencies['discord.js'].replaceAll('^', '')}`
 		);
 		await reply(message, { embeds: [statsEmbed] });
 	}
@@ -37,10 +37,10 @@ export class StatsCommand extends SpecteraCommand {
 	public async chatInputRun(interaction: CommandInteraction) {
 		const statsEmbed = new MessageEmbed().setColor('WHITE').setDescription(
 			`**Servers**: ${this.container.client.guilds.cache.size}
-				**Channels**: ${this.container.client.channels.cache.size}
-				**Members**: ${this.container.client.users.cache.size}
-				**Bot Version**: ${version}
-				**DiscordJS Version**: ${dependencies['discord.js'].replaceAll('^', '')}`
+			**Channels**: ${this.container.client.channels.cache.size}
+			**Members**: ${this.container.client.users.cache.size}
+			**Bot Version**: ${version}
+			**DiscordJS Version**: ${dependencies['discord.js'].replaceAll('^', '')}`
 		);
 		await interaction.reply({ embeds: [statsEmbed] });
 	}

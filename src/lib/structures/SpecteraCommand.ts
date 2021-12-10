@@ -1,20 +1,20 @@
-import { PieceContext, Args as SapphireArgs, CommandContext, PreconditionEntryResolvable, UserPermissionsPrecondition } from '@sapphire/framework';
+import { Args as SapphireArgs, MessageCommandContext, PreconditionEntryResolvable, UserPermissionsPrecondition, Command } from '@sapphire/framework';
 import { SubCommandPluginCommand } from '@sapphire/plugin-subcommands';
 import type { PermissionResolvable } from 'discord.js';
 import { PermissionLevels } from '../types/enums/PermissionLevels';
 
-export abstract class SpecteraCommand extends SubCommandPluginCommand {
+export class SpecteraCommand extends SubCommandPluginCommand {
 	public readonly permissionLevel: PermissionLevels;
 	public readonly guarded: boolean;
 	public readonly hidden: boolean;
-	public constructor(context: PieceContext, options: SpecteraCommand.Options) {
+	public constructor(context: Command.Context, options: SpecteraCommand.Options) {
 		super(context, SpecteraCommand.resolvePreConditions(context, options));
 		this.permissionLevel = options.permissionLevel ?? PermissionLevels.Everyone;
 		this.guarded = options.guarded ?? false;
 		this.hidden = options.hidden ?? false;
 	}
 
-	protected static resolvePreConditions(_context: PieceContext, options: SpecteraCommand.Options): SpecteraCommand.Options {
+	protected static resolvePreConditions(_context: Command.Context, options: SpecteraCommand.Options): SpecteraCommand.Options {
 		options.generateDashLessAliases ??= true;
 
 		const preconditions = (options.preconditions ??= []) as PreconditionEntryResolvable[];
@@ -60,5 +60,5 @@ export namespace SpecteraCommand {
 		cooldown?: number;
 	};
 	export type Args = SapphireArgs;
-	export type Context = CommandContext;
+	export type Context = MessageCommandContext;
 }

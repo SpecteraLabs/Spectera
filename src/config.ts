@@ -33,6 +33,7 @@ export const CLIENT_OPTIONS: ClientOptions = {
 	intents: ['GUILDS', 'GUILD_MESSAGES', 'DIRECT_MESSAGES', 'GUILD_MESSAGE_REACTIONS'],
 	defaultPrefix: envParseString('CLIENT_PREFIX'),
 	regexPrefix: parseRegExpPrefix(),
+	loadMessageCommandListeners: true,
 	api: {
 		auth: {
 			id: envParseString('CLIENT_ID'),
