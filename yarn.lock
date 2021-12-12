@@ -1900,7 +1900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/discord.js-utilities@npm:^4.1.4":
+"@sapphire/discord.js-utilities@npm:^4.1.4, @sapphire/discord.js-utilities@npm:^4.1.5":
   version: 4.1.5
   resolution: "@sapphire/discord.js-utilities@npm:4.1.5"
   dependencies:
@@ -1912,18 +1912,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/eslint-config@npm:4.0.7":
-  version: 4.0.7
-  resolution: "@sapphire/eslint-config@npm:4.0.7"
+"@sapphire/eslint-config@npm:4.0.8":
+  version: 4.0.8
+  resolution: "@sapphire/eslint-config@npm:4.0.8"
   dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.4.0
-    "@typescript-eslint/parser": ^5.4.0
-    eslint: ^8.3.0
+    "@typescript-eslint/eslint-plugin": ^5.6.0
+    "@typescript-eslint/parser": ^5.6.0
+    eslint: ^8.4.1
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
-    prettier: ^2.5.0
+    prettier: ^2.5.1
     typescript: ^4.5.2
-  checksum: 5aa40dad69e855b068f7b5da759888f85f713d6de8ae7a3addf1881118b76031d0be703537f6251e2583ccaf05fafeba84bb9740d012746d7e08adc7f516a4aa
+  checksum: 7f3c1fa80515d52855e010bf2ebb28a099003a0260b8d36def569f3dccf6419c3991ee87383ec8a7af949861fa58e3757088cd93687aef882ee6844f4a01d11f
   languageName: node
   linkType: hard
 
@@ -1936,9 +1936,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/framework@npm:2.3.0-pr-293.501f6a8.0":
-  version: 2.3.0-pr-293.501f6a8.0
-  resolution: "@sapphire/framework@npm:2.3.0-pr-293.501f6a8.0"
+"@sapphire/framework@npm:2.3.0-pr-293.f4a0d9e.0":
+  version: 2.3.0-pr-293.f4a0d9e.0
+  resolution: "@sapphire/framework@npm:2.3.0-pr-293.f4a0d9e.0"
   dependencies:
     "@sapphire/discord-utilities": ^2.3.0
     "@sapphire/discord.js-utilities": ^4.1.4
@@ -1947,7 +1947,7 @@ __metadata:
     "@sapphire/utilities": ^3.1.0
     lexure: ^0.17.0
     tslib: ^2.3.1
-  checksum: b5f245793eeaf8de4ae765d5a91b40d3724f9cef5e5981fbb914e6103d485604b9375890207ad965cb54af36f237dab5b06d98ad8a8ff29a748d9222b7de49e6
+  checksum: 6da4e1ddb76f5175f27aa5f6ac3019dca4e29171cdea7e19b106e88bb3107ae1eb4a61c9e594733db21a369b29e43bfa75ae2df48593583691667ead6e8f5400
   languageName: node
   linkType: hard
 
@@ -1962,7 +1962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/plugin-api@npm:^3.1.0":
+"@sapphire/plugin-api@npm:^3.1.1":
   version: 3.1.1
   resolution: "@sapphire/plugin-api@npm:3.1.1"
   dependencies:
@@ -1986,7 +1986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/plugin-logger@npm:^2.1.0":
+"@sapphire/plugin-logger@npm:^2.1.1":
   version: 2.1.1
   resolution: "@sapphire/plugin-logger@npm:2.1.1"
   dependencies:
@@ -1997,7 +1997,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/plugin-subcommands@npm:^2.1.1":
+"@sapphire/plugin-subcommands@npm:^2.1.2":
   version: 2.1.2
   resolution: "@sapphire/plugin-subcommands@npm:2.1.2"
   dependencies:
@@ -2006,7 +2006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/prettier-config@npm:^1.2.6":
+"@sapphire/prettier-config@npm:^1.2.7":
   version: 1.2.7
   resolution: "@sapphire/prettier-config@npm:1.2.7"
   dependencies:
@@ -2326,7 +2326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:5.6.0, @typescript-eslint/eslint-plugin@npm:^5.4.0":
+"@typescript-eslint/eslint-plugin@npm:5.6.0, @typescript-eslint/eslint-plugin@npm:^5.6.0":
   version: 5.6.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.6.0"
   dependencies:
@@ -2364,7 +2364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:5.6.0, @typescript-eslint/parser@npm:^5.4.0":
+"@typescript-eslint/parser@npm:5.6.0, @typescript-eslint/parser@npm:^5.6.0":
   version: 5.6.0
   resolution: "@typescript-eslint/parser@npm:5.6.0"
   dependencies:
@@ -4062,7 +4062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.4.1, eslint@npm:^8.3.0":
+"eslint@npm:8.4.1, eslint@npm:^8.4.1":
   version: 8.4.1
   resolution: "eslint@npm:8.4.1"
   dependencies:
@@ -6795,7 +6795,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.5.1, prettier@npm:^2.5.0, prettier@npm:^2.5.1":
+"prettier@npm:2.5.1, prettier@npm:^2.5.1":
   version: 2.5.1
   resolution: "prettier@npm:2.5.1"
   bin:
@@ -7515,15 +7515,15 @@ __metadata:
     "@commitlint/config-conventional": 15.0.0
     "@prisma/client": 3.6.0
     "@sapphire/decorators": ^3.1.4
-    "@sapphire/discord.js-utilities": ^4.1.4
-    "@sapphire/eslint-config": 4.0.7
+    "@sapphire/discord.js-utilities": ^4.1.5
+    "@sapphire/eslint-config": 4.0.8
     "@sapphire/fetch": ^2.0.3
-    "@sapphire/framework": 2.3.0-pr-293.501f6a8.0
-    "@sapphire/plugin-api": ^3.1.0
+    "@sapphire/framework": 2.3.0-pr-293.f4a0d9e.0
+    "@sapphire/plugin-api": ^3.1.1
     "@sapphire/plugin-editable-commands": ^1.1.1
-    "@sapphire/plugin-logger": ^2.1.0
-    "@sapphire/plugin-subcommands": ^2.1.1
-    "@sapphire/prettier-config": ^1.2.6
+    "@sapphire/plugin-logger": ^2.1.1
+    "@sapphire/plugin-subcommands": ^2.1.2
+    "@sapphire/prettier-config": ^1.2.7
     "@sapphire/stopwatch": 1.2.4
     "@sapphire/time-utilities": ^1.5.0
     "@sapphire/ts-config": 3.1.6
