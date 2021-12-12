@@ -2715,7 +2715,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-jest@npm:^27.4.2, babel-jest@npm:^27.4.4":
+"babel-jest@npm:^27.4.4":
   version: 27.4.4
   resolution: "babel-jest@npm:27.4.4"
   dependencies:
@@ -5631,7 +5631,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^27.4.3":
+"jest@npm:^27.4.4":
   version: 27.4.4
   resolution: "jest@npm:27.4.4"
   dependencies:
@@ -7533,14 +7533,14 @@ __metadata:
     "@types/node": 16.11.12
     "@typescript-eslint/eslint-plugin": 5.6.0
     "@typescript-eslint/parser": 5.6.0
-    babel-jest: ^27.4.2
+    babel-jest: ^27.4.4
     colorette: 2.0.16
     discord.js: ^13.3.1
     dotenv-cra: ^3.0.2
     esbuild: ^0.14.2
     eslint: 8.4.1
     husky: 7.0.4
-    jest: ^27.4.3
+    jest: ^27.4.4
     lint-staged: 12.1.2
     nodemon: ^2.0.15
     prettier: 2.5.1
@@ -7548,7 +7548,7 @@ __metadata:
     prisma: 3.6.0
     reflect-metadata: 0.1.13
     tsc-watch: 4.5.0
-    typescript: ^4.5.2
+    typescript: ^4.5.3
     vm2: ^3.9.5
   languageName: unknown
   linkType: soft
@@ -8092,7 +8092,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.4.3, typescript@npm:^4.5.2":
+"typescript@npm:^4.4.3, typescript@npm:^4.5.2, typescript@npm:^4.5.3":
   version: 4.5.3
   resolution: "typescript@npm:4.5.3"
   bin:
@@ -8102,7 +8102,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.3#~builtin<compat/typescript>":
   version: 4.5.3
   resolution: "typescript@patch:typescript@npm%3A4.5.3#~builtin<compat/typescript>::version=4.5.3&hash=493e53"
   bin:
