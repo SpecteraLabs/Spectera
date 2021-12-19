@@ -1,6 +1,6 @@
 import esbuild from 'esbuild';
 import { opendir } from 'fs/promises';
-import { join, resolve } from 'path';
+import { join } from 'path';
 import nodemon from 'nodemon';
 import { URL, fileURLToPath } from 'url';
 
@@ -52,7 +52,7 @@ export async function build(watch = false) {
 						}
 				  }
 				: false,
-			incremental: true,
+			incremental: watch,
 			sourcemap: true,
 			external: [],
 			minify: process.env.NODE_ENV === 'production'
