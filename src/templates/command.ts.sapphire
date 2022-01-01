@@ -4,14 +4,31 @@
 ---
 import { ApplyOptions } from '@sapphire/decorators';
 import { SpecteraCommand } from '#structures/SpecteraCommand';
-import type { Message } from 'discord.js';
-import type { Args } from '@sapphire/framework';
+import type { Message, CommandInteraction } from 'discord.js';
+import { type Args, type ApplicationCommandRegistry, RegisterBehavior } from '@sapphire/framework';
 
 @ApplyOptions<SpecteraCommand.Options>({
-	description: 'Your description here.'
+	description: 'Your description here'
 })
 export class {{name}}Command extends SpecteraCommand {
+	public registerApplicationCommands(registry: ApplicationCommandRegistry) {
+		registry.registerChatInputCommand(
+			{
+				name: this.name,
+				description: this.description
+			},
+			{
+				guildIds: ['859287138364030977'],
+				behaviorWhenNotIdentical: RegisterBehavior.Overwrite
+			}
+		);
+	}
+
 	public async messageRun(message: Message, args: Args) {
+		// ...
+	}
+
+	public async chatInputRun(interaction: CommandInteraction) {
 		// ...
 	}
 }

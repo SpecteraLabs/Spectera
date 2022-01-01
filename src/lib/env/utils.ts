@@ -1,7 +1,7 @@
-import type { ObligatorEnv, ObligatorEnvAny, ObligatorEnvBoolean, ObligatorEnvInteger, ObligatorEnvString } from './types';
+import type { SpecteraEnv, SpecteraEnvAny, SpecteraEnvBoolean, SpecteraEnvInteger, SpecteraEnvString } from './types';
 import { isNullishOrEmpty } from '@sapphire/utilities';
 
-export function envParseInteger(key: ObligatorEnvInteger, defaultValue?: number): number {
+export function envParseInteger(key: SpecteraEnvInteger, defaultValue?: number): number {
 	const value = process.env[key];
 	if (isNullishOrEmpty(value)) {
 		if (defaultValue === undefined) throw new Error(`[ENV] ${key} - The key must be an integer, but is empty or undefined.`);
@@ -13,7 +13,7 @@ export function envParseInteger(key: ObligatorEnvInteger, defaultValue?: number)
 	throw new Error(`[ENV] ${key} - The key must be an integer, but received '${value}'.`);
 }
 
-export function envParseBoolean(key: ObligatorEnvBoolean, defaultValue?: boolean): boolean {
+export function envParseBoolean(key: SpecteraEnvBoolean, defaultValue?: boolean): boolean {
 	const value = process.env[key];
 	if (isNullishOrEmpty(value)) {
 		if (defaultValue === undefined) throw new Error(`[ENV] ${key} - The key must be a boolean, but is empty or undefined.`);
@@ -25,7 +25,7 @@ export function envParseBoolean(key: ObligatorEnvBoolean, defaultValue?: boolean
 	throw new Error(`[ENV] ${key} - The key must be a boolean, but received '${value}'.`);
 }
 
-export function envParseString<K extends ObligatorEnvString>(key: K, defaultValue?: ObligatorEnv[K]): ObligatorEnv[K] {
+export function envParseString<K extends SpecteraEnvString>(key: K, defaultValue?: SpecteraEnv[K]): SpecteraEnv[K] {
 	const value: any = process.env[key];
 	if (isNullishOrEmpty(value)) {
 		if (defaultValue === undefined) throw new Error(`[ENV] ${key} - The key must be a string, but is empty or undefined.`);
@@ -35,7 +35,7 @@ export function envParseString<K extends ObligatorEnvString>(key: K, defaultValu
 	return value;
 }
 
-export function envParseArray(key: ObligatorEnvString, defaultValue?: string[]): string[] {
+export function envParseArray(key: SpecteraEnvString, defaultValue?: string[]): string[] {
 	const value = process.env[key];
 	if (isNullishOrEmpty(value)) {
 		if (defaultValue === undefined) throw new Error(`[ENV] ${key} - The key must be an array, but is empty or undefined.`);
@@ -45,6 +45,6 @@ export function envParseArray(key: ObligatorEnvString, defaultValue?: string[]):
 	return value.split(' ');
 }
 
-export function envIsDefined(...keys: readonly ObligatorEnvAny[]): boolean {
+export function envIsDefined(...keys: readonly SpecteraEnvAny[]): boolean {
 	return keys.every((key) => !isNullishOrEmpty(process.env[key]));
 }

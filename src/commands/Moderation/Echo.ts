@@ -1,5 +1,5 @@
 import { ApplyOptions, RequiresUserPermissions } from '@sapphire/decorators';
-import type { CommandInteraction, Message, Permissions, TextChannel } from 'discord.js';
+import type { CommandInteraction, Message, TextChannel } from 'discord.js';
 import { SpecteraCommand } from '#structures/SpecteraCommand';
 import { ApplicationCommandRegistry, RegisterBehavior } from '@sapphire/framework';
 
@@ -44,8 +44,7 @@ export class Echo extends SpecteraCommand {
 	}
 
 	public async chatInputRun(interaction: CommandInteraction) {
-		const { permissions } = interaction.member;
-		if (!(permissions as Readonly<Permissions>).has('MANAGE_MESSAGES')) return;
+		if (!interaction.memberPermissions!.has('MANAGE_MESSAGES')) return;
 		const destination = interaction.options.getChannel('channel', true);
 		const msg = interaction.options.getString('message', true);
 		await (destination as TextChannel).send({ content: msg });

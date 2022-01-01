@@ -6,7 +6,7 @@ import { PermissionLevels } from '#types/enums/PermissionLevels';
 import { codeBlock, isThenable } from '@sapphire/utilities';
 import { Type } from '@sapphire/type';
 import { inspect } from 'util';
-import { send } from '@sapphire/plugin-editable-commands';
+import { reply } from '@sapphire/plugin-editable-commands';
 import { Stopwatch } from '@sapphire/stopwatch';
 import { codeBlockRegExp } from '#lib/constants';
 
@@ -41,13 +41,13 @@ export class Eval extends SpecteraCommand {
 		if (args.getFlags('silent', 's')) return null;
 
 		if (output.length > 2000) {
-			return send(message, {
+			return reply(message, {
 				content: `Output was too long... sent the result as a file.`,
 				files: [{ attachment: Buffer.from(output), name: 'output.js' }]
 			});
 		}
 
-		return send(message, { embeds: [EvalEmbed] });
+		return reply(message, { embeds: [EvalEmbed] });
 	}
 
 	private async eval(message: Message, code: string, flags: { async: boolean; depth: number; showHidden: boolean }) {

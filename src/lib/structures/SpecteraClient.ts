@@ -7,6 +7,7 @@ export class SpecteraClient extends SapphireClient {
 	public snipes: Collection<string, SnipedMessageObject> = new Collection();
 	public constructor() {
 		super(CLIENT_OPTIONS);
+		container.client = this;
 	}
 
 	public fetchPrefix = async (message: Message) => {
