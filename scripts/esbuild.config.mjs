@@ -1,7 +1,6 @@
 import esbuild from 'esbuild';
 import { opendir } from 'fs/promises';
 import { join } from 'path';
-import nodemon from 'nodemon';
 import { URL, fileURLToPath } from 'url';
 
 async function* scan(path, cb) {
@@ -41,22 +40,11 @@ export async function build(watch = false) {
 			outdir: fileURLToPath(distFolder),
 			platform: 'node',
 			tsconfig: join(fileURLToPath(srcFolder), 'tsconfig.json'),
-			watch: watch
-				? {
-						onRebuild(err, _result) {
-							if (err) {
-								console.error(err);
-								process.exit(1);
-							}
-							nodemon.restart();
-						}
-				  }
-				: false,
+			watch,
 			incremental: watch,
 			sourcemap: true,
 			external: [],
 			minify: process.env.NODE_ENV === 'production'
-		}),
-		nodemon('yarn pre')
+		})
 	]);
 }
