@@ -2,7 +2,6 @@ process.env.NODE_ENV ??= 'development';
 
 import { envParseArray, envParseBoolean, envParseString } from './lib/env';
 import { LogLevel } from '@sapphire/framework';
-import { ScheduledTaskRedisStrategy } from '@sapphire/plugin-scheduled-tasks/register-redis';
 import type { ActivitiesOptions, ClientOptions } from 'discord.js';
 import { config } from 'dotenv-cra';
 
@@ -55,18 +54,6 @@ export const CLIENT_OPTIONS: ClientOptions = {
 	},
 	presence: {
 		activities: parsePresenceActivity()
-	},
-	tasks: {
-		strategy: new ScheduledTaskRedisStrategy({
-			bull: {
-				redis: {
-					port: 8888,
-					password: envParseString('REDIS_PASSWORD'),
-					host: envParseString('REDIS_HOST'),
-					db: 1
-				}
-			}
-		})
 	},
 	caseInsensitiveCommands: true,
 	caseInsensitivePrefixes: true
