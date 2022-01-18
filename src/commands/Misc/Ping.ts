@@ -7,7 +7,7 @@ import { ApplicationCommandRegistry, RegisterBehavior } from '@sapphire/framewor
 @ApplyOptions<SpecteraCommand.Options>({
 	description: 'Sends back the latency of the bot'
 })
-export class Ping extends SpecteraCommand {
+export class PingCommand extends SpecteraCommand {
 	public registerApplicationCommands(registry: ApplicationCommandRegistry) {
 		registry.registerChatInputCommand(
 			{

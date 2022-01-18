@@ -6,3 +6,5 @@ export const enum CooldownTime {
 	ExtraLarge = 30000,
 	Mammoth = 60000
 }
+
+type e = unknown;

@@ -5,6 +5,7 @@
 import { ApplyOptions } from '@sapphire/decorators';
 import { SpecteraCommand } from '#structures/SpecteraCommand';
 import type { Message, CommandInteraction } from 'discord.js';
+import { SlashCommandBuilder } from '@discordjs/builders';
 import { type Args, type ApplicationCommandRegistry, RegisterBehavior } from '@sapphire/framework';
 
 @ApplyOptions<SpecteraCommand.Options>({
@@ -12,11 +13,9 @@ import { type Args, type ApplicationCommandRegistry, RegisterBehavior } from '@s
 })
 export class {{name}}Command extends SpecteraCommand {
 	public registerApplicationCommands(registry: ApplicationCommandRegistry) {
-		registry.registerChatInputCommand(
-			{
-				name: this.name,
-				description: this.description
-			},
+		registry.registerChatInputCommand((builder: SlashCommandBuilder) => {
+			return builder.setName(this.name).setDescription(this.description);
+		}
 			{
 				guildIds: ['859287138364030977'],
 				behaviorWhenNotIdentical: RegisterBehavior.Overwrite
