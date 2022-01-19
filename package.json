@@ -14,7 +14,7 @@
 		"build": "tsup",
 		"clean": "node scripts/clean.mjs",
 		"start": "yarn lint && yarn build && yarn pre",
-		"dev": "run-p watch pre",
+		"dev": "yarn lint && run-p watch pre",
 		"docker:start": "yarn pre",
 		"check:lint": "prettier -c \"src/**/*.ts\"",
 		"typecheck": "tsc --noEmit",
