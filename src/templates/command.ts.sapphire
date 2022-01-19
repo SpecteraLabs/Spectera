@@ -23,7 +23,7 @@ export class {{name}}Command extends SpecteraCommand {
 		);
 	}
 
-	public async messageRun(message: Message, args: Args) {
+	public async messageRun(...[message, args]: Parameters<SpecteraCommand['messageRun']>) {
 		// ...
 	}
 
