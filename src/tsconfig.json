@@ -12,8 +12,7 @@
 			"#lib/*": ["lib/*.js"],
 			"#root/*": ["*"]
 		},
-		"composite": true,
-		"noUnusedLocals": false
+		"composite": true
 	},
 	"include": [".", "./**/*.json"],
 	"exclude": ["./tsconfig.json"]

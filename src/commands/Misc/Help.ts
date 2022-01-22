@@ -28,6 +28,7 @@ export class HelpCommand extends SpecteraCommand {
 		return response;
 	}
 
+	// @ts-expect-error I will make a use of this later
 	private async helpCategories(message: Message) {
 		const commandsByCategory = await HelpCommand.fetchCommands(message);
 		let i = 0;

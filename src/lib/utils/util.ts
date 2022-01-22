@@ -1,8 +1,5 @@
-import type { phisherFetch } from '#lib/constants';
 import type { Snowflake } from '#lib/types/Augment';
-import { PHISHERMAN_KEY } from '#root/config';
 import { TwemojiRegex } from '@sapphire/discord-utilities';
-import { fetch } from '@sapphire/fetch';
 
 export const kRegExpUnicodeBoxNumber = /^\d\u20E3$/;
 export const kRegExpFormattedCustomEmoji = /<a?:\w{2,32}:\d{17,18}>/;

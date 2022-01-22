@@ -56,6 +56,7 @@ export class Eval extends SpecteraCommand {
 		let success = true;
 		let result = null;
 		let timer;
+		// @ts-expect-error I can use this as an alias
 		const msg = message;
 
 		try {

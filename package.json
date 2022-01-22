@@ -85,7 +85,6 @@
 		"@typescript-eslint/parser": "5.9.1",
 		"babel-jest": "^27.4.6",
 		"colorette": "2.0.16",
-		"esbuild": "^0.14.11",
 		"eslint": "~8.6.0",
 		"husky": "7.0.4",
 		"jest": "^27.4.7",

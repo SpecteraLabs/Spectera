@@ -1,5 +1,5 @@
 import { Precondition, PreconditionResult } from '@sapphire/framework';
-import type { CommandInteraction, Message, Permissions } from 'discord.js';
+import type { CommandInteraction, Message } from 'discord.js';
 
 export class Administrator extends Precondition {
 	public messageRun(message: Message): PreconditionResult {

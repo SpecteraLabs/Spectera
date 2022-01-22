@@ -4024,7 +4024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.14.11, esbuild@npm:^0.14.2":
+"esbuild@npm:^0.14.2":
   version: 0.14.11
   resolution: "esbuild@npm:0.14.11"
   dependencies:
@@ -7752,7 +7752,6 @@ __metadata:
     colorette: 2.0.16
     discord.js: ^13.6.0
     dotenv-cra: ^3.0.2
-    esbuild: ^0.14.11
     eslint: ~8.6.0
     husky: 7.0.4
     jest: ^27.4.7
