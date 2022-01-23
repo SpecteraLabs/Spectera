@@ -51,10 +51,10 @@ export class Prefix extends SpecteraCommand {
 		const result = await this.container.database.guildSettings.findUnique({ where: { id: message.guild!.id } });
 		const prefixes = result!.prefixes.toString();
 		const embed = new MessageEmbed()
-			.setAuthor(`${message.guild!.name}'s prefixes (${result?.prefixes.length})`, message.guild!.iconURL() as string)
+			.setAuthor({ name: `${message.guild!.name}'s prefixes (${result?.prefixes.length})`, iconURL: message.guild!.iconURL() as string })
 			.setDescription('`'.concat(prefixes.replaceAll(',', '` `')).concat('`'))
 			.setColor('WHITE')
-			.setFooter(`Requested by ${message.member?.displayName}`, message.author.displayAvatarURL({ dynamic: true }))
+			.setFooter({ text: `Requested by ${message.member?.displayName}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 			.setTimestamp();
 		return reply(message, { embeds: [embed] });
 	}

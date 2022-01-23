@@ -26,7 +26,7 @@ export class MessageDelete extends Listener {
 			.setTitle(`Message deleted in #${message.channel.name}`)
 			.setDescription(message.content)
 			.setColor(BrandingColors.Secondary)
-			.setFooter(`ID: ${message.member!.user.id}`)
+			.setFooter({ text: `ID: ${message.member!.user.id}` })
 			.setTimestamp();
 		if (message.attachments.first()) embed.setImage(message.attachments.first()!.proxyURL);
 		await channel!.send({ embeds: [embed] });

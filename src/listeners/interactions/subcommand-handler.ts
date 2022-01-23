@@ -10,8 +10,8 @@ export class UserEvent extends Listener {
 	public async run(interaction: Interaction) {
 		if (!interaction.isCommand()) return;
 		const subcommand = interaction.options.getSubcommand();
-		const name = interaction.commandName;
-		const command = this.container.stores.get('commands').get(name);
+		const { commandName } = interaction;
+		const command = this.container.stores.get('commands').get(commandName);
 		if (!command) return;
 		const method = Reflect.get(command, `chatInput${subcommand.charAt(0).toUpperCase() + subcommand.slice(1)}`);
 		await method(interaction);

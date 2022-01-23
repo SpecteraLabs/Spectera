@@ -23,4 +23,3 @@ const client = new SpecteraClient();
 container.database = new PrismaClient();
 
 void client.start();
-if (process.env.NODE_ENV === 'development') import('@sapphire/plugin-hmr/register');

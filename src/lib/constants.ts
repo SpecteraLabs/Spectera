@@ -1,4 +1,3 @@
-import { ArgType, UserError } from '@sapphire/framework';
 import { Message, MessageEmbed, TextChannel } from 'discord.js';
 import { join } from 'path';
 import { fetch } from '@sapphire/fetch';
@@ -33,14 +32,6 @@ export const enum BrandingColors {
 export const codeBlockRegExp = /\n*```(?:(\S+)\n)?\s*([^]+?)\s*```/i;
 export const uriRegex = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 
-export const handleArgs = async <T extends ArgType[keyof ArgType]>(getArg: Promise<T>, message: string) => {
-	try {
-		return await getArg;
-	} catch {
-		throw new UserError({ identifier: 'argsMissing', message });
-	}
-};
-
 export interface phisherFetch {
 	verifiedPhish: boolean;
 	classification: 'safe' | 'unknown' | 'suspicious' | 'malicious';
@@ -51,7 +42,7 @@ export function buildPhishLog(message: Message, url: string, classification: phi
 		.setTitle('Phish Caught')
 		.setColor(BrandingColors.Primary)
 		.setTimestamp()
-		.setFooter(`id: ${message.author.id}`)
+		.setFooter({ text: `id: ${message.author.id}` })
 		.setDescription(
 			`${url} has been caught by phisherman! in #${(message.channel as TextChannel).name}\nLink sent by **${
 				message.author.tag

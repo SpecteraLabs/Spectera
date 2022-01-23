@@ -34,6 +34,9 @@ export const CLIENT_OPTIONS: ClientOptions = {
 	defaultPrefix: envParseString('CLIENT_PREFIX'),
 	regexPrefix: parseRegExpPrefix(),
 	loadMessageCommandListeners: true,
+	hmr: {
+		enabled: process.env.NODE_ENV === 'development'
+	},
 	api: {
 		auth: {
 			id: envParseString('CLIENT_ID'),

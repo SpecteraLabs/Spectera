@@ -37,7 +37,9 @@ export class Eval extends SpecteraCommand {
 
 		const Type = codeBlock('ts', type);
 		const output = success ? codeBlock('js', result) : `**ERROR**: ${codeBlock('bash', result)}`;
-		EvalEmbed.setDescription(output).setFooter(`⏱️ Time Taken: ${timer}`).addField('Type:', `${Type}`);
+		EvalEmbed.setDescription(output)
+			.setFooter({ text: `⏱️ Time Taken: ${timer}` })
+			.addField('Type:', `${Type}`);
 		if (args.getFlags('silent', 's')) return null;
 
 		if (output.length > 2000) {
