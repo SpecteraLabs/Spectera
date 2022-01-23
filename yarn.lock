@@ -2040,7 +2040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/fetch@npm:^2.0.4":
+"@sapphire/fetch@npm:^2.0.3, @sapphire/fetch@npm:^2.0.4":
   version: 2.0.4
   resolution: "@sapphire/fetch@npm:2.0.4"
   dependencies:
@@ -2062,6 +2062,15 @@ __metadata:
     lexure: ^0.17.0
     tslib: ^2.3.1
   checksum: 32fd783c62a3445182797488ad95cc62a756c38d191922e63522a6156425083d2640b99055ed7fd15e01f11c6d6db91505bf1462accb5f80938201ac3a8e760d
+  languageName: node
+  linkType: hard
+
+"@sapphire/phisherman@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@sapphire/phisherman@npm:1.1.0"
+  dependencies:
+    "@sapphire/fetch": ^2.0.3
+  checksum: 324323150e43a57049ad4902d8f8db5dd37a70ecb5e8c9075fc30db49aba9585dfb0027d1c02ec87bd2e60e2cc603a9a865500291fe3761221cde40acc7cc8fb
   languageName: node
   linkType: hard
 
@@ -7720,6 +7729,7 @@ __metadata:
     "@sapphire/eslint-config": 4.0.11
     "@sapphire/fetch": ^2.0.4
     "@sapphire/framework": next
+    "@sapphire/phisherman": ^1.1.0
     "@sapphire/plugin-api": ^3.1.3
     "@sapphire/plugin-editable-commands": ^1.1.3
     "@sapphire/plugin-hmr": ^1.1.0
