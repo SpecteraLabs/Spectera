@@ -1,10 +1,12 @@
 import type { PrismaClient } from '@prisma/client';
+import type { TagParser } from '@spectera/tag-parser';
 import type { Collection } from 'discord.js';
 import type { SnipedMessageObject } from './interfaces/Snipe';
 
 declare module '@sapphire/pieces' {
 	interface Container {
 		database: PrismaClient;
+		parser: TagParser;
 	}
 }
 

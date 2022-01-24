@@ -18,8 +18,10 @@ import '#lib/setup';
 import { SpecteraClient } from '#structures/SpecteraClient';
 import { PrismaClient } from '@prisma/client';
 import { container } from '@sapphire/framework';
+import { TagParser } from '@spectera/tag-parser';
 
 const client = new SpecteraClient();
 container.database = new PrismaClient();
+container.parser = new TagParser();
 
 void client.start();

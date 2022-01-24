@@ -13,7 +13,6 @@ export class AntiPhishEvent extends Listener {
 	public async run(message: Message) {
 		if (message.author.bot) return;
 		if (!message.guild) return;
-		console.log(message.content);
 		if (!message.content.match(uriRegex)) return;
 		try {
 			const execedUri: string | RegExpExecArray = uriRegex.exec(message.content)!;

@@ -2251,6 +2251,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@spectera/tag-parser@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@spectera/tag-parser@npm:2.2.0"
+  checksum: 26c28cd1ed5df3c693c913b1477bbe2dd71abca9a3913ae03a73325248cb621abeaa75a42ae8e88118bfddc2532ed985eb45fd7b79bb61a4f33576bb1460d5d7
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -7741,6 +7748,7 @@ __metadata:
     "@sapphire/ts-config": 3.1.8
     "@sapphire/type": ^2.1.2
     "@sapphire/utilities": ^3.2.1
+    "@spectera/tag-parser": ^2.2.0
     "@types/jest": ^27.4.0
     "@types/node": 16.11.21
     "@typescript-eslint/eslint-plugin": 5.10.0
