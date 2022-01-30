@@ -97,7 +97,7 @@
 		"prisma": "3.8.1",
 		"reflect-metadata": "0.1.13",
 		"tsc-watch": "4.6.0",
-		"tsup": "^5.11.12",
+		"tsup": "^5.11.13",
 		"typescript": "^4.5.5"
 	},
 	"imports": {
