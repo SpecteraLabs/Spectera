@@ -15,7 +15,7 @@ export class AntiPhishEvent extends Listener {
 		if (!message.guild) return;
 		if (!message.content.match(uriRegex)) return;
 		try {
-			const execedUri: string | RegExpExecArray = uriRegex.exec(message.content)!;
+			const execedUri = uriRegex.exec(message.content)!;
 			const uri = execedUri[0].replace('www.', '');
 			const check = await checkDomain(uri, PHISHERMAN_KEY);
 
