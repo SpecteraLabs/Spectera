@@ -1,0 +1,4 @@
+{
+	"ping": "Ping?",
+	"editedPing": "Pong! Bot Latency {{latency}}ms. API Latency {{api_latency}}ms."
+}

@@ -3,6 +3,7 @@ import { SpecteraCommand } from '#structures/SpecteraCommand';
 import { reply } from '@sapphire/plugin-editable-commands';
 import { ChatInputCommand, RegisterBehavior } from '@sapphire/framework';
 import { type CommandInteraction, Message } from 'discord.js';
+import { editLocalized, resolveKey } from '@sapphire/plugin-i18next';
 
 @ApplyOptions<SpecteraCommand.Options>({
 	description: 'Sends back the latency of the bot',
@@ -14,10 +15,16 @@ import { type CommandInteraction, Message } from 'discord.js';
 })
 export class PingCommand extends SpecteraCommand {
 	public async messageRun(...[message]: Parameters<SpecteraCommand['messageRun']>) {
-		const msg = await reply(message, 'Ping?');
-		return msg.edit(
-			`Pong! Bot Latency ${Math.round(this.container.client.ws.ping)}ms. API Latency ${msg.createdTimestamp - message.createdTimestamp}ms.`
-		);
+		const msg = await reply(message, {
+			content: await resolveKey(message, 'commands/misc:ping')
+		});
+		return editLocalized(msg, {
+			keys: 'commands/misc:editedPing',
+			formatOptions: {
+				latency: Math.floor(this.container.client.ws.ping),
+				api_latency: msg.createdTimestamp - message.createdTimestamp
+			}
+		});
 	}
 
 	public async chatInputRun(...[interaction]: Parameters<ChatInputCommand['chatInputRun']>) {

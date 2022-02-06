@@ -5,6 +5,7 @@
 		"outDir": "../dist",
 		"rootDir": ".",
 		"baseUrl": ".",
+		"skipLibCheck": true,
 		"paths": {
 			"#structures/*": ["lib/structures/*.js"],
 			"#types/enums/*": ["lib/types/enums/*.js"],
