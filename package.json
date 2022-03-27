@@ -53,7 +53,7 @@
 		}
 	},
 	"dependencies": {
-		"@prisma/client": "3.11.0",
+		"@prisma/client": "3.11.1",
 		"@sapphire/decorators": "^4.3.2",
 		"@sapphire/discord.js-utilities": "^4.9.2",
 		"@sapphire/eslint-config": "4.3.1",
@@ -85,22 +85,22 @@
 		"@commitlint/config-conventional": "16.2.1",
 		"@types/jest": "^27.4.1",
 		"@types/node": "16.11.26",
-		"@typescript-eslint/eslint-plugin": "5.15.0",
-		"@typescript-eslint/parser": "5.15.0",
+		"@typescript-eslint/eslint-plugin": "5.16.0",
+		"@typescript-eslint/parser": "5.16.0",
 		"babel-jest": "^27.5.1",
 		"colorette": "2.0.16",
-		"eslint": "~8.11.0",
+		"eslint": "~8.12.0",
 		"husky": "7.0.4",
 		"jest": "^27.5.1",
 		"lint-staged": "12.3.7",
 		"npm-run-all": "^4.1.5",
-		"prettier": "2.6.0",
+		"prettier": "2.6.1",
 		"pretty-quick": "^3.1.3",
-		"prisma": "3.11.0",
+		"prisma": "3.11.1",
 		"reflect-metadata": "0.1.13",
 		"tsc-watch": "4.6.2",
 		"tsup": "^5.12.1",
-		"typescript": "^4.6.2"
+		"typescript": "^4.6.3"
 	},
 	"imports": {
 		"#structures/*": "./dist/lib/structures/*.js",
