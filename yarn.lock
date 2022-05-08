@@ -2317,6 +2317,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/discord.js-utilities@npm:^4.10.0":
+  version: 4.10.0
+  resolution: "@sapphire/discord.js-utilities@npm:4.10.0"
+  dependencies:
+    "@sapphire/discord-utilities": ^2.10.3
+    "@sapphire/time-utilities": ^1.7.4
+    "@sapphire/utilities": ^3.6.2
+    tslib: ^2.4.0
+  checksum: 7794e35aa500aa7fbe7c2a1528124c5f70642b071cb3821d23909d40a3625adf51ebbca4cd3871806eb2b501d73c31758f21d8fef57a7af5fec8562e517611fb
+  languageName: node
+  linkType: hard
+
 "@sapphire/discord.js-utilities@npm:^4.5.0":
   version: 4.6.0
   resolution: "@sapphire/discord.js-utilities@npm:4.6.0"
@@ -2326,18 +2338,6 @@ __metadata:
     "@sapphire/utilities": ^3.3.0
     tslib: ^2.3.1
   checksum: d1d255412409e77247d7a114049268751ff2f0c4124755027d76d8f7fc5bf47c65da57a1ae44f886cfb4d3da7ec0e1ea4662365f9abfcfb2b70a1d2997726876
-  languageName: node
-  linkType: hard
-
-"@sapphire/discord.js-utilities@npm:^4.9.7":
-  version: 4.9.7
-  resolution: "@sapphire/discord.js-utilities@npm:4.9.7"
-  dependencies:
-    "@sapphire/discord-utilities": ^2.10.3
-    "@sapphire/time-utilities": ^1.7.4
-    "@sapphire/utilities": ^3.6.2
-    tslib: ^2.4.0
-  checksum: c174b512c283216c3382fea518ba01ceda5ade39cd7ae8988bc4a9bb1fe37d0a7f7b7a578cd0053c3bcf6230ede2f7cee50810f08082186b311e220117b9ec50
   languageName: node
   linkType: hard
 
@@ -8147,7 +8147,7 @@ __metadata:
     "@commitlint/config-conventional": 16.2.4
     "@prisma/client": 3.13.0
     "@sapphire/decorators": ^4.3.4
-    "@sapphire/discord.js-utilities": ^4.9.7
+    "@sapphire/discord.js-utilities": ^4.10.0
     "@sapphire/eslint-config": 4.3.4
     "@sapphire/fetch": ^2.3.1
     "@sapphire/framework": next
