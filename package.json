@@ -55,8 +55,8 @@
 	"dependencies": {
 		"@prisma/client": "3.14.0",
 		"@sapphire/decorators": "^4.3.4",
-		"@sapphire/discord.js-utilities": "^4.10.0",
-		"@sapphire/eslint-config": "4.3.4",
+		"@sapphire/discord.js-utilities": "^4.11.0",
+		"@sapphire/eslint-config": "4.3.5",
 		"@sapphire/fetch": "^2.3.1",
 		"@sapphire/framework": "next",
 		"@sapphire/phisherman": "^1.4.1",
