@@ -53,7 +53,7 @@
 		}
 	},
 	"dependencies": {
-		"@prisma/client": "3.13.0",
+		"@prisma/client": "3.14.0",
 		"@sapphire/decorators": "^4.3.4",
 		"@sapphire/discord.js-utilities": "^4.10.0",
 		"@sapphire/eslint-config": "4.3.4",
@@ -73,20 +73,20 @@
 		"@sapphire/type": "^2.2.4",
 		"@sapphire/utilities": "^3.6.2",
 		"@spectera/tag-parser": "^2.3.1",
-		"discord.js": "^13.6.0",
+		"discord.js": "^13.7.0",
 		"dotenv-cra": "^3.0.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.10",
 		"@babel/preset-env": "^7.17.10",
 		"@babel/preset-typescript": "^7.16.7",
-		"@commitlint/cli": "16.2.4",
-		"@commitlint/config-angular": "16.2.4",
+		"@commitlint/cli": "16.3.0",
+		"@commitlint/config-angular": "16.3.0",
 		"@commitlint/config-conventional": "16.2.4",
-		"@types/jest": "^27.5.0",
-		"@types/node": "16.11.33",
-		"@typescript-eslint/eslint-plugin": "5.22.0",
-		"@typescript-eslint/parser": "5.22.0",
+		"@types/jest": "^27.5.1",
+		"@types/node": "16.11.35",
+		"@typescript-eslint/eslint-plugin": "5.23.0",
+		"@typescript-eslint/parser": "5.23.0",
 		"babel-jest": "^28.1.0",
 		"colorette": "2.0.16",
 		"eslint": "~8.15.0",
@@ -96,7 +96,7 @@
 		"npm-run-all": "^4.1.5",
 		"prettier": "2.6.2",
 		"pretty-quick": "^3.1.3",
-		"prisma": "3.13.0",
+		"prisma": "3.14.0",
 		"reflect-metadata": "0.1.13",
 		"tsc-watch": "5.0.3",
 		"tsup": "^5.12.7",
@@ -109,6 +109,6 @@
 		"#lib/*": "./dist/lib/*.js",
 		"#root/*": "./dist/*.js"
 	},
-	"packageManager": "yarn@3.2.0",
+	"packageManager": "yarn@3.2.1",
 	"prettier": "@sapphire/prettier-config"
 }
