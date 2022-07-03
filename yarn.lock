@@ -2799,6 +2799,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/utilities@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "@sapphire/utilities@npm:3.7.0"
+  checksum: 3b574586242f015859e913123a5311774ad2d6cb79241c2a3d447a585282bdb04cddcd8e086f757a8ae5d2c49f4a25b4f848d63cebe605c7641364b51c3cfa11
+  languageName: node
+  linkType: hard
+
 "@sinclair/typebox@npm:^0.23.3":
   version: 0.23.5
   resolution: "@sinclair/typebox@npm:0.23.5"
@@ -8362,7 +8369,7 @@ __metadata:
     "@sapphire/time-utilities": ^1.7.4
     "@sapphire/ts-config": 3.3.4
     "@sapphire/type": ^2.2.4
-    "@sapphire/utilities": ^3.6.2
+    "@sapphire/utilities": ^3.7.0
     "@spectera/tag-parser": ^2.3.1
     "@types/jest": ^27.5.1
     "@types/node": 16.11.36
