@@ -71,7 +71,7 @@
 		"@sapphire/time-utilities": "^1.7.6",
 		"@sapphire/ts-config": "3.3.4",
 		"@sapphire/type": "^2.2.4",
-		"@sapphire/utilities": "^3.9.2",
+		"@sapphire/utilities": "^3.9.3",
 		"@spectera/tag-parser": "^2.3.1",
 		"discord.js": "^13.7.0",
 		"dotenv-cra": "^3.0.2"
