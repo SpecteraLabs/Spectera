@@ -68,7 +68,7 @@
 		"@sapphire/plugin-subcommands": "^2.2.2",
 		"@sapphire/prettier-config": "^1.4.4",
 		"@sapphire/stopwatch": "1.4.1",
-		"@sapphire/time-utilities": "^1.7.6",
+		"@sapphire/time-utilities": "^1.7.8",
 		"@sapphire/ts-config": "3.3.4",
 		"@sapphire/type": "^2.2.4",
 		"@sapphire/utilities": "^3.9.3",
