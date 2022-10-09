@@ -2746,12 +2746,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/stopwatch@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@sapphire/stopwatch@npm:1.4.1"
+"@sapphire/stopwatch@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@sapphire/stopwatch@npm:1.5.0"
   dependencies:
-    tslib: ^2.3.1
-  checksum: 084462d9ca7ace45fd06d61e346a7a3326362d6d598c8721c908acf35772634b68f0224db998f0c59448a17b32b0d163248c6bc76c7f6f2d1db8a4f2ffc9fa68
+    tslib: ^2.4.0
+  checksum: 23c013598d87d2fcc797efe5d2409ae6836b9221d79eacc10b7c2a95f9d694b562b7ad027dc49e9e8125095417199385a15317520fec371bdb8cc7622085e3af
   languageName: node
   linkType: hard
 
@@ -2842,6 +2842,13 @@ __metadata:
   version: 3.3.0
   resolution: "@sapphire/utilities@npm:3.3.0"
   checksum: 0bbc527239d396ae7f5f76601190cc54c46b1f9483038ec5f37c4fac6a7d70428a2ce032df0fbfb22d036d31b4352c5b647786a8436b060ddeed77897baa4df9
+  languageName: node
+  linkType: hard
+
+"@sapphire/utilities@npm:^3.11.0":
+  version: 3.11.0
+  resolution: "@sapphire/utilities@npm:3.11.0"
+  checksum: 3c8521038b8879524e8114f39eefc8b3b06cf825995f709684238b5cb14bd7df06d232a26a88f79160df290a66f9aa3133f5ce4ff8e2398033db9f301ad31e0d
   languageName: node
   linkType: hard
 
@@ -8489,11 +8496,11 @@ __metadata:
     "@sapphire/plugin-logger": ^2.2.3
     "@sapphire/plugin-subcommands": ^2.2.2
     "@sapphire/prettier-config": ^1.4.4
-    "@sapphire/stopwatch": 1.4.1
+    "@sapphire/stopwatch": 1.5.0
     "@sapphire/time-utilities": ^1.7.8
     "@sapphire/ts-config": 3.3.4
     "@sapphire/type": ^2.2.4
-    "@sapphire/utilities": ^3.9.3
+    "@sapphire/utilities": ^3.11.0
     "@spectera/tag-parser": ^2.3.1
     "@types/jest": ^27.5.1
     "@types/node": 16.11.36
