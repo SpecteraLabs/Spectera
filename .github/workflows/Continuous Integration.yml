@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 16
       - name: Restore CI Cache
-        uses: actions/cache@48af2dc4a9e8278b89d7fa154b955c30c6aaab09 # tag=v3.0.2
+        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # tag=v3.0.11
         id: cache-restore
         with:
           path: node_modules
