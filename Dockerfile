@@ -1,5 +1,5 @@
 # Base required for most things
-FROM node:18-buster-slim as base
+FROM node:19-buster-slim as base
 
 WORKDIR /opt/app
 
