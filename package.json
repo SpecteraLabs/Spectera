@@ -89,7 +89,7 @@
 		"@typescript-eslint/parser": "5.42.0",
 		"babel-jest": "^28.1.3",
 		"colorette": "2.0.19",
-		"eslint": "~8.26.0",
+		"eslint": "~8.27.0",
 		"husky": "8.0.1",
 		"jest": "^28.1.3",
 		"lint-staged": "12.5.0",
