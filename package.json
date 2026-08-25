@@ -53,7 +53,7 @@
 		}
 	},
 	"dependencies": {
-		"@prisma/client": "3.15.2",
+		"@prisma/client": "7.10.0",
 		"@sapphire/decorators": "^6.0.2",
 		"@sapphire/discord.js-utilities": "^6.1.0",
 		"@sapphire/eslint-config": "4.4.3",
