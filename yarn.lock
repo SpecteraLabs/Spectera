@@ -7053,7 +7053,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.8, prettier@npm:^2.8.2, prettier@npm:^2.8.8":
+"prettier@npm:3.9.8":
+  version: 3.9.8
+  resolution: "prettier@npm:3.9.8"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: b9728106824ec6f36bf34533252b213f417b724b67947f97f77558c1edfa3e626fb813dfef306fca715e34f349f3d397dfd97fc02dcc50a10a06203211d2294f
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.8.2, prettier@npm:^2.8.8":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
@@ -7770,7 +7779,7 @@ __metadata:
     jest: ^28.1.3
     lint-staged: 12.5.0
     npm-run-all: ^4.1.5
-    prettier: 2.8.8
+    prettier: 3.9.8
     pretty-quick: ^3.1.3
     prisma: 3.15.2
     reflect-metadata: 0.1.13
